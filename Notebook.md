@@ -99,6 +99,21 @@ Obs: All .faa files in one folder.
 ## 5. Uniprot Alignment - Antibiotic biosynthesis:
 
 ### Name:
+**gbk_cds_sequence_extraction.ipynb**
+
+#### Objective:
+- Here we take the output from antismash and create a dataframe with sequence information for future alignment.
+   
+#### Input:
+- A folder with all .gbk files
+
+#### Output:
+- antismash_cds.faa. A file with all CDS from different samples.
+
+### Observations:
+- It is necessary for the BlastP alignment.
+
+### Name:
 **Uniprot_protein_download.ipynb**
 
 #### Objective:
@@ -117,10 +132,31 @@ Obs: All .faa files in one folder.
 **Uniprot_protein_alignment.ipynb**
 
 #### Objective:
-- Here we take the output from the previous notebook (uniprot_protein_download.ipynb) and uses the dataframe as the input for the manipulations here. 
+- This notebook takes the output from DIAMOND  and analise the alignment between the CDS from samples BGCs and sequences of antibiotic biosynthesis associated proteins (from Uniprot).
+
    
 #### Input:
 - Dataframe from **Uniprot_protein_download.ipynb**
+- Aligment result from DIAMOND (output.tsv)
+
+#### Output:
+- Is incomplete.
+
+### Observations:
+- This notebook is incomplete.
+- The command used for DIAMOND alignment was: "diamond blastp   -q antismash_cds.faa   -d uniprot_db   -o cds_vs_uniprot.tsv   -f 6   qseqid sseqid pident length qstart qend sstart send evalue bitscore   --evalue 1e-5   --max-target-seqs 5"
+
+
+## 6. antiSMASH:
+
+### Name:
+
+
+#### Objective:
+- 
+   
+#### Input:
+- 
 
 #### Output:
 - 
