@@ -22,3 +22,27 @@ bgc_arquitecture_analysis.ipynb
 
 ### Observations:
 - The PCA part (last one) do not function. But the graphs still can be useful.
+
+
+## 2. BIG-SCAPE:
+
+### Name:
+BIG-SCAPE_exploratory_notebook.ipynb
+
+### Objective:
+- This notebook associates each BGC in the sample with the nearest MIBIG BGC.
+- Makes the following graphs: boxplot of distance, jaccard, adjacency and dss.
+- Finally, it returns a dataframe containing the MIBiG database BGC that most closely matches each BGC identified in the sample.
+   
+### Input:
+- A file named XXX_full.network produced by BIG-SCAPE, providing similarity metrics between BGC pairs.
+
+### Processament:
+- Process the input data by applying the specified filtering criteria.
+
+### Output:
+- Generate a Boxplot graph and a table with BGCs similarity (from sample and MIBIG).
+
+### Observations:
+- The command used for BIG-SCAPE was:
+- python3 bigscape.py cluster  -i /file/with/all_BGCs/together -o /your/directory/output --include-singletons -p /path/to/pfam_database/Pfam-A.hmm --mibig-version 4.0
