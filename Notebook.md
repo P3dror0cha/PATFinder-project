@@ -80,7 +80,7 @@ Obs: All .faa files in one folder.
 - The operon finder used was POEM pipeline (https://github.com/Rinoahu/POEM_py3k).
 
 ### Name:
-- **Uniting_POEM_with_BGC.ipynb**
+**Uniting_POEM_with_BGC.ipynb**
 
 #### Objective:
 - Here we take the processed result from POEM pipeline and merge with the BGCs results (BIG-SCAPE, antiSMASH and DeepSEA results).
@@ -99,13 +99,28 @@ Obs: All .faa files in one folder.
 ## 5. Uniprot Alignment - Antibiotic biosynthesis:
 
 ### Name:
-- 
+**Uniprot_protein_download.ipynb**
 
 #### Objective:
-- 
+- This notebook uses the output from the UniProt API to perform alignments between CDSs from sample BGCs and proteins associated with “antibiotic biosynthesis.”
    
 #### Input:
--  
+- None
+
+#### Output:
+- uniprot_table.csv. Makes a dataframe with parsed informations, such as: "accession", "submitted_name", "gene_id", "organism", "lineage", "sequence" and others.
+
+### Observations:
+- 
+
+### Name:
+**Uniprot_protein_alignment.ipynb**
+
+#### Objective:
+- Here we take the output from the previous notebook (uniprot_protein_download.ipynb) and uses the dataframe as the input for the manipulations here. 
+   
+#### Input:
+- Dataframe from **Uniprot_protein_download.ipynb**
 
 #### Output:
 - 
