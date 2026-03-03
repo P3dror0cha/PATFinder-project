@@ -46,3 +46,28 @@ BIG-SCAPE_exploratory_notebook.ipynb
 ### Observations:
 - The command used for BIG-SCAPE was:
 - python3 bigscape.py cluster  -i /file/with/all_BGCs/together -o /your/directory/output --include-singletons -p /path/to/pfam_database/Pfam-A.hmm --mibig-version 4.0
+
+## 3. DeepSEA:
+
+### Name:
+deepsea_results.ipynb
+
+### Objective:
+- This notebook is designed to construct a dataframe comprising BGCs associated with resistance proteins.
+- Makes the following graphs: "Distribution by resistance class", "Number of resistance proteins in each metagenome", "Confusion matrix with BGC class and Resistance class".
+   
+
+### Input:
+- All DeepSEA .tsv outputs. The file will have the following columns: "Name", "Class", "Prob".
+Obs: DeepSEA will always produce one tsv for each metagenomic sample.
+- Files with annotated CDS from each metagenome sample (.faa format).
+Obs: All .faa files in one folder. 
+
+### Processament:
+- Take the raw result from DeepSEA and filters the dataframe.
+
+### Output:
+- Generate the graphs above and the filtered dataframe.
+
+### Observations:
+- The command used with DeepSEA was: python DeepSEA.py run --input test/test.fasta --outname test.table
