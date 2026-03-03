@@ -14,9 +14,6 @@ bgc_arquitecture_analysis.ipynb
 ### Input:
 - A folder with all .gbk from antiSMASH. 
 
-### Processament:
-- Separated in seven parts. Most parts produce descritive graphs of BGC's population characteristics 
-
 ### Output:
 - Generate six images about the BGC's population.
 
@@ -37,9 +34,6 @@ BIG-SCAPE_exploratory_notebook.ipynb
 ### Input:
 - A file named XXX_full.network produced by BIG-SCAPE, providing similarity metrics between BGC pairs.
 
-### Processament:
-- Process the input data by applying the specified filtering criteria.
-
 ### Output:
 - Generate a Boxplot graph and a table with BGCs similarity (from sample and MIBIG).
 
@@ -56,18 +50,65 @@ deepsea_results.ipynb
 - This notebook is designed to construct a dataframe comprising BGCs associated with resistance proteins.
 - Makes the following graphs: "Distribution by resistance class", "Number of resistance proteins in each metagenome", "Confusion matrix with BGC class and Resistance class".
    
-
 ### Input:
 - All DeepSEA .tsv outputs. The file will have the following columns: "Name", "Class", "Prob".
 Obs: DeepSEA will always produce one tsv for each metagenomic sample.
 - Files with annotated CDS from each metagenome sample (.faa format).
 Obs: All .faa files in one folder. 
 
-### Processament:
-- Take the raw result from DeepSEA and filters the dataframe.
-
 ### Output:
 - Generate the graphs above and the filtered dataframe.
 
 ### Observations:
 - The command used with DeepSEA was: python DeepSEA.py run --input test/test.fasta --outname test.table
+
+## 4. Operon Finder:
+
+### Name:
+- processing_POEM_results.ipynb
+
+### Objective:
+- This notebook takes the output from POEM, specificaly the output named "input.fsa.operon" that has the information about the operon genes in each BGC.
+   
+### Input:
+-  input.fsa.operon. This file has all genes in sequence for each operon detected.
+
+### Output:
+- POEM_operon_information.csv. Dataframe containing the following informations: "metagenome_ids", "strand" and "genes_for_each_operon"
+
+### Observations:
+- The operon finder used was POEM pipeline (https://github.com/Rinoahu/POEM_py3k).
+
+### Name:
+- Uniting_POEM_with_BGC.ipynb
+
+### Objective:
+- Here we take the processed result from POEM pipeline and merge with the BGCs results (BIG-SCAPE, antiSMASH and DeepSEA results).
+   
+### Input:
+-  POEM_operon_information.csv (Table made in the "processing_POEM_results.ipynb" notebook)
+-  A folder path that contains all .gbk files from BGCs.
+-  Dataframe with BIG-SCAPE informations (BIG-SCAPE_exploratory_notebook.ipynb)
+-  Dataframe with DeepSEA informations (deepsea_results.ipynb)
+
+### Output:
+- updated_BGCs_information.csv (csv with all informations - BIG-SCAPE, antiSMASH, DeepSEA and POEM)
+
+### Observations:
+
+## 5. Uniprot Alignment - Antibiotic biosynthesis:
+
+### Name:
+- 
+
+### Objective:
+- 
+   
+### Input:
+-  
+
+### Output:
+- 
+
+### Observations:
+- 
