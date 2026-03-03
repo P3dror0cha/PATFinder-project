@@ -2,22 +2,22 @@
 
 ## 1. BGC_architecture:
 
-### Name:
+#### Name:
 bgc_arquitecture_analysis.ipynb
 
-### Objective:
+#### Objective:
 - Notebook dedicated to the analysis of the arquitecture from BGC's metagenomes.
 - Makes the following graphs: Frequency, length, CDS Count, Gene Kind Count, Number of Domains of BGC by classes.
 - Makes a PCA analysis of the domains composition of the BGC population
    
 
-### Input:
+#### Input:
 - A folder with all .gbk from antiSMASH. 
 
-### Output:
+#### Output:
 - Generate six images about the BGC's population.
 
-### Observations:
+#### Observations:
 - The PCA part (last one) do not function. But the graphs still can be useful.
 
 
