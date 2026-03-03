@@ -64,7 +64,7 @@ Obs: All .faa files in one folder.
 
 ## 4. Operon Finder:
 
-### Name:
+### 1 - Name:
 **processing_POEM_results.ipynb**
 
 #### Objective:
@@ -79,7 +79,7 @@ Obs: All .faa files in one folder.
 #### Observations:
 - The operon finder used was POEM pipeline (https://github.com/Rinoahu/POEM_py3k).
 
-### Name:
+### 2 - Name:
 **Uniting_POEM_with_BGC.ipynb**
 
 #### Objective:
@@ -98,7 +98,7 @@ Obs: All .faa files in one folder.
 
 ## 5. Uniprot Alignment - Antibiotic biosynthesis:
 
-### Name:
+### 1 - Name:
 **gbk_cds_sequence_extraction.ipynb**
 
 #### Objective:
@@ -113,7 +113,7 @@ Obs: All .faa files in one folder.
 ### Observations:
 - It is necessary for the BlastP alignment.
 
-### Name:
+### 2 - Name:
 **Uniprot_protein_download.ipynb**
 
 #### Objective:
@@ -128,7 +128,7 @@ Obs: All .faa files in one folder.
 ### Observations:
 - 
 
-### Name:
+### 3 - Name:
 **Uniprot_protein_alignment.ipynb**
 
 #### Objective:
@@ -150,16 +150,16 @@ Obs: All .faa files in one folder.
 ## 6. antiSMASH:
 
 ### Name:
-
+**characterization_of_metagenomes.ipynb**
 
 #### Objective:
-- 
+- Notebook dedicated to characterize the metagenomes pool, using the python functions
    
 #### Input:
-- 
+- None
 
 #### Output:
-- 
+- Download the .fna (with DNA sequences) of each metagenome searched
 
 ### Observations:
 - 
