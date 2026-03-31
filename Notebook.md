@@ -150,7 +150,7 @@ Obs: All .faa files in one folder.
 ## 6. antiSMASH:
 
 ### Name:
-**characterization_of_metagenomes.ipynb**
+**download_of_metagenomes.ipynb**
 
 #### Objective:
 - Notebook dedicated to characterize the metagenomes pool, using the python functions
