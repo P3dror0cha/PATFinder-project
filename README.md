@@ -16,3 +16,12 @@ Below is the current pipeline workflow.
 
 <img width="4613" height="3051" alt="Imagem meu github" src="https://github.com/user-attachments/assets/21624153-c440-4f36-a2ad-7c9b2e3f0ecf" />
 
+## Installation
+
+Follow the steps below to set up the environment and run the pipeline.
+
+### 1. Clone the repository
+
+```bash
+git clone [https://github.com/your-username/your-repo.git](https://github.com/P3dror0cha/Segunda_IC.git)
+cd Segunda_IC
