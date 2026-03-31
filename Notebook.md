@@ -78,6 +78,7 @@ Obs: All .faa files in one folder.
 
 #### Observations:
 - The operon finder used was POEM pipeline (https://github.com/Rinoahu/POEM_py3k).
+- The command used was: bash ./bin/run_poem.sh  -f /home/pedro/resultados_bgc/fna_dos_bgcs/BGCS.fasta -a n -p pka -l y
 
 ### 2 - Name:
 **Uniting_POEM_with_BGC.ipynb**
