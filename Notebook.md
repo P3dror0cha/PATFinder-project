@@ -61,6 +61,7 @@ Obs: All .faa files in one folder.
 
 #### Observations:
 - The command used with DeepSEA was: python DeepSEA.py run --input test/test.fasta --outname test.table
+- The input for deepsea is a file with all CDS from all BGCs, or a loop that reads all CDS files.
 
 ## 4. Operon Finder:
 
