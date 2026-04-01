@@ -14,7 +14,8 @@ The pipeline integrates the following tools:
 
 Below is the current pipeline workflow.
 
-<img width="4613" height="3051" alt="Imagem meu github" src="https://github.com/user-attachments/assets/21624153-c440-4f36-a2ad-7c9b2e3f0ecf" />
+<img width="4613" height="3051" alt="Imagem meu github (1)" src="https://github.com/user-attachments/assets/2a3aa131-6291-4e03-898e-7e16d4403061" />
+
 
 ## Installation
 
