@@ -23,5 +23,5 @@ Follow the steps below to set up the environment and run the pipeline.
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/your-repo.git](https://github.com/P3dror0cha/Segunda_IC.git)
+git clone https://github.com/P3dror0cha/Segunda_IC.git
 cd Segunda_IC
