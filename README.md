@@ -25,7 +25,7 @@ Follow the steps below to set up the environment and run the pipeline.
 ```bash
 git clone https://github.com/P3dror0cha/Segunda_IC.git
 cd Segunda_IC
-
+```
 ### 2. Installing dependencies
 
 Create a conda environment using the following comands:
@@ -33,7 +33,7 @@ Create a conda environment using the following comands:
 ```bash
 conda env create -f environment.yml
 conda activate BGC_workflow
-
+```
 ### 3. Installing important repositories
 
 To ensure this workflow functions properly, you must first install BIG-SCAPE, KOfam, POEM-pipeline, and DeepSEA by following their respective installation instructions.
