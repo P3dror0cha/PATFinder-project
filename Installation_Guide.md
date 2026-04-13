@@ -11,6 +11,8 @@ download-antismash-databases (verificar se é necessário dps)
 For BIG-SCAPE to work we must first install Pfam database
 ```bash
 wget https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+gunzip Pfam-A.hmm.gz
+hmmpress Pfam-A.hmm
 ```
 After installing the database, run the command below and install bigscape. Remember to change the path to Pfam database in BIGSCAPE.nf
 ```bash
