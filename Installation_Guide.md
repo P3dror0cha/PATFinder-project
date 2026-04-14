@@ -2,7 +2,7 @@ This file has the purpose to create an ambient where you can run the nextflow pi
 # Creating a conda/mamba ambient
 blabla
 # Antismash installation
-Following the installation guide (link here) make the following comands inside your ambient:
+Following the installation guide (https://docs.antismash.secondarymetabolites.org/install/) make the following comands inside your ambient:
 ```bash
 conda install -c conda-forge -c bioconda -c defaults antismash=8.0.4
 download-antismash-databases (verificar se é necessário dps)
@@ -18,4 +18,10 @@ After installing the database, run the command below and install bigscape. Remem
 ```bash
 conda install -c conda-forge -c bioconda bigscape=2.0.0
 ```
-
+# DeepSEA installation
+Following the installation guide described in (https://github.com/computational-chemical-biology/DeepSEA-project), make the following steps inside the PATFinder-project repository.
+```bash
+git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
+cd DeepSEA-project
+conda env update --file environment-gpu.yml 
+```
