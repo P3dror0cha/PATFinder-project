@@ -19,7 +19,7 @@ After installing the database, run the command below and install bigscape. Remem
 conda install -c conda-forge -c bioconda bigscape=2.0.0
 ```
 # DeepSEA installation
-Following the installation guide described in (https://github.com/computational-chemical-biology/DeepSEA-project), make the following steps inside the PATFinder-project repository.
+Following the installation guide described in (https://github.com/computational-chemical-biology/DeepSEA-project), make the steps below inside the PATFinder-project repository.
 ```bash
 git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
 cd DeepSEA-project
