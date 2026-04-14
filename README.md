@@ -1,5 +1,5 @@
-# Segunda_IC
-Repository for my second undergraduate research project under Professor Ricardo.
+# PATFinder-project
+Repository dedicated to PATFinder (Pedro’s Antibiotic Target Finder), a bioinformatics tool designed to identify and explore potential antibiotic compounds within biosynthetic gene clusters (BGCs).
 
 # BGC pipeline project
 This project focuses on the development of a bioinformatics pipeline for the analysis of Biosynthetic Gene Clusters (BGCs), with an emphasis on identifying and associating them with antimicrobial potential.
