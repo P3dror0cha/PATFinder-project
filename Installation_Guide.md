@@ -1,6 +1,6 @@
 This file has the purpose to create an ambient where you can run the nextflow pipeline.
 # Creating a conda/mamba ambient
-blabla
+
 # Antismash installation
 Following the installation guide (https://docs.antismash.secondarymetabolites.org/install/) make the following comands inside your ambient:
 ```bash
