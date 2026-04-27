@@ -1,46 +1,99 @@
 #!/usr/bin/env python3
 
 import requests
-import json 
+import json
+import argparse
+import os
 
-def MGnify_search(max_pages):
+def MGnify_search(max_pages, url=None, output_prefix="aquatic", output_dir="MGnify_pipeline_results"):
     """
-    Faz a pesquisa de vários IDs de amostras do MGnify. A pesquisa pode ser feita pelo catálogo de genomas do MGnify ou por bioma.
-    
-    Parâmetros:
-    max_pages: número máximo de páginas a buscar.
+    Retrieves multiple sample IDs from the MGnify database.
+
+    Parameters:
+    max_pages: maximum number of pages to retrieve.
+    url: custom MGnify API URL (optional).
+    output_prefix: prefix for output files.
+    output_dir: Output directory for the id list and the json file.
     """
-    print("Início do download dos ids")
-    lista_ids = []
-    lista_json = []
+
+    if url is None:
+        url = "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Environmental:Aquatic:Marine/genomes"
+
+    print("Starting ID download")
+
+    json_list = []
+    id_list = []
+
+    os.makedirs(output_dir, exist_ok=True)
 
     for page in range(1, max_pages + 1):
-        url = f"https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Environmental:Aquatic:Marine/genomes?page={page}"
-        resposta = requests.get(url)
+        response = requests.get(url, params={"page": page})
 
-        if resposta.status_code != 200:
-            print(f"Erro {resposta.status_code} na página {page}")
+        if response.status_code != 200:
+            print(f"Error {response.status_code} on page {page}")
             break
 
-        dados_json = resposta.json()
-        ids_atuais = [item["id"] for item in dados_json.get("data", [])]
-        lista_json.extend(dados_json.get("data", []))
-        lista_ids.extend(ids_atuais)
+        data = response.json().get("data", [])
 
-        print(f"Página {page}: {len(ids_atuais)} IDs encontrados")
-      
+        json_list.extend(data)
+        id_list.extend(item["id"] for item in data)
 
-    resultado_final_json = {"data": lista_json}
-    
-    with open("aquatic_download.json", "w") as i:
-        json.dump(resultado_final_json, i, indent=4)
+        print(f"Page {page}: {len(data)} IDs found")
 
-    with open("aquatic_ids.txt", "w") as f:
-        for id_study in lista_ids:
-            f.write(id_study + "\n")
+    final_json = {"data": json_list}
 
-    print(f"\nTotal de {len(lista_ids)} IDs coletados em {page} páginas.")
-    print("fim do download dos ids")
-    return resultado_final_json, lista_ids
+    json_file = f"{output_prefix}_download.json"
+    ids_file = f"{output_prefix}_ids.txt"
 
-resultado_final_json, lista_ids = MGnify_search(2)
+    with open(f"./MGnify_pipeline_results/{json_file}", "w") as f_json, open(f"./MGnify_pipeline_results/{ids_file}", "w") as f_ids:
+        json.dump(final_json, f_json, indent=4)
+        f_ids.write("\n".join(id_list))
+
+    print(f"\nTotal of {len(id_list)} IDs collected.")
+    print("End of ID download")
+
+    return final_json, id_list
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Download IDs from MGnify"
+    )
+
+    parser.add_argument(
+        "--max_pages",
+        type=int,
+        required=True,
+        help="Maximum number of pages to retrieve"
+    )
+
+    parser.add_argument(
+        "--url",
+        default=None,
+        help="Custom MGnify API URL"
+    )
+
+    parser.add_argument(
+        "--output_prefix",
+        default="aquatic",
+        help="Prefix for output files"
+    )
+
+    parser.add_argument(
+    "--output_dir",
+    default="MGnify_pipeline_results",
+    help="Name for the output directory."
+    )
+
+    args = parser.parse_args()
+
+    MGnify_search(
+        max_pages=args.max_pages,
+        url=args.url,
+        output_prefix=args.output_prefix,
+        output_dir=args.output_dir 
+    )
+
+
+if __name__ == "__main__":
+    main()

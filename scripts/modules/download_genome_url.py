@@ -1,42 +1,37 @@
 #!/usr/bin/env python3
 
 import requests
+import os
 
-def download_genome_url(input, filtro=".fna"):
+def download_genome_url(input, filter_ext=".fna"):
     """
-    Lê um arquivo .txt OU uma lista de links e baixa apenas os arquivos que você quer filtrando pelo tipo de arquivo.
+    Reads a .txt file OR a list of links and downloads only the desired files by filtering by file type.
     
-    Parâmetros:
-    input: caminho do arquivo .txt contendo os links OU uma lista de links.
-    filtro: extensão do arquivo a ser baixado. Default: ".fna"
+    Parameters:
+    input: path to a .txt file containing the links OR a list of links.
+    filter_ext: file extension to be downloaded. Default: ".fna"
     """
-    if isinstance(input, str):
-        with open(input, "r") as f:
-            links = [linha.strip() for linha in f if linha.strip()]
-    elif isinstance(input, list):
-        links = [linha.strip() for linha in input if linha.strip()]
-    else:
-        raise TypeError("O input deve ser um caminho de arquivo (.txt) ou uma lista de links.")
 
-    fna_links = [link for link in links if link.endswith(filtro)] 
+    output_dir = "./metagenomes_MGnify"
+    os.makedirs(output_dir, exist_ok=True)
 
-    if not fna_links:
-        print(f"Nenhum link {filtro} encontrado.") 
+    links = [line.strip() for line in input if line.strip()]
+    filtered_links = [link for link in links if link.endswith(filter_ext)] 
+
+    if not filtered_links:
+        print(f"No {filter_ext} links found.") 
         return
 
-    for link in fna_links:
-        nome_arquivo = link.split("/")[-1]
-        print(nome_arquivo)
-        print(f"Baixando {nome_arquivo} ...")
+    for link in filtered_links:
+        filename = link.split("/")[-1]
+        print(filename)
+        print(f"Downloading {filename} ...")
 
         try:
-            resposta = requests.get(link)
-            resposta.raise_for_status()
-            with open(f"/home/pedro/antismash/genomes/{nome_arquivo}", "wb") as f:
-                f.write(resposta.content)
-            print(f"Download concluído: {nome_arquivo}")
+            response = requests.get(link)
+            response.raise_for_status()
+            with open(f"./metagenomes_MGnify/{filename}", "wb") as f:
+                f.write(response.content)
+            print(f"Download completed: {filename}")
         except requests.RequestException as e:
-            print(f"Erro ao baixar {nome_arquivo}: {e}")
-
-
-download_genomes = download_genome_url("/home/pedro/antismash/scripts_python/links_download.txt")
+            print(f"Error downloading {filename}: {e}")
