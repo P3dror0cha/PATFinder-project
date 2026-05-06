@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 
 import argparse
-import pandas as pd
 
-from BS1_filtering_bigscape_results import filtering_bigscape_results
-from BS2_reference_bgcs import reference_bgcs
-from BS3_uniting_reference_with_sample_bgcs import uniting_reference_with_sample_BGCs
+from bin.PY2_bigscape_output_analysis_functions import BS1_filtering_bigscape_results 
+from bin.PY2_bigscape_output_analysis_functions import BS2_reference_bgcs 
+from bin.PY2_bigscape_output_analysis_functions import BS3_uniting_reference_with_sample_BGCs
 
-
-def processing_bigscape(fullnetwork_file_path, output_file):
+def BS4_processing_bigscape(fullnetwork_file_path, output_file):
     """
     This function is the filtering step for BiG-SCAPE results. 
     """
-    df = filtering_bigscape_results(fullnetwork_file_path)
-    df_reference = reference_bgcs()
-    df_united = uniting_reference_with_sample_BGCs(df_reference, df)
+    df = BS1_filtering_bigscape_results(fullnetwork_file_path)
+    df_reference = BS2_reference_bgcs()
+    df_united = BS3_uniting_reference_with_sample_BGCs(df_reference, df)
     
     df_united.to_csv(output_file, sep="\t", index=False)
     
@@ -38,7 +36,7 @@ def main():
 
     args = parser.parse_args()
 
-    processing_bigscape(
+    BS4_processing_bigscape(
         fullnetwork_file_path=args.fullnetwork_file_path,
         output_file=args.output_file
     )
