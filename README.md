@@ -68,6 +68,15 @@ wget ftp://ftp.genome.jp/pub/db/kofam/profiles.tar.gz
 gunzip ko_list.gz
 tar -xzf profiles.tar.gz
 ```
+## 2.4 POEM-pipeline
+In the repository folder, use the following commands to make the env
+
+```bash
+git clone https://github.com/Rinoahu/POEM_py3k
+cd ./POEM_py3k
+bash ./install.sh
+```
+Obs: Note that if you do not use conda, changes in install.sh are necessary!
 
 ### 3. Installing important repositories
 
