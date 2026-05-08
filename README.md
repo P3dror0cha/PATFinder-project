@@ -27,14 +27,48 @@ Follow the steps below to set up the environment and run the pipeline.
 git clone https://github.com/P3dror0cha/Segunda_IC.git
 cd Segunda_IC
 ```
-### 2. Installing dependencies
+### 2. Installing dependencies and creating ambients
 
-Create a conda environment using the following comands:
+This section shows the commands used to make the necessary ambients for this pipeline to work. For instance, the ambients create are: 1 - antismash_bigscape, 2 - deepsea-project, 3 - DIAMOND_ambient and 4 - POEM_pipeline_ambient.
+
+## 2.1 antiSMASH and BIG-SCAPE
+Create a conda environment for antismash_bigscape.yml file in envs folder:
 
 ```bash
-conda env create -f environment.yml
-conda activate BGC_workflow
+conda env create -f envs/antismash_bigscape.yml
 ```
+For BIG-SCAPE to work, you will need the Pfam database. In the repository folder, run the following commands:
+
+```bash
+mkdir databases
+cd databases
+wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+gunzip Pfam-A.hmm.gz
+hmmpress Pfam-A.hmm
+cd ..
+```
+## 2.2 DeepSEA
+In the repository folder (PATFinder_project), use the following commands:
+
+```bash
+git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
+cd DeepSEA-project
+conda env create -f environment-gpu.yml 
+```
+## 2.3 DIAMOND and KOfam
+In the repository folder, use the following commands to make the env and install KOfam database:
+
+```bash
+conda env create -f envs/diamond_kofam.yml
+
+cd databases
+wget ftp://ftp.genome.jp/pub/db/kofam/ko_list.gz
+wget ftp://ftp.genome.jp/pub/db/kofam/profiles.tar.gz
+
+gunzip ko_list.gz
+tar -xzf profiles.tar.gz
+```
+
 ### 3. Installing important repositories
 
 To ensure this workflow functions properly, you must first install BIG-SCAPE, KOfam, POEM-pipeline, and DeepSEA by following their respective installation instructions.
