@@ -72,6 +72,7 @@ tar -xzf profiles.tar.gz
 In the repository folder, use the following commands to make the env
 
 ```bash
+conda activate diamond_kofam
 git clone https://github.com/Rinoahu/POEM_py3k
 cd ./POEM_py3k
 bash ./install.sh
