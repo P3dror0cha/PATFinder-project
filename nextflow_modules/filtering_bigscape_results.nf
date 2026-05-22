@@ -12,9 +12,9 @@ process FILTERING_BIGSCAPE_RESULTS {
     path "filtered_bigscape_results.tsv", emit: filtered_bigscape_results
 
 script:
-"""
-python3 ${projectDir}/bin/BS4_processing_bigscape_results.py \
-    --fullnetwork_file_path ${bigscape_fullnetwork} \
-    --output_file filtered_bigscape_results.tsv
-"""
-}
+    """
+    python3 ${projectDir}/bin/PY2_bigscape_output_analysis_process.py \
+        --fullnetwork_file_path ${bigscape_fullnetwork} \
+        --output_file filtered_bigscape_results.tsv
+    """
+    }

@@ -8,14 +8,14 @@ process POEM {
     path cds_files
 
     output:
-    path "poem_results"
+    path "*"                                   
+    path "input.fsa.operon", emit: operon_file 
 
     script:
     """
-    # juntar os faa
     cat ${cds_files.join(' ')} > merged_metagenome_cds.faa
 
-    bash ./bin/run_poem.sh \
+    bash ${projectDir}/POEM_py3k/bin/run_poem.sh \
         -f merged_metagenome_cds.faa \
         -a n \
         -p pka \
