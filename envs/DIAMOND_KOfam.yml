@@ -1,0 +1,14 @@
+# envs/diamond_kofam.yml
+name: diamond_kofam
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - diamond
+  - kofamscan
+  - biopython
+  - nextflow
+  - pip:
+    - pandas
+    - requests
