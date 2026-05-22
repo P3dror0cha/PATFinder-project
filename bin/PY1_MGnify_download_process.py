@@ -2,16 +2,16 @@
 
 import argparse
 
-from MGnify_search import MGnify_search
-from genome_urls_list import genome_urls_list
-from download_genome_url import download_genome_url
+from PY1_MGnify_download_functions import D1_MGnify_search
+from PY1_MGnify_download_functions import D2_genome_urls_list
+from PY1_MGnify_download_functions import D3_download_genome_url
 
 def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output_dir="./genomes_MGnify"):
     """
     The complete MGnify pipeline integrates the following functions:
-    1. MGnify_search
-    2. genome_urls_list
-    3. download_genome_url
+    1. D1_MGnify_search
+    2. D2_genome_urls_list
+    3. D3_download_genome_url
 
     Parameters:
     max_pages (int): Number of pages to retrieve from MGnify. Each page has 25 metagenomes. (required)
@@ -23,10 +23,10 @@ def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output
     None
     """
 
-    json_file, id_list = MGnify_search(max_pages)
-    url_list = genome_urls_list(id_list, output_file=f"{output_prefix}_url_list.txt")
-    download_genome_url(url_list, filter_ext=".fna")
-    download_genome_url(url_list, filter_ext=".faa")
+    json_file, id_list = D1_MGnify_search(max_pages)
+    url_list = D2_genome_urls_list(id_list, output_file=f"{output_prefix}_url_list.txt")
+    D3_download_genome_url(url_list, filter_ext=".fna")
+    D3_download_genome_url(url_list, filter_ext=".faa")
 
 
 

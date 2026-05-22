@@ -2,9 +2,9 @@
 
 import argparse
 
-from bin.PY2_bigscape_output_analysis_functions import BS1_filtering_bigscape_results 
-from bin.PY2_bigscape_output_analysis_functions import BS2_reference_bgcs 
-from bin.PY2_bigscape_output_analysis_functions import BS3_uniting_reference_with_sample_BGCs
+from PY2_bigscape_output_analysis_functions import BS1_filtering_bigscape_results 
+from PY2_bigscape_output_analysis_functions import BS2_reference_bgcs 
+from PY2_bigscape_output_analysis_functions import BS3_uniting_reference_with_sample_BGCs
 
 def BS4_processing_bigscape(fullnetwork_file_path, output_file):
     """

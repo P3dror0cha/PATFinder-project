@@ -53,6 +53,8 @@ def D1_MGnify_search(max_pages, url=None, output_prefix="aquatic", output_dir="M
 
     return final_json, id_list
 
+##############################################################################################
+
 def D2_genome_urls_list(id_list, output_file="metagenomes_url_links.txt", output_dir = "MGnify_pipeline_results"):
     """
     Retrieve download URLs associated with each genome ID from the MGnify API
@@ -89,6 +91,8 @@ def D2_genome_urls_list(id_list, output_file="metagenomes_url_links.txt", output
     print(f"Saved to: {output_file}")
 
     return download_links
+
+##############################################################################################
 
 def D3_download_genome_url(input, filter_ext=".fna"):
     """
