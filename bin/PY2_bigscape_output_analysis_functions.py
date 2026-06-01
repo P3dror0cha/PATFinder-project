@@ -12,22 +12,21 @@ import json
 #'./bigscape/*full.network'
 def BS1_filtering_bigscape_results(output_dir):
     """
-    Filter and preprocess BiG-SCAPE full_network results.
+    Filters and preprocesses BiG-SCAPE full_network results.
 
-    This function reads a BiG-SCAPE full network file (typically matching the pattern
-    './bigscape/output_files/*full.network') and applies a series of filtering and cleaning steps
-    to prepare the data for downstream analysis.
+    Reads a BiG-SCAPE full network file and applies filtering steps to remove 
+    self-comparisons (BGC vs BGC, sample vs sample). It normalizes GBK identifiers 
+    by removing region suffixes and ensures consistent column ordering so that 
+    non-BGC sample entries are always placed in the 'GBK_a' position and 
+    reference BGCs in 'GBK_b'.
 
-    Steps performed:
-    1. Load the full network file as a tab-separated table.
-    2. Remove self-comparisons between BGCs (e.g., BGC vs BGC) and between MGYG entries.
-    3. Use the first row as the header and drop it from the dataset.
-    4. Remove non-essential columns related to record metadata and alignment parameters.
-    5. Normalize GBK identifiers by removing region suffixes (e.g., '.region001').
-    6. Ensure consistent ordering of comparisons:
-    - If one entry is a reference BGC and the other is not, swap columns so that
-        non-BGC entries are consistently placed in the same position.
+    Args:
+        output_dir (str): Path to the BiG-SCAPE full network file (tab-separated).
+
+    Returns:
+        pd.DataFrame: A cleaned and filtered DataFrame ready for downstream analysis.
     """
+
     df = pd.read_csv(output_dir, sep='\t', header=None)
 
     df_filtered = df[~(df[1].str.contains("BGC") & df[6].str.contains("BGC"))]
@@ -45,8 +44,19 @@ def BS1_filtering_bigscape_results(output_dir):
 
 def BS2_reference_bgcs():
     """
-    Download, extract, and parse reference biosynthetic gene clusters (BGCs)
-    from the MIBiG database, returning a structured pandas DataFrame.
+    Downloads and parses reference BGCs from the MIBiG database.
+
+    Fetches the MIBiG JSON dataset tarball, extracts its contents to the 
+    current working directory, and parses the individual JSON files to extract 
+    metadata such as BGC accession ID, biosynthetic class, and compound name.
+
+    Returns:
+        pd.DataFrame: A deduplicated DataFrame containing MIBiG reference 
+            BGC metadata.
+            
+    Note:
+        The URL for the MIBiG database (version 4.0) and the download/extraction 
+        paths are hardcoded to the current working directory (`os.getcwd()`).
     """
     url = "https://dl.secondarymetabolites.org/mibig/mibig_json_4.0.tar.gz"
 
@@ -98,6 +108,22 @@ def BS2_reference_bgcs():
 ##############################################################################################
 
 def BS3_uniting_reference_with_sample_BGCs(df_ref, df_filtered):
+    """
+    Merges sample BGC networks with MIBiG reference annotations.
+
+    Performs a left join between the filtered BiG-SCAPE network and the MIBiG 
+    reference dataset based on the reference BGC ID. It then converts the 
+    alignment distance to a numeric type and filters the dataset to retain 
+    only the best hit (minimum distance) for each sample BGC.
+
+    Args:
+        df_ref (pd.DataFrame): DataFrame containing MIBiG reference BGCs (from BS2).
+        df_filtered (pd.DataFrame): Filtered BiG-SCAPE network DataFrame (from BS1).
+
+    Returns:
+        pd.DataFrame: A merged DataFrame containing only the top MIBiG reference 
+            hit for each queried sample BGC.
+    """
 
     df_ref_filtered = df_ref[['bgc_id', 'class', 'compound_name']]
     df_ref_filtered = df_ref_filtered.rename(columns={'bgc_id': 'GBK_b'})

@@ -1,0 +1,25 @@
+import pandas as pd
+import argparse
+
+from Diamond_functions import (
+    parse_diamond_result
+)
+
+def Diamond_process(diamond_output_file, output_csv="diamond_annotated_results.csv"):
+
+    df_annotated = parse_diamond_result(diamond_output_file)
+    df_annotated.to_csv(output_csv, index=False)
+
+    return df_annotated
+
+if __name__ == "__main__":
+
+
+    parser = argparse.ArgumentParser(description="Process DIAMOND output and annotate with UniProt information")
+    parser.add_argument("--diamond_output", required=True, help="Path to DIAMOND output file (tab-separated)")
+    parser.add_argument("--output_csv", default="diamond_annotated_results.csv", help="Name of the output CSV file")
+
+    args = parser.parse_args()
+
+    annotated_df = Diamond_process(args.diamond_output, args.output_csv)
+    print(f"Annotated DIAMOND results saved to: {args.output_csv}")

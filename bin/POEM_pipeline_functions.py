@@ -3,26 +3,24 @@ import re
 
 def POEM1_parse_operon_string(result_from_POEM):
     """
-    Parses a complex operon string to extract metagenome ID, strand orientation, and gene coordinates.
+    Parses a complex operon string to extract metagenome ID, strand, and coordinates.
 
-    This function splits a string of linked genes by directional arrows ('-->' or '<--') 
-    and uses regular expressions to extract metadata for each gene. It then reconstructs 
+    Splits a string of linked genes by directional arrows ('-->' or '<--') and uses 
+    regular expressions to extract metadata for each gene. It then reconstructs 
     the coordinates into a unified, direction-aware string.
 
-    Parameters:
-    -----------
-    result_from_POEM : str
-        The raw operon string containing gene information. It is expected to contain 
-        substrings matching the pattern: '|{strand}|{start}|{end}$${metagenome_id}'.
+    Args:
+        result_from_POEM (str): Raw operon string containing gene information. 
+            Expected to contain substrings matching the pattern: 
+            '|{strand}|{start}|{end}$${metagenome_id}'.
 
     Returns:
-    --------
-    pandas.Series
-        A Series containing three parsed elements, designed to be used with DataFrame.apply():
-        - metagenome (str): The unique metagenome identifier (e.g., 'MGYG123_456').
-        - strand (str): The DNA strand orientation ('+' or '-').
-        - coord_string (str): A concatenated string of start/end coordinates linked 
-          by arrows indicating transcription direction (e.g., '100/500 --> 600/900').
+        pd.Series: A Series containing three parsed elements, designed to be used 
+            with DataFrame.apply():
+            - metagenome (str): The unique metagenome identifier (e.g., 'sample_123_456').
+            - strand (str): The DNA strand orientation ('+' or '-').
+            - coord_string (str): A concatenated string of start/end coordinates 
+              linked by arrows indicating transcription direction (e.g., '100/500 --> 600/900').
     """
 
     genes = re.split(r'-->|<--', str(result_from_POEM))
@@ -32,7 +30,8 @@ def POEM1_parse_operon_string(result_from_POEM):
     coords = []
 
     for g in genes:
-        m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+)', g)
+        m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$([^.]+)', g)
+        #m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)', g)
         if m:
             strand = m.group(1)      
             start = m.group(2)        
@@ -53,25 +52,23 @@ def POEM1_parse_operon_string(result_from_POEM):
 def POEM2_process_poem_table(table_path, sep="\t"):
     """
     Reads a tabular file and extracts genomic metadata from the 'gene_id' column.
+
+    Loads the data into a pandas DataFrame, standardizes column names, and applies 
+    the `POEM1_parse_operon_string` function to generate new metadata columns 
+    based on the raw operon strings.
     
-    Parameters:
-    -----------
-    table_path : str
-        The path to the input CSV/TSV file.
-    sep : str, optional
-        The delimiter string used in the file. Default is a tab ("\t").
+    Args:
+        table_path (str): Path to the input CSV/TSV file.
+        sep (str, optional): The delimiter string used in the file. Defaults to "\t".
         
     Returns:
-    --------
-    pd.DataFrame
-        The processed DataFrame containing three new columns: 
-        'metagenome_id', 'strand', and 'coordinates'.
+        pd.DataFrame: The processed DataFrame containing three newly parsed columns: 
+            'metagenome_id', 'strand', and 'coordinates'.
         
     Raises:
-    -------
-    ValueError
-        If the required 'gene_id' column is missing from the input file.
+        ValueError: If the required 'gene_id' column is missing from the input file.
     """
+
     df = pd.read_csv(table_path, sep=sep)
     df.columns = df.columns.str.strip().str.lower()
 

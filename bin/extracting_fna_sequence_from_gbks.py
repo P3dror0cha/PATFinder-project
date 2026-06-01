@@ -4,18 +4,34 @@ from Bio import SeqIO
 
 def extract_bgc_to_fasta(gbk_files: list, output_fasta: str) -> int:
     """
-    Extracts 'region' or 'cluster' features from a list of GenBank files 
-    and writes their sequences to a FASTA file.
+    Extracts Biosynthetic Gene Cluster (BGC) regions from GenBank (.gbk) files into a FASTA.
+    These files are the normal output of antiSMASH.
+
+    Iterates through a list of .gbk, searching for features specifically 
+    annotated as 'region' or 'cluster' (typical BGC annotations). It extracts the 
+    nucleotide sequences corresponding to these features and writes them 
+    to a single FASTA file.
+
+    Args:
+        gbk_files (list[str]): A list of file paths to the .gbk files (Put all in one folder and use the path).
+        output_fasta (str): The name or path for the resulting output FASTA file.
+
+    Returns:
+        int: The total number of files provided in the input list (0 if empty).
+        
+    Note:
+        - Skips missing files and prints a warning message.
+        - Overwrites the `output_fasta` file if it already exists.
     """
     if not gbk_files:
-        print("Warning: No input files provided.")
+        print("No input files provided.")
         return 0
 
     with open(output_fasta, "w") as out_file:
         for gbk_path in gbk_files:
          
             if not os.path.exists(gbk_path):
-                print(f"Warning: File not found -> {gbk_path}")
+                print(f"File not found -> {gbk_path}")
                 continue
 
             base_name = os.path.basename(gbk_path)

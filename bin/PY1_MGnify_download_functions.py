@@ -6,13 +6,28 @@ import os
 
 def D1_MGnify_search(max_pages, url=None, output_prefix="aquatic", output_dir="MGnify_pipeline_results"):
     """
-    Retrieves multiple sample IDs from the MGnify database.
+    Retrieves multiple metagenome sample IDs from the MGnify database via API.
 
-    Parameters:
-    max_pages: maximum number of pages to retrieve.
-    url: custom MGnify API URL (optional).
-    output_prefix: prefix for output files.
-    output_dir: Output directory for the id list and the json file.
+    Iterates through the specified number of pages of the MGnify API to fetch 
+    genome data for a specific biome. Collects the JSON responses and extracts 
+    the associated genome IDs, saving both to local files.
+
+    Args:
+        max_pages (int): Maximum number of pages to retrieve from the API.
+        url (str, optional): Custom MGnify API URL endpoint. Defaults to the 
+            Marine Aquatic biome genomes endpoint.
+        output_prefix (str, optional): Prefix for the generated output files. 
+            Defaults to "aquatic".
+        output_dir (str, optional): Directory to create for output files. 
+            Defaults to "MGnify_pipeline_results".
+
+    Returns:
+        tuple[dict, list]: A tuple containing:
+            - final_json (dict): The complete JSON response aggregated across pages.
+            - id_list (list): A list of extracted genome IDs as strings.
+    
+    Note: 
+        This function has hardcoded paths. Changes will be made in further modifications in this tool.
     """
 
     if url is None:
@@ -57,8 +72,21 @@ def D1_MGnify_search(max_pages, url=None, output_prefix="aquatic", output_dir="M
 
 def D2_genome_urls_list(id_list, output_file="metagenomes_url_links.txt", output_dir = "MGnify_pipeline_results"):
     """
-    Retrieve download URLs associated with each genome ID from the MGnify API
-    and save them into a single text file.
+    Retrieves download URLs for a list of MGnify genome IDs.
+
+    Queries the MGnify API for each provided genome ID to fetch its available 
+    download links. Extracts the self-referencing URLs and saves them all 
+    into a single text file.
+
+    Args:
+        id_list (list[str]): A list of MGnify genome IDs to query.
+        output_file (str, optional): Name of the output text file. 
+            Defaults to "metagenomes_url_links.txt".
+        output_dir (str, optional): Directory where the output file will be saved. 
+            Defaults to "MGnify_pipeline_results".
+
+    Returns:
+        list[str]: A list of all collected download URLs.
     """
 
     download_links = []
@@ -96,11 +124,26 @@ def D2_genome_urls_list(id_list, output_file="metagenomes_url_links.txt", output
 
 def D3_download_genome_url(input, filter_ext=".fna"):
     """
-    Reads a .txt file OR a list of links and downloads only the desired files by filtering by file type.
+    Filters a list of URLs and downloads the specified genome files.
+
+    Takes an iterable of URLs, filters them by the specified file extension 
+    (e.g., FASTA nucleotide files), and downloads each file directly into a 
+    local directory.
     
-    Parameters:
-    input: path to a .txt file containing the links OR a list of links.
-    filter_ext: file extension to be downloaded. Default: ".fna"
+    Args:
+        input (Iterable[str]): An iterable (like a list of strings or an open 
+            file object) containing the raw download URLs.
+        filter_ext (str, optional): The file extension to filter and download. 
+            Defaults to ".fna".
+
+    Returns:
+        None
+        
+    Note:
+        This function has hardcoded paths. Changes will be made in further modifications in this tool. 
+        If reading from a text file, the 'input' argument must be an opened 
+        file object (e.g., `open('links.txt')`) rather than just the file path string, 
+        as the function iterates directly over the input.
     """
 
     output_dir = "./metagenomes_MGnify"
