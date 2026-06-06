@@ -17,14 +17,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # -----------------------------------------------------------------
-      # IMAGENS DO CONDA (Usando a fábrica Dockerfile_conda)
-      # -----------------------------------------------------------------
       - name: Build and push AntiSMASH/BiG-SCAPE environment
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile_conda
+          file: ./Dockerfile
           build-args: ENV_FILE=envs/antismash_bigscape.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-antismash:v1.0
@@ -33,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile_conda
+          file: ./Dockerfile
           build-args: ENV_FILE=envs/deepsea.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-deepsea:v1.0
@@ -42,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile_conda
+          file: ./Dockerfile
           build-args: ENV_FILE=envs/diamond_kofam.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-diamond:v1.0
@@ -51,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile_conda
+          file: ./Dockerfile
           build-args: ENV_FILE=envs/poem.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-poem:v1.0
