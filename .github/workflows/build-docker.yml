@@ -1,0 +1,68 @@
+name: Building and pushing Docker images to Docker Hub
+
+on:
+  push:
+    branches: [ "test", "main" ] 
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository codes
+        uses: actions/checkout@v3
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # -----------------------------------------------------------------
+      # 1. IMAGEM DO PYTHON (Para os scripts da pasta bin/)
+      # -----------------------------------------------------------------
+      - name: Build and push Python environment
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile_python
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-python:v1.0
+
+      # -----------------------------------------------------------------
+      # 2. IMAGENS DO CONDA (Usando a "fábrica" Dockerfile_conda)
+      # -----------------------------------------------------------------
+      - name: Build and push AntiSMASH/BiG-SCAPE environment
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile_conda
+          build-args: ENV_FILE=envs/antismash_bigscape.yml
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-antismash:v1.0
+
+      - name: Build and push DeepSEA environment
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile_conda
+          build-args: ENV_FILE=envs/deepsea.yml
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-deepsea:v1.0
+
+      - name: Build and push Diamond/KOfam environment
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile_conda
+          build-args: ENV_FILE=envs/diamond_kofam.yml
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-diamond:v1.0
+          
+      - name: Build and push POEM environment
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile_conda
+          build-args: ENV_FILE=envs/poem.yml
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-poem:v1.0
