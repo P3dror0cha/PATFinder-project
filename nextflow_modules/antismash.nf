@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process ANTISMASH {
+    container 'antismash/standalone:8.0.4'
     label 'antismash'
     publishDir "results/antismash", mode: 'copy'
 

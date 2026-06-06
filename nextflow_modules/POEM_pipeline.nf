@@ -2,23 +2,22 @@
 
 process POEM {
     label 'poem'
+    
     publishDir "results/poem", mode: 'copy'
 
     input:
-    path cds_files
+    path fna_files
 
     output:
-    path "*"                                   
-    path "input.fsa.operon", emit: operon_file 
+    path "${fna_files}_output", emit: poem_results_dir 
+    path "${fna_files}_output/input.fsa.operon", emit: operon_file, optional: true 
 
     script:
     """
-    cat ${cds_files.join(' ')} > merged_metagenome_cds.faa
-
-    bash ${projectDir}/POEM_py3k/bin/run_poem.sh \
-        -f merged_metagenome_cds.faa \
-        -a n \
-        -p pka \
+    bash ${projectDir}/POEM_py3k/bin/run_poem.sh \\
+        -f ${fna_files} \\
+        -a n \\
+        -p pka \\
         -l y
     """
 }
