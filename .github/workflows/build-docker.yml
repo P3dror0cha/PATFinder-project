@@ -22,7 +22,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: ENV_FILE=envs/antismash_bigscape.yml
+          build-args: ENV_FILE=envs/antismash_bigscape_atualized.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-antismash:v1.0
 
@@ -31,7 +31,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: ENV_FILE=envs/deepsea.yml
+          build-args: ENV_FILE=envs/deepsea_project_atualized.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-deepsea:v1.0
 
@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: ENV_FILE=envs/diamond_kofam.yml
+          build-args: ENV_FILE=envs/diamond_kofam_atualized.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-diamond:v1.0
           
@@ -49,6 +49,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: ENV_FILE=envs/poem.yml
+          build-args: ENV_FILE=envs/poem_py3_atualized.yml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/patfinder-poem:v1.0
