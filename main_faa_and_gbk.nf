@@ -16,32 +16,48 @@ include { FILTERING_POEM_RESULTS } from './nextflow_modules/filtering_POEM_resul
 include { DIAMOND } from './nextflow_modules/diamond.nf'
 include { FILTERING_DIAMOND_RESULTS } from './nextflow_modules/filtering_diamond_results.nf'
 
-params.fna_files = "data/*.fna"
-params.faa_files = "data/*.faa"
+params.gbk_files = null
+params.faa_files = null
 
 workflow {
 
     // ========================================================================
-    // 1 & 2. READING INPUTS AND PREPARING METADATA
+    // 1 & 2. READING INPUTS, PAIRING AND PREPARING METADATA
     // ========================================================================
-    ch_fna_by_name = Channel.fromPath(params.fna_files).map { tuple(it.baseName, it) }
-    ch_faa_by_name = Channel.fromPath(params.faa_files).map { tuple(it.baseName, it) }
-    
-    ch_meta_files = ch_fna_by_name
-        .join(ch_faa_by_name) 
-        .toList() 
-        .flatMap { it.withIndex() } 
-        .map { item, index ->
-            def (original_name, fna_file, faa_file) = item
-            def clean_name = String.format("sample_%08d", index + 1)
-            def meta = [ id: clean_name, original_id: original_name ]
-            return tuple(meta, fna_file, faa_file)
+
+    if (!params.gbk_files || !params.faa_files) {
+        error "ERRO: Please, provide the path to your gbk and faa files. Use --gbk_files and --faa_files."
+    }
+
+    def ch_gbk_by_name = Channel.fromPath(params.gbk_files)
+        .map { file ->
+            def id = file.name.replaceAll(/_[0-9]+\.region[0-9]+\.gbk$/, "")
+            tuple(id, file)
         }
+        .groupTuple() 
 
-    ch_fna_concat = ch_meta_files.map { meta, fna, faa -> tuple(meta, fna) }
-    ch_faa_concat = ch_meta_files.map { meta, fna, faa -> tuple(meta, faa) }
+    def ch_faa_by_name = Channel.fromPath(params.faa_files)
+        .map { file -> tuple(file.baseName, file) }
 
-    ch_fna_concat
+    def ch_paired_inputs = ch_gbk_by_name
+        .join(ch_faa_by_name)
+        .toList()                  
+        .flatMap { it.withIndex() } 
+        
+    ch_faa_concat = ch_paired_inputs.map { item, index ->
+        def (original_name, gbk_files_list, faa_file) = item
+        def clean_name = String.format("sample_%08d", index + 1)
+        def meta = [ id: clean_name, original_id: original_name ]
+        
+        return tuple(meta, faa_file) 
+    }
+
+    ch_gbks = ch_paired_inputs.flatMap { item, index ->
+        def (original_name, gbk_files_list, faa_file) = item
+        return gbk_files_list
+    }.collect()
+
+    ch_faa_concat
         .map { meta, file -> "${meta.id}\t${meta.original_id}\n" }
         .collectFile(
             name: 'ids_correlation.tsv', 
@@ -50,15 +66,7 @@ workflow {
         )
 
     // ========================================================================
-    // 3. ANTISMASH PIPELINE
-    // ========================================================================
-    ch_renamed_fasta = RENAME_FASTA(ch_fna_concat)
-    antismash_output = ANTISMASH(ch_renamed_fasta)
-    
-    ch_gbks = antismash_output.gbk.map { meta, gbk -> gbk }.collect()
-
-    // ========================================================================
-    // 4. DEEPSEA PIPELINE
+    // 4. DEEPSEA PIPELINE (Pula a etapa 3 do AntiSMASH)
     // ========================================================================
     ch_renamed_faa = RENAME_FAA(ch_faa_concat)
     ch_all_renamed_faa = ch_renamed_faa.map { meta, faa -> faa }.collect()

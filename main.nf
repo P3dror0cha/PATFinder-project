@@ -10,8 +10,11 @@ include { KOFAM } from './nextflow_modules/kofam.nf'
 include { FILTERING_KOFAM_RESULTS } from './nextflow_modules/filtering_kofam_results.nf'
 include { RENAME_FAA } from './nextflow_modules/rename_faa.nf'
 include { EXTRACTING_GBKS_SEQUENCES } from './nextflow_modules/extracting_gbks_sequences.nf'
+include { EXTRACTING_GBKS_CDS } from './nextflow_modules/extracting_gbks_cds.nf'
 include { POEM } from './nextflow_modules/POEM_pipeline.nf'
 include { FILTERING_POEM_RESULTS } from './nextflow_modules/filtering_POEM_results.nf'
+include { DIAMOND } from './nextflow_modules/diamond.nf'
+include { FILTERING_DIAMOND_RESULTS } from './nextflow_modules/filtering_diamond_results.nf'
 
 workflow {
 
@@ -19,6 +22,7 @@ workflow {
     // 1. DOWNLOAD METAGENOMES
     // ========================================================================
     results = MGNIFY_DOWNLOAD(params.max_pages, params.output_prefix)
+    
 
     // ========================================================================
     // 2. PREPARING CHANNELS AND METADATA
@@ -83,15 +87,26 @@ workflow {
     // ========================================================================
     // 6. KOFAM PIPELINE
     // ========================================================================
-    kofam = KOFAM(ch_all_renamed_faa)
+    cds_from_all_gbks = EXTRACTING_GBKS_CDS(ch_gbks)
+    kofam = KOFAM(cds_from_all_gbks)
     kofam_results = FILTERING_KOFAM_RESULTS(kofam.kofam_output, filtered_bigscape_results.filtered_bigscape_results)
 
     // ========================================================================
     // 6. POEM PIPELINE (OPERON)
     // ========================================================================
     sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks)
-    //poem_output = POEM(sequences_from_all_gbks)
-    //poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
+    poem_output = POEM(sequences_from_all_gbks.bgc_sequences)
+    poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
+
+    // ========================================================================
+    // 7. DIAMOND ALIGNMENT (RESISTANCE PROTEINS AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
+    // ========================================================================
+    diamond_results = DIAMOND(cds_from_all_gbks)
+    filtered_diamond_results = FILTERING_DIAMOND_RESULTS(diamond_results.diamond_result)
+
+    // ========================================================================
+    // 8. UNITING ALL RESULTS 
+    // ========================================================================
 
 }
 
