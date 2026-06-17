@@ -1,4 +1,4 @@
-name: poem_py3
+name: poem_py3_atualized
 channels:
 - bioconda
 - conda-forge
