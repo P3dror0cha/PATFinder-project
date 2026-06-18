@@ -6,7 +6,7 @@ process ANTISMASH {
     publishDir "results/antismash", mode: 'copy'
 
     input:
-    tuple val(meta), path(fasta_file)
+    tuple val(meta), path(fasta_file), path(antismash_db)
 
     output:
     tuple val(meta), path("${meta.id}/*region*.gbk"), emit: gbk
@@ -14,6 +14,7 @@ process ANTISMASH {
     script: 
     """
     antismash "$fasta_file" \
+        --databases ${params.antismash_db} \
         --genefinding-tool prodigal \
         --cb-general \
         --cb-knownclusters \
