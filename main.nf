@@ -1,4 +1,5 @@
 include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
+include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
 include { ANTISMASH } from './nextflow_modules/antismash.nf'
 include { BIGSCAPE } from './nextflow_modules/bigscape.nf'
 include { UNITING_ALL_GBKS } from './nextflow_modules/uniting_all_gbks_in_one_folder.nf'
@@ -58,8 +59,13 @@ workflow {
     // ========================================================================
     // 3. ANTISMASH PIPELINE
     // ========================================================================
+    DOWNLOAD_ANTISMASH_DB()
+    ch_db_antismash = DOWNLOAD_ANTISMASH_DB.out.db_antismash
     ch_renamed_fasta = RENAME_FASTA(ch_fna_concat)
-    antismash_output = ANTISMASH(ch_renamed_fasta)
+
+    ch_antismash_input = ch_renamed_fasta.combine(ch_db_antismash)
+
+    antismash_output = ANTISMASH(ch_antismash_input)
     
     ch_gbks = antismash_output.gbk.map { meta, gbk -> gbk }.collect()
 
