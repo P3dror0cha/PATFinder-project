@@ -1,5 +1,7 @@
 include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
 include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
+include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
+include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
 include { ANTISMASH } from './nextflow_modules/antismash.nf'
 include { BIGSCAPE } from './nextflow_modules/bigscape.nf'
 include { UNITING_ALL_GBKS } from './nextflow_modules/uniting_all_gbks_in_one_folder.nf'
@@ -57,9 +59,15 @@ workflow {
         )
 
     // ========================================================================
-    // 3. ANTISMASH PIPELINE
+    // 3. INSTALLING DATABASES
     // ========================================================================
     DOWNLOAD_ANTISMASH_DB()
+    DOWNLOAD_PFAM_DB()
+    DOWNLOAD_KOFAM_DB()
+
+    // ========================================================================
+    // 4. ANTISMASH PIPELINE
+    // ========================================================================
     ch_db_antismash = DOWNLOAD_ANTISMASH_DB.out.db_antismash
     ch_renamed_fasta = RENAME_FASTA(ch_fna_concat)
 
@@ -70,7 +78,7 @@ workflow {
     ch_gbks = antismash_output.gbk.map { meta, gbk -> gbk }.collect()
 
     // ========================================================================
-    // 4. DEEPSEA PIPELINE
+    // 5. DEEPSEA PIPELINE
     // ========================================================================
     ch_renamed_faa = RENAME_FAA(ch_faa_concat)
     ch_all_renamed_faa = ch_renamed_faa.map { meta, faa -> faa }.collect()
@@ -83,7 +91,7 @@ workflow {
     )
 
     // ========================================================================
-    // 5. BiG-SCAPE ANALYSIS
+    // 6. BiG-SCAPE ANALYSIS
     // ========================================================================
     all_BGCs = UNITING_ALL_GBKS(ch_gbks)
 
@@ -91,27 +99,27 @@ workflow {
     filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork)
 
     // ========================================================================
-    // 6. KOFAM PIPELINE
+    // 7. KOFAM PIPELINE
     // ========================================================================
     cds_from_all_gbks = EXTRACTING_GBKS_CDS(ch_gbks)
     kofam = KOFAM(cds_from_all_gbks)
     kofam_results = FILTERING_KOFAM_RESULTS(kofam.kofam_output, filtered_bigscape_results.filtered_bigscape_results)
 
     // ========================================================================
-    // 6. POEM PIPELINE (OPERON)
+    // 8. POEM PIPELINE (OPERON)
     // ========================================================================
     sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks)
     poem_output = POEM(sequences_from_all_gbks.bgc_sequences)
     poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
 
     // ========================================================================
-    // 7. DIAMOND ALIGNMENT (RESISTANCE PROTEINS AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
+    // 9. DIAMOND ALIGNMENT (RESISTANCE PROTEINS AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
     // ========================================================================
     diamond_results = DIAMOND(cds_from_all_gbks)
     filtered_diamond_results = FILTERING_DIAMOND_RESULTS(diamond_results.diamond_result)
 
     // ========================================================================
-    // 8. UNITING ALL RESULTS 
+    // 10. UNITING ALL RESULTS 
     // ========================================================================
 
 }
