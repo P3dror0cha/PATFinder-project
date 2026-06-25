@@ -1,42 +1,37 @@
-name: deepsea-project
+name: deepsea_project_updated
 
 channels:
   - conda-forge
   - bioconda
+  - nvidia 
 
 dependencies:
-  - python=3.10
-  - numpy
-  - pandas
-  - scipy
-  - scikit-learn
-  - matplotlib
-  - seaborn
-  - biopython
-  - gemmi
-  - mafft
-  - cd-hit
-  - diamond
-  - seqkit
-  - pymol-open-source
-  - nglview
-  - py3dmol
-  - logomaker
-  - jupyterlab
-  - cudatoolkit=11.8
-  - cudnn=8.9
+  - python=3.10 
+  - numpy=1.26.4
+  - pandas=2.2.1
+  - scipy=1.13.0
+  - scikit-learn=1.4.2
+  - matplotlib>=3.8,<3.10 
+  - seaborn=0.13.2
+  - biopython>=1.81 
+  - gemmi=0.6.6
+  - mafft=7.525
+  - cd-hit=4.8.1
+  - diamond=2.0.8
+  - seqkit=2.8.1
+  - pymol-open-source=2.5.0
+  - nglview=3.1.4
+  - py3dmol=2.4.2
+  - logomaker=0.8
+  - jupyterlab=4.3.4
+  - cudatoolkit=11.8.0
+  - cudnn>=8.9 
   - pip
   - pip:
       - tensorflow==2.15.0
-      - keras-tuner
-      - parmed
-      - dash
-      - dash-bio
-      - plotly
-      - kaleido
-      - keras-tuner
-      - parmed
-      - dash
-      - dash-bio
-      - plotly
-      - kaleido
+      - keras-tuner==1.4.7
+      - parmed==4.3.0
+      - dash==2.18.2
+      - dash-bio==1.0.2
+      - plotly==5.20.0
+      - kaleido==0.2.1
