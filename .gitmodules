@@ -1,0 +1,3 @@
+[submodule "DeepSEA-project"]
+	path = DeepSEA-project
+	url = https://github.com/computational-chemical-biology/DeepSEA-project.git
