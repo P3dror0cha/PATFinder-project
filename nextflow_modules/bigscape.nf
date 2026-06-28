@@ -25,7 +25,7 @@ bigscape cluster \
     -i bgcs_from_antismash \
     -o bigscape_output \
     --include-singletons \
-    -p ${pfam_db} \
+    -p ${pfam_db}/Pfam-A.hmm \
     --mibig-version 4.0
 """
 }
