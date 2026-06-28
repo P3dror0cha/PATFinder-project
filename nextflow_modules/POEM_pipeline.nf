@@ -14,6 +14,17 @@ process POEM {
 
     script:
     """
+    ## Check if nextflow is managed by micromamba or conda and set up the environment accordingly
+    if [ "\$CONDA_MANAGEMENT" = "micromamba" ]; then
+        conda() {
+            micromamba "\$@"
+        }
+        export -f conda
+
+    elif [ "\$CONDA_MANAGEMENT" = "conda" ]; then
+        source \$(conda info --base)/etc/profile.d/conda.sh
+    fi
+
     bash ${projectDir}/POEM_py3k/bin/run_poem.sh \\
         -f ${fna_files} \\
         -a n \\

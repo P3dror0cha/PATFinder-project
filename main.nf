@@ -2,6 +2,7 @@ include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
 include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
 include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
 include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
+include { DOWNLOAD_COG_DB } from './nextflow_modules/download_cog_db.nf'
 include { ANTISMASH } from './nextflow_modules/antismash.nf'
 include { BIGSCAPE } from './nextflow_modules/bigscape.nf'
 include { UNITING_ALL_GBKS } from './nextflow_modules/uniting_all_gbks_in_one_folder.nf'
@@ -64,6 +65,7 @@ workflow {
     DOWNLOAD_ANTISMASH_DB()
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
+    DOWNLOAD_COG_DB()
 
     // ========================================================================
     // 4. ANTISMASH PIPELINE

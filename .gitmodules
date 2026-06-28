@@ -1,3 +1,6 @@
 [submodule "DeepSEA-project"]
 	path = DeepSEA-project
 	url = https://github.com/computational-chemical-biology/DeepSEA-project.git
+[submodule "POEM_py3k"]
+	path = POEM_py3k
+	url = https://github.com/Rinoahu/POEM_py3k.git
