@@ -187,7 +187,7 @@ def K5_merging_kofam_df(final_df_filtered, df_list, df_kegg):
     df_merge = final_df_filtered.merge(df_kegg, on="KO", how="left")
     df_merge = df_merge.loc[df_merge["pathway"].str.startswith("map", na=False)]
     df_merge = df_merge.merge(df_list, on="pathway", how="left")
-    df_merge.to_csv("/home/pedro/PATFinder-project/results_backup/3.5_df_merge.csv")
+    #df_merge.to_csv("/home/pedro/PATFinder-project/results_backup/3.5_df_merge.csv")
 
     df_groupby = df_merge.groupby("BGC_ID").agg({
         "pathway": lambda x: ";".join(x.dropna().unique()),
