@@ -10,8 +10,8 @@ process FILTERING_DEEPSEA_RESULTS {
     path "gbks_temp_folder/*"
 
     output:
-    path "deepsea_final_merged.csv"
-    path "deepsea_images/"
+    path "deepsea_final_merged.csv", emit: deepsea_csv
+    path "deepsea_images/", emit: deepsea_images
     
 
 script: 

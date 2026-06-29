@@ -2,8 +2,8 @@
 
 process FILTERING_BIGSCAPE_RESULTS {
 
-    label 'filtering_bigscape_results'
-    publishDir "results", mode: 'copy'
+    label 'bigscape_results'
+    publishDir "results/bigscape_results", mode: 'copy'
 
     input:
     path bigscape_fullnetwork

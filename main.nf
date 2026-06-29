@@ -19,6 +19,7 @@ include { POEM } from './nextflow_modules/POEM_pipeline.nf'
 include { FILTERING_POEM_RESULTS } from './nextflow_modules/filtering_POEM_results.nf'
 include { DIAMOND } from './nextflow_modules/diamond.nf'
 include { FILTERING_DIAMOND_RESULTS } from './nextflow_modules/filtering_diamond_results.nf'
+include { CONCAT_ALL_RESULTS } from './nextflow_modules/concat_all_results.nf'
 
 workflow {
 
@@ -111,7 +112,7 @@ workflow {
     // 8. POEM PIPELINE (OPERON)
     // ========================================================================
     sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks)
-    poem_output = POEM(sequences_from_all_gbks.bgc_sequences)
+    poem_output = POEM(sequences_from_all_gbks.bgc_sequences, DOWNLOAD_COG_DB.out.cog_db)
     poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
 
     // ========================================================================
@@ -123,6 +124,11 @@ workflow {
     // ========================================================================
     // 10. UNITING ALL RESULTS 
     // ========================================================================
+    concat = CONCAT_ALL_RESULTS(
+        poem_results.poem_filtered_csv, 
+        deepsea_results.deepsea_csv,
+        kofam_results.kofam_bigscape_filtered_results,
+        filtered_diamond_results.diamond_filtered_result)
 
 }
 

@@ -46,8 +46,8 @@ def uniting_kofam_diamond_results(kofam_results, diamond_results):
         pd.DataFrame: A unified DataFrame containing the gene annotations.
     '''
 
-    kofam_results = kofam_results.rename(columns={"gene name": "gene_id"})
-    diamond_results = diamond_results.rename(columns={"qseqid": "gene_id"})
+    kofam_results = kofam_results.rename(columns={"BGC_ID": "bgc_id"})
+    diamond_results["bgc_id"] = diamond_results
 
     df_united = pd.merge(
         kofam_results, 

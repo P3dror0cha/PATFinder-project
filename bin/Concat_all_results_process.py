@@ -10,8 +10,13 @@ from Concat_all_results_functions import (
 
 def concat_process(poem_results, deepsea_results, kofam_results, diamond_results):
 
-    df_poem_deepsea = uniting_poem_deepsea_results(poem_results, deepsea_results)
-    df_kofam_diamond = uniting_kofam_diamond_results(kofam_results, diamond_results)
+    df_poem = pd.read_csv(poem_results)
+    df_deepsea = pd.read_csv(deepsea_results)
+    df_kofam = pd.read_csv(kofam_results)
+    df_diamond = pd.read_csv(diamond_results)
+
+    df_poem_deepsea = uniting_poem_deepsea_results(df_poem, df_deepsea)
+    df_kofam_diamond = uniting_kofam_diamond_results(df_kofam, df_diamond)
 
     df_final_concat = uniting_all_infos(df_poem_deepsea, df_kofam_diamond)
 
@@ -34,6 +39,5 @@ if __name__ == "__main__":
         kofam_results=args.kofam,
         diamond_results=args.diamond
     )
-
     df_final.to_csv(args.output, index=False)
 
