@@ -3,7 +3,6 @@
 work
 .conda
 .gitmodules
-POEM_py3k
 Docker*
 install.sh
 run_poem.sh
