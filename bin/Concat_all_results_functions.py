@@ -47,12 +47,12 @@ def uniting_kofam_diamond_results(kofam_results, diamond_results):
     '''
 
     kofam_results = kofam_results.rename(columns={"BGC_ID": "bgc_id"})
-    diamond_results["bgc_id"] = diamond_results
+    diamond_results["bgc_id"] = diamond_results["id"].str.extract(r'(sample_\d+_\d+)')
 
     df_united = pd.merge(
         kofam_results, 
         diamond_results, 
-        on="gene_id", 
+        on="bgc_id", 
         how="outer"
         )
     
@@ -75,7 +75,6 @@ def uniting_all_infos(poem_deepsea, kofam_diamond):
         pd.DataFrame: The final DataFrame integrating all analyzed information.
     '''
 
-    kofam_diamond["bgc_id"] = kofam_diamond["gene_id"].str.extract(r'(^[^|]+)')
     kofam_diamond['bgc_id'] = kofam_diamond['bgc_id'].str.strip()
 
     df_united = pd.merge(
