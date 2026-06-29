@@ -12,7 +12,7 @@ process DOWNLOAD_COG_DB {
     mkdir -p cog/cog2014
 
     echo "Download COG database"
-    wget -q -c ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/*2014* -P cog/
+    wget -q -c ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/*2014* -P cog/cog2014/
 
     echo "Unzip cog fasta and format the file by diamond"
     gunzip cog/prot2003-2014.fa.gz
