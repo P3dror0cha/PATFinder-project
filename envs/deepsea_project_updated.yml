@@ -13,7 +13,7 @@ dependencies:
   - scikit-learn=1.4.2
   - matplotlib>=3.8,<3.10 
   - seaborn=0.13.2
-  - biopython>=1.81 
+  - biopython=1.80 
   - gemmi=0.6.6
   - mafft=7.525
   - cd-hit=4.8.1
