@@ -25,7 +25,7 @@ def DS1_append_deepsea_results(path_to_deepsea_tsv):
         all_results.append(df)
     combined_df = pd.concat(all_results, ignore_index=True)
 
-    combined_df["genome"] = combined_df["Name"].str.split("_").str[0]
+    combined_df["genome"] = combined_df["Name"].str.extract(r'(sample_\d+)')
     combined_df = combined_df.rename(columns={"Name": "id"})
 
     combined_df = combined_df.rename(
@@ -35,7 +35,7 @@ def DS1_append_deepsea_results(path_to_deepsea_tsv):
             "genome": "genome_deepsea",
         }
     )
-
+    combined_df.to_csv("ds1_df.csv")
     return combined_df
 
 
@@ -79,6 +79,7 @@ def DS2_append_faa(path_to_all_faa):
             "source_file": "source_file_cds",
         }
     )
+    faa_df.to_csv("ds2_df.csv")
     return faa_df
 
 
@@ -113,6 +114,7 @@ def DS3_merge_deepsea_df(combined_df, faa_df):
         "source_file_cds"
     )["class_deepsea"].transform(lambda x: x.mode()[0])
 
+    resistance_proteins.to_csv("ds3_df.csv")
     return resistance_proteins
 
 
@@ -325,6 +327,8 @@ def DS6_parse_antismash_gbks(input_directory):
             except Exception as e:
                 print(f"Error in file {filename}: {e}")
 
+    df = pd.DataFrame(all_rows)
+    df.to_csv("ds6_df.csv")
     return pd.DataFrame(all_rows)
 
 
@@ -351,6 +355,8 @@ def DS7_filtering_antismash_gbks(df_bgc_features):
     ].transform(lambda x: x.ffill().bfill())
     df_bgc_features = df_bgc_features[df_bgc_features["feature_type"] == "CDS"]
 
+
+    df_bgc_features.to_csv("ds7_df.csv")
     return df_bgc_features
 
 
@@ -378,6 +384,7 @@ def DS8_merging_dataframes(df_bgc_features, resistance_proteins):
         resistance_proteins, on="sequence", how="inner"
     )
 
+    df_bgc_resistance_proteins.to_csv("ds8_df.csv")
     return df_bgc_resistance_proteins
 
 
@@ -389,7 +396,8 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
     Cleans up the final joined DataFrame and exports it to a CSV file.
 
     Drops any columns that are entirely composed of missing values (NaN) 
-    before exporting.
+    before exporting. Drop not necessary columns, group the deepsea hits per BGC, 
+    and rename the final columns.
 
     Args:
         df_bgc_resistance_proteins (pd.DataFrame): Merged BGC-Resistance DataFrame.
@@ -404,10 +412,43 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
     df_bgc_resistance_proteins = df_bgc_resistance_proteins.dropna(
         axis=1, how="all"
     )
+
+    df_bgc_resistance_proteins = df_bgc_resistance_proteins.drop(columns=[
+        "feature_type",
+        "location",
+        "product",
+        "region_number",
+        "locus_tag",
+        "gene_kind",
+        "gene_functions",
+        "eggnog_coverage",
+        "ipr_coverage",
+        "taxon_lineage",
+        "last_update",
+        "source_file_cds"
+    ])
+
+    df_bgc_resistance_proteins = df_bgc_resistance_proteins.groupby("record_id")[[
+        'class_deepsea',
+        'prob_deepsea',
+        'sequence',
+        'description_cds'
+    ]].agg(lambda x: ', '.join(x.astype(str))).reset_index()
+
+    df_bgc_resistance_proteins['deepsea_hits_count'] = df_bgc_resistance_proteins.groupby('record_id')['class_deepsea'].transform('size')
+    
+    df_bgc_resistance_proteins.rename(columns={
+        "class_deepsea": "deepsea_class",
+        "prob_deepsea": "deepsea_prob",
+        "sequence": "deepsea_hits_sequence",
+        "description_cds": "deepsea_cds_description"
+    })
+
     df_bgc_resistance_proteins.to_csv(
         "resistance_proteins_in_bgc.csv", index=False
     )
 
+    df_bgc_resistance_proteins.to_csv("ds9_df.csv")
     return df_bgc_resistance_proteins
 
 
