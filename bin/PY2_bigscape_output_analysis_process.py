@@ -14,6 +14,8 @@ def BS4_processing_bigscape(fullnetwork_file_path, output_file):
     df_reference = BS2_reference_bgcs()
     df_united = BS3_uniting_reference_with_sample_BGCs(df_reference, df)
     
+    df_united.drop(columns=["ORF_coords_a", "ORF_coords_b"], inplace=True)
+
     df_united.to_csv(output_file, sep="\t", index=False)
     
     return df_united

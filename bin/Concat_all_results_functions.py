@@ -94,7 +94,7 @@ def uniting_kofam_diamond_results(kofam_results, diamond_results):
     '''
 
     kofam_results = kofam_results.rename(columns={"BGC_ID": "bgc_id"})
-    diamond_results["bgc_id"] = diamond_results["id"].str.extract(r'(sample_\d+_\d+)')
+    #diamond_results["bgc_id"] = diamond_results["id"].str.extract(r'(sample_\d+_\d+)')
 
     df_united = pd.merge(
         kofam_results, 
@@ -132,3 +132,38 @@ def uniting_all_infos(poem_deepsea, kofam_diamond):
         )
 
     return df_united
+
+def sorting_concat_columns(df_united):
+    
+    df_united = df_united.rename(columns={
+        "GBK_b": "MIBIG_bgc", 
+        "weights": "BIG_SCAPE_weights",
+        "class": "MIBIG_class",
+        "compound_name": "MIBIG_compound_name"})
+
+    columns_order = [
+        "bgc_id",
+        "query_bgc_class",
+        "MIBIG_bgc",
+        "MIBIG_class",
+        "MIBIG_compound_name",
+        "distance",
+        "jaccard",
+        "adjacency",
+        "dss",
+        "BIG-SCAPE_weights",
+        "deepsea_class",
+        "deepsea_prob",
+        "deepsea_hits_sequence",
+        "deepsea_cds_description",
+        "deepsea_hits_count",
+        "uniprot_id",
+        "uniprot_evalue",
+        "uniprot_proteins",
+        "uniprot_genes",
+        "uniprot_hits_count",
+        "KO",
+        "filtered_pathways",
+        "strand",
+        "coordinates"
+        ]

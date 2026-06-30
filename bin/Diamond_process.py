@@ -2,12 +2,14 @@ import pandas as pd
 import argparse
 
 from Diamond_functions import (
-    parse_diamond_result
+    parse_diamond_result,
+    clustering_results_by_id
 )
 
 def Diamond_process(diamond_output_file, antibiotic_biosynthesis_proteins_tsv_path, antibiotic_resistance_proteins_tsv_path, output_csv="diamond_annotated_results.csv",):
 
     df_annotated = parse_diamond_result(diamond_output_file, antibiotic_biosynthesis_proteins_tsv_path, antibiotic_resistance_proteins_tsv_path)
+    df_annotated = clustering_results_by_id(df_annotated)
     df_annotated.to_csv(output_csv, index=False)
 
     return df_annotated
