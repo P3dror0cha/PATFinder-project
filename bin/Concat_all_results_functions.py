@@ -1,7 +1,47 @@
 import pandas as pd
 import re
+import os
+from Bio import SeqIO
 
-def uniting_poem_deepsea_results(poem_result, deepsea_result):
+def product_from_gbk_files(gbk_files):
+    """
+    Parses antiSMASH GenBank (.gbk) files to extract BGC and CDS features.
+
+    Iterates over all .gbk files in the directory, capturing global taxonomy, 
+    identifying BGC regions/protoclusters, and extracting detailed annotations 
+    (sequence, locus tags, product types) for all Coding Sequences (CDS).
+
+    Args:
+        input_directory (str): Path to the folder containing antiSMASH .gbk files.
+
+    Returns:
+        pd.DataFrame: A DataFrame where each row represents a parsed feature 
+            (mostly CDS) mapped to its broader BGC region context.
+    """
+
+    all_rows = []
+
+    for file_path in gbk_files:
+            filename = os.path.basename(file_path) 
+
+            try:
+                for record in SeqIO.parse(file_path, "genbank"):
+                    for feat in record.features:
+                        
+                        if feat.type in ["region", "protocluster"]:
+                            product_str = ", ".join(feat.qualifiers.get("product", ["NaN"]))
+                            
+                            all_rows.append({
+                                "record_id": record.id,
+                                "query_bgc_class": product_str
+                            })
+
+            except Exception as e:
+                print(f"Error in file {filename}: {e}")
+
+    return pd.DataFrame(all_rows)
+
+def uniting_poem_deepsea_results(df_bgc_product, poem_result, deepsea_result):
     '''
     Merges POEM and DeepSea results into a single DataFrame.
 
@@ -16,7 +56,7 @@ def uniting_poem_deepsea_results(poem_result, deepsea_result):
     Returns:
         pd.DataFrame: A unified DataFrame containing both results.
     '''
-
+    df_bgc_product = df_bgc_product.rename(columns={"record_id": "bgc_id"})
     poem_result = poem_result.rename(columns={"metagenome_id": "bgc_id"})
     deepsea_result = deepsea_result.rename(columns={"record_id": "bgc_id"})
 
@@ -26,6 +66,13 @@ def uniting_poem_deepsea_results(poem_result, deepsea_result):
         on="bgc_id", 
         how="outer"
         )
+
+    df_united = pd.merge(
+        df_united,
+        df_bgc_product,
+        on="bgc_id",
+        how="outer"
+    )
 
     return df_united
 

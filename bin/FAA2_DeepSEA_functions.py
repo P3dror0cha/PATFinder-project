@@ -315,8 +315,6 @@ def DS6_parse_antismash_gbks(input_directory):
                                 "gene_kind": gene_kind,
                                 "gene_functions": gene_functions_str,
                                 "sequence": translation,
-                                "eggnog-coverage": "NaN",
-                                "ipr-coverage": "NaN",
                                 "taxon-lineage": region_data["taxon_lineage"],
                                 "last-update": record.annotations.get(
                                     "date", "NaN"
@@ -409,47 +407,42 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
         resistance_proteins_in_bgc.csv in the current working directory.
     """
     
-    df_bgc_resistance_proteins = df_bgc_resistance_proteins.dropna(
+    df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins.dropna(
         axis=1, how="all"
     )
 
-    df_bgc_resistance_proteins = df_bgc_resistance_proteins.drop(columns=[
+    df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins_filtered.drop(columns=[
         "feature_type",
         "location",
-        "product",
         "region_number",
         "locus_tag",
-        "gene_kind",
         "gene_functions",
-        "eggnog_coverage",
-        "ipr_coverage",
-        "taxon_lineage",
-        "last_update",
+        "taxon-lineage",
+        "last-update",
         "source_file_cds"
     ])
 
-    df_bgc_resistance_proteins = df_bgc_resistance_proteins.groupby("record_id")[[
-        'class_deepsea',
-        'prob_deepsea',
-        'sequence',
-        'description_cds'
-    ]].agg(lambda x: ', '.join(x.astype(str))).reset_index()
-
-    df_bgc_resistance_proteins['deepsea_hits_count'] = df_bgc_resistance_proteins.groupby('record_id')['class_deepsea'].transform('size')
+    df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins_filtered.groupby("record_id").agg(
+        deepsea_class=('class_deepsea', lambda x: ', '.join(x.astype(str))),
+        deepsea_prob=('prob_deepsea', lambda x: ', '.join(x.astype(str))),
+        deepsea_hits_sequence=('sequence', lambda x: ', '.join(x.astype(str))),
+        deepsea_cds_description=('description_cds', lambda x: ', '.join(x.astype(str))),
+        deepsea_hits_count=('class_deepsea', 'size') 
+    ).reset_index()
     
-    df_bgc_resistance_proteins.rename(columns={
+    df_bgc_resistance_proteins_filtered.rename(columns={
         "class_deepsea": "deepsea_class",
         "prob_deepsea": "deepsea_prob",
         "sequence": "deepsea_hits_sequence",
         "description_cds": "deepsea_cds_description"
     })
 
-    df_bgc_resistance_proteins.to_csv(
+    df_bgc_resistance_proteins_filtered.to_csv(
         "resistance_proteins_in_bgc.csv", index=False
     )
 
-    df_bgc_resistance_proteins.to_csv("ds9_df.csv")
-    return df_bgc_resistance_proteins
+    df_bgc_resistance_proteins_filtered.to_csv("ds9_df.csv")
+    return df_bgc_resistance_proteins_filtered
 
 
 ##################################################################################

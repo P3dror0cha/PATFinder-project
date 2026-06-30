@@ -35,11 +35,11 @@ def DeepSEA_process(path_to_deepsea_tsv, path_to_all_faa, antismash_output, outp
     df_bgc_features = DS7_filtering_antismash_gbks(df_bgc_features)
 
     df_bgc_resistance_proteins = DS8_merging_dataframes(df_bgc_features, resistance_proteins_df)
-    df_bgc_resistance_proteins = DS9_download_resistance_proteins_info(df_bgc_resistance_proteins)
+    df_bgc_resistance_proteins_filtered = DS9_download_resistance_proteins_info(df_bgc_resistance_proteins)
 
     DS10_deepsea_heatmap(df_bgc_resistance_proteins, output_image_dir)
 
-    return df_bgc_resistance_proteins
+    return df_bgc_resistance_proteins_filtered
 
 if __name__ == "__main__":
     

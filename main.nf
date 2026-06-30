@@ -125,6 +125,7 @@ workflow {
     // 10. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
+        all_BGCs,
         poem_results.poem_filtered_csv, 
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
