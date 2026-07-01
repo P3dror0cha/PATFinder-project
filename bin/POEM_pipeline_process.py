@@ -3,12 +3,14 @@ import argparse
 
 from POEM_pipeline_functions import (
     POEM1_parse_operon_string,
-    POEM2_process_poem_table
+    POEM2_process_poem_table,
+    POEM3_clustering_results
 )
 
 def POEM3_operon_pipeline(output_POEM_pipeline_path, output_csv_path):
     df = POEM2_process_poem_table(output_POEM_pipeline_path)
     df = df[["metagenome_id", "strand", "coordinates"]]
+    df = POEM3_clustering_results(df)
     df.to_csv(output_csv_path, index=False)
 
     return df

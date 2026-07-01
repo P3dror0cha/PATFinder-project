@@ -134,7 +134,22 @@ def uniting_all_infos(poem_deepsea, kofam_diamond):
     return df_united
 
 def sorting_concat_columns(df_united):
-    
+    '''
+    Consolidates BGC information (POEM/DeepSea) with gene annotations (KOfam/Diamond).
+
+    This function creates a 'bgc_id' column in the gene DataFrame by extracting 
+    the prefix from the 'gene_id' column (capturing all text before the first '|' 
+    character via Regular Expression) and strips any trailing whitespaces. Finally, 
+    it performs an outer merge with the BGC DataFrame.
+
+    Args:
+        df_united (pd.DataFrame): Output from the function "uniting_all_infos".
+
+    Returns:
+        pd.DataFrame: The final DataFrame with final results filtered.
+    '''
+
+
     df_united = df_united.rename(columns={
         "GBK_b": "MIBIG_bgc", 
         "weights": "BIG_SCAPE_weights",
@@ -151,7 +166,7 @@ def sorting_concat_columns(df_united):
         "jaccard",
         "adjacency",
         "dss",
-        "BIG-SCAPE_weights",
+        "BIG_SCAPE_weights",
         "deepsea_class",
         "deepsea_prob",
         "deepsea_hits_sequence",
@@ -167,3 +182,11 @@ def sorting_concat_columns(df_united):
         "strand",
         "coordinates"
         ]
+    
+    df_united = df_united[columns_order]
+
+    
+
+    df_united = df_united.drop_duplicates()
+
+    return df_united

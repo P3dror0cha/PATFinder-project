@@ -434,7 +434,7 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
         "class_deepsea": "deepsea_class",
         "prob_deepsea": "deepsea_prob",
         "sequence": "deepsea_hits_sequence",
-        "description_cds": "deepsea_cds_description"
+        "description_cds": "deepsea_faa_header_description"
     })
 
     df_bgc_resistance_proteins_filtered.to_csv(

@@ -34,8 +34,11 @@ def BS1_filtering_bigscape_results(output_dir):
     df_filtered.columns = df_filtered.iloc[0]
     df_filtered = df_filtered[1:]
     df_filtered = df_filtered.drop(columns=['Record_a', 'Record_Type_a', 'Record_Number_a', 'Record_b', 'Record_Type_b', 'Record_Number_b', "alignment_mode", "extend_strategy"])
-    df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region\d+", "", regex=True)
-    df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region\d+", "", regex=True)
+    
+    #df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region(\d+)", r"_\1", regex=True)
+    #df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region(\d+)", r"_\1", regex=True)
+    df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region", "_", regex=True)
+    df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region", "_", regex=True)
     mask = df_filtered["GBK_a"].str.startswith("BGC") & ~df_filtered["GBK_b"].str.startswith("BGC")
     df_filtered.loc[mask, ["GBK_a", "GBK_b", "ORF_coords_a", "ORF_coords_b"]] = df_filtered.loc[mask, ["GBK_b", "GBK_a", "ORF_coords_b", "ORF_coords_a"]].values
     return df_filtered

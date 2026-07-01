@@ -6,7 +6,8 @@ from Concat_all_results_functions import (
     product_from_gbk_files,
     uniting_poem_deepsea_results,
     uniting_kofam_diamond_results,
-    uniting_all_infos
+    uniting_all_infos,
+    sorting_concat_columns
 )
 
 def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diamond_results):
@@ -22,6 +23,7 @@ def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diam
     df_kofam_diamond = uniting_kofam_diamond_results(df_kofam, df_diamond)
 
     df_final_concat = uniting_all_infos(df_poem_deepsea, df_kofam_diamond)
+    df_final_concat = sorting_concat_columns(df_final_concat)
 
     return df_final_concat
 

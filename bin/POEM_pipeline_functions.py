@@ -62,7 +62,7 @@ def POEM2_process_poem_table(table_path, sep="\t"):
         sep (str, optional): The delimiter string used in the file. Defaults to "\t".
         
     Returns:
-        pd.DataFrame: The processed DataFrame containing three newly parsed columns: 
+        pd.DataFrame: The processed DataFrame containing three columns: 
             'metagenome_id', 'strand', and 'coordinates'.
         
     Raises:
@@ -79,3 +79,20 @@ def POEM2_process_poem_table(table_path, sep="\t"):
 
     return df
 
+###################################################################################
+
+def POEM3_clustering_results(df):
+    """
+    Aggregate the coordinate results by metagenome id and strand.
+    
+    Args:
+        poem_dataframe (str): Path to the output of the "POEM2_process_poem_table".
+        
+    Returns:
+        pd.DataFrame: The processed DataFrame containing three columns: 
+            'metagenome_id', 'strand', and 'coordinates'.
+    """
+
+    df = df.groupby(['metagenome_id', 'strand'], as_index=False)['coordinates'].agg(' / '.join)
+
+    return df
