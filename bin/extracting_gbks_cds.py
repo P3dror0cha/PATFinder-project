@@ -1,4 +1,3 @@
-# Parsing CDS sequences from .gbk files in /home/pedro/antismash/resultados/all_BGCs
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord

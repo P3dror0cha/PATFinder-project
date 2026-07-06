@@ -407,20 +407,37 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
         resistance_proteins_in_bgc.csv in the current working directory.
     """
     
+
+    final_columns = [
+        "record_id", "deepsea_class", "deepsea_prob", 
+        "deepsea_hits_sequence", "deepsea_cds_description", "deepsea_hits_count"
+    ]
+
+    if df_bgc_resistance_proteins.empty:
+        df_empty_result = pd.DataFrame(columns=final_columns)
+        
+        df_empty_result.to_csv("resistance_proteins_in_bgc.csv", index=False)
+        df_empty_result.to_csv("ds9_df.csv", index=False)
+        
+        return df_empty_result
+
     df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins.dropna(
         axis=1, how="all"
     )
 
-    df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins_filtered.drop(columns=[
-        "feature_type",
-        "location",
-        "region_number",
-        "locus_tag",
-        "gene_functions",
-        "taxon-lineage",
-        "last-update",
-        "source_file_cds"
-    ])
+    df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins_filtered.drop(
+        columns=[
+            "feature_type",
+            "location",
+            "region_number",
+            "locus_tag",
+            "gene_functions",
+            "taxon-lineage",
+            "last-update",
+            "source_file_cds"
+        ],
+        errors="ignore"
+    )
 
     df_bgc_resistance_proteins_filtered = df_bgc_resistance_proteins_filtered.groupby("record_id").agg(
         deepsea_class=('class_deepsea', lambda x: ', '.join(x.astype(str))),
@@ -429,19 +446,9 @@ def DS9_download_resistance_proteins_info(df_bgc_resistance_proteins):
         deepsea_cds_description=('description_cds', lambda x: ', '.join(x.astype(str))),
         deepsea_hits_count=('class_deepsea', 'size') 
     ).reset_index()
-    
-    df_bgc_resistance_proteins_filtered.rename(columns={
-        "class_deepsea": "deepsea_class",
-        "prob_deepsea": "deepsea_prob",
-        "sequence": "deepsea_hits_sequence",
-        "description_cds": "deepsea_faa_header_description"
-    })
 
-    df_bgc_resistance_proteins_filtered.to_csv(
-        "resistance_proteins_in_bgc.csv", index=False
-    )
-
-    df_bgc_resistance_proteins_filtered.to_csv("ds9_df.csv")
+    df_bgc_resistance_proteins_filtered.to_csv("resistance_proteins_in_bgc.csv", index=False)
+    df_bgc_resistance_proteins_filtered.to_csv("ds9_df.csv", index=False)
     return df_bgc_resistance_proteins_filtered
 
 
@@ -464,6 +471,21 @@ def DS10_deepsea_heatmap(df_bgc_resistance_proteins, output_dir="deepsea_images"
         resistance_proteins_heatmap.png in the specified output directory.
     """
     
+    if df_bgc_resistance_proteins.empty:
+        os.makedirs(output_dir, exist_ok=True)
+        
+        plt.figure(figsize=(10, 6))
+        plt.text(0.5, 0.5, "No resistance proteins detected.", 
+                 ha='center', va='center', fontsize=14, color='gray', style='italic')
+        plt.axis('off') 
+        plt.title("Resistance Classes in BGCs heatmap")
+        plt.tight_layout()
+        output_path = os.path.join(output_dir, "resistance_proteins_heatmap.png")
+        plt.savefig(output_path, dpi=300)
+        plt.close()
+        
+        return
+
     df_filtered = df_bgc_resistance_proteins[
         [
             "record_id",
