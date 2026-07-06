@@ -13,7 +13,7 @@ process DEEPSEA {
 
 script: 
     """
-    export LD_LIBRARY_PATH=\$CONDA_PREFIX/lib:\$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=\${CONDA_PREFIX:-}/lib:\${LD_LIBRARY_PATH:-}
 
     ln -s ${projectDir}/DeepSEA-project/class-encoder .
     ln -s ${projectDir}/DeepSEA-project/models .
