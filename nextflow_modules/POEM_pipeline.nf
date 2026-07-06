@@ -15,6 +15,12 @@ process POEM {
 
     script:
     """
+    if [ -d "/home/mambauser/app" ]; then
+        POEM_SOURCE="/home/mambauser/app"
+    else
+        POEM_SOURCE="${projectDir}/POEM_py3k"
+    fi
+
     if [ "\${CONDA_MANAGEMENT:-}" = "micromamba" ]; then
         conda() {
             if [ "\$1" = "activate" ] || [ "\$1" = "deactivate" ] || [ "\$1" = "hook" ]; then
@@ -28,14 +34,21 @@ process POEM {
         source \$(conda info --base)/etc/profile.d/conda.sh
     fi
 
-    mkdir -p tmp_poem_env/database
-    ln -s \$(pwd)/${cog_db} tmp_poem_env/database/cog
-    
-    ln -s ${projectDir}/POEM_py3k/bin tmp_poem_env/bin
-    ln -s ${projectDir}/POEM_py3k/lib tmp_poem_env/lib
-    ln -s ${projectDir}/POEM_py3k/config tmp_poem_env/config
+    if ! command -v conda &> /dev/null; then
+        conda() { return 0; }
+        export -f conda
+    fi
 
-    bash ${projectDir}/POEM_py3k/bin/run_poem.sh \\
+    mkdir -p tmp_poem_env/database
+    ln -s \$(readlink -f ${cog_db}) tmp_poem_env/database/cog
+    
+    ln -s \$POEM_SOURCE/bin tmp_poem_env/bin
+    ln -s \$POEM_SOURCE/lib tmp_poem_env/lib
+    ln -s \$POEM_SOURCE/config tmp_poem_env/config
+
+    export PYTHONPATH=\$(pwd)/tmp_poem_env/lib:\${PYTHONPATH:-}
+
+    bash tmp_poem_env/bin/run_poem.sh \\
         -f ${fna_files} \\
         -a n \\
         -p pka \\
