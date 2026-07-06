@@ -15,10 +15,10 @@ process DOWNLOAD_COG_DB {
     wget -q -c ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/*2014* -P cog/cog2014/
 
     echo "Unzip cog fasta and format the file by diamond"
-    gunzip cog/prot2003-2014.fa.gz
+    gunzip cog/cog2014/prot2003-2014.fa.gz
     
     diamond makedb \\
-        --in cog/prot2003-2014.fa \\
-        -d cog/prot2003-2014.fa
+        --in cog/cog2014/prot2003-2014.fa \\
+        -d cog/cog2014/prot2003-2014.fa
     """
 }
