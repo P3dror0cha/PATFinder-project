@@ -5,6 +5,7 @@ import pandas as pd
 import glob
 import os
 import argparse
+import re
 
 def extract_cds_from_gbk(gbk_files):
     """
@@ -27,7 +28,14 @@ def extract_cds_from_gbk(gbk_files):
     results = []
 
     for gbk in glob.glob(gbk_files):
+        filename = os.path.basename(gbk)
+        
+        match = re.search(r'region_?(\d+)', filename, re.IGNORECASE)
+        region_suffix = f"_{match.group(1)}" if match else ""
+
         for record in SeqIO.parse(gbk, "genbank"):
+            
+            final_record_id = f"{record.id}{region_suffix}"
             
             cds_features = filter(lambda f: f.type == "CDS", record.features)
 
@@ -48,8 +56,8 @@ def extract_cds_from_gbk(gbk_files):
                 )
 
                 results.append({
-                    "gbk_file": os.path.basename(gbk),
-                    "record_id": record.id,
+                    "gbk_file": filename,
+                    "record_id": final_record_id, 
                     "feature_type": feature.type,
                     "feature_id": feature_id,
                     "start": int(feature.location.start),

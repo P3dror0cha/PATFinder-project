@@ -44,7 +44,7 @@ def K1_kofam_import(kofam_result_list):
         data,
         columns=['best_hits','query', 'KO', 'threshold', 'score', 'evalue', 'description', 'function']
     )
-    #df.to_csv("/home/pedro/PATFinder-project/results_backup/1_df_do_kofam.csv")
+    df.to_csv("/home/pedro/PATFinder-project/results_backup/1_df_do_kofam.csv")
     return df
 
 ##############################################################################################
@@ -74,7 +74,7 @@ def K2_kofam_best_hits(df):
 
     df_best_hits.drop(columns=["best_hits", "threshold", "score", "function"], inplace=True)
 
-    #df_best_hits.to_csv("/home/pedro/PATFinder-project/results_backup/2_df_best_hits_do_kofam.csv")
+    df_best_hits.to_csv("/home/pedro/PATFinder-project/results_backup/2_df_best_hits_do_kofam.csv")
     return df_best_hits
 
 ##############################################################################################
@@ -119,7 +119,7 @@ def K3_kofam_without_best_hits(df, df_best_hits):
     final_df["percentual"] = final_df.groupby("query")["quality"].transform("mean") * 100
 
     final_df_filtered = final_df.drop(columns=["evalue", "description"])
-    #final_df_filtered.to_csv("/home/pedro/PATFinder-project/results_backup/3_final_df_filtered.csv", index=False)
+    final_df_filtered.to_csv("/home/pedro/PATFinder-project/results_backup/3_final_df_filtered.csv", index=False)
     return final_df_filtered
 
 ##############################################################################################
@@ -162,8 +162,8 @@ def K4_KEGG_API_information(url="https://rest.kegg.jp/link/pathway/ko", url_2="h
     data = [line.split("\t") for line in lines if "\t" in line]
 
     df_list = pd.DataFrame(data, columns=["pathway", "description"])
-    #df_kegg.to_csv("/home/pedro/PATFinder-project/results_backup/df_kegg.csv")
-    #df_list.to_csv("/home/pedro/PATFinder-project/results_backup/df_list.csv")
+    df_kegg.to_csv("/home/pedro/PATFinder-project/results_backup/df_kegg.csv")
+    df_list.to_csv("/home/pedro/PATFinder-project/results_backup/df_list.csv")
     return df_kegg, df_list
 
 ##############################################################################################
@@ -187,7 +187,7 @@ def K5_merging_kofam_df(final_df_filtered, df_list, df_kegg):
     df_merge = final_df_filtered.merge(df_kegg, on="KO", how="left")
     df_merge = df_merge.loc[df_merge["pathway"].str.startswith("map", na=False)]
     df_merge = df_merge.merge(df_list, on="pathway", how="left")
-    #df_merge.to_csv("/home/pedro/PATFinder-project/results_backup/3.5_df_merge.csv")
+    df_merge.to_csv("/home/pedro/PATFinder-project/results_backup/3.5_df_merge.csv")
 
     df_groupby = df_merge.groupby("BGC_ID").agg({
         "pathway": lambda x: ";".join(x.dropna().unique()),
@@ -219,8 +219,8 @@ def K6_uniting_BGC_information(BIGSCAPE_result, df_groupby):
     df_bgc = pd.read_csv(BIGSCAPE_result, sep='\t')
     df_bgc.columns = df_bgc.columns.str.strip()
     df_bgc.rename(columns={"GBK_a": "BGC_ID"}, inplace=True) 
-    #df_bgc.to_csv("/home/pedro/PATFinder-project/results_backup/df_bgc_antes_do_merge.csv", index=False)
-    #df_groupby.to_csv("/home/pedro/PATFinder-project/results_backup/df_groupby.csv", index=False)
+    df_bgc.to_csv("/home/pedro/PATFinder-project/results_backup/df_bgc_antes_do_merge.csv", index=False)
+    df_groupby.to_csv("/home/pedro/PATFinder-project/results_backup/df_groupby.csv", index=False)
     df_bgc = pd.merge(df_bgc, df_groupby, on="BGC_ID", how="left")
 
     return df_bgc
@@ -288,6 +288,6 @@ def K8_uniting_all_information(df_bgc, output_path_raw_csv, output_path_filtered
     df_bgc_filtered = df_bgc.drop(columns=["pathway", "description", "KO_quality_percentual"])
     df_bgc.to_csv(output_path_raw_csv, index=False)
     df_bgc_filtered.to_csv(output_path_filtered_csv, index=False)
-    #df_bgc_filtered.to_csv("/home/pedro/PATFinder-project/results_backup/8_df_bgc_filtered.csv", index=False)
+    df_bgc_filtered.to_csv("/home/pedro/PATFinder-project/results_backup/8_df_bgc_filtered.csv", index=False)
     
     return df_bgc, df_bgc_filtered

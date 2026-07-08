@@ -12,6 +12,7 @@ include { FILTERING_DEEPSEA_RESULTS } from './nextflow_modules/filtering_deepsea
 include { KOFAM } from './nextflow_modules/kofam.nf'
 include { FILTERING_KOFAM_RESULTS } from './nextflow_modules/filtering_kofam_results.nf'
 include { RENAME_FAA } from './nextflow_modules/rename_faa.nf'
+include { RENAME_GBKS } from './nextflow_modules/rename_gbks.nf'
 include { EXTRACTING_GBKS_SEQUENCES } from './nextflow_modules/extracting_gbks_sequences.nf'
 include { EXTRACTING_GBKS_CDS } from './nextflow_modules/extracting_gbks_cds.nf'
 include { POEM } from './nextflow_modules/POEM_pipeline.nf'
@@ -25,7 +26,7 @@ include { CONCAT_ALL_RESULTS } from './nextflow_modules/concat_all_results.nf'
 // ========================================================================
 params.gbk_files = null
 params.faa_files = null
-params.pfam_db   = null // Garantindo a existência do parâmetro caso use local
+params.pfam_db   = null 
 
 workflow {
 
@@ -50,7 +51,30 @@ workflow {
         .join(ch_faa_by_name)
         .toList()                  
         .flatMap { it.withIndex() } 
+
+    ch_gbks = ch_paired_inputs.flatMap { item, index ->
+        def (original_name, gbk_files_list, faa_file) = item
+        return gbk_files_list
+    }.collect()
+
+    def plan_rename = ch_paired_inputs.flatMap { item, index ->
+        def (original_name, gbk_files_list, faa_file) = item
+        def clean_name = String.format("sample_%08d", index + 1)
         
+        return gbk_files_list.collect { gbk ->
+            def matcher = gbk.name =~ /_([0-9]+)\.region([0-9]+)\.gbk$/
+            
+            def valor1 = matcher ? matcher[0][1] : "00" // Corrigir isto aqui!!! 
+            def valor2 = matcher ? matcher[0][2] : "000" 
+            
+            def novo_nome = "${clean_name}_${valor1}_${valor2}.gbk"
+            
+            return tuple(gbk, novo_nome)
+        }
+    }
+
+    ch_gbks_renamed = RENAME_GBKS(plan_rename).collect()
+
     ch_faa_concat = ch_paired_inputs.map { item, index ->
         def (original_name, gbk_files_list, faa_file) = item
         def clean_name = String.format("sample_%08d", index + 1)
@@ -59,18 +83,6 @@ workflow {
         return tuple(meta, faa_file) 
     }
 
-    ch_gbks = ch_paired_inputs.flatMap { item, index ->
-        def (original_name, gbk_files_list, faa_file) = item
-        return gbk_files_list
-    }.collect()
-
-    ch_faa_concat
-        .map { meta, file -> "${meta.id}\t${meta.original_id}\n" }
-        .collectFile(
-            name: 'ids_correlation.tsv', 
-            storeDir: 'results', 
-            seed: "Padronized_ID\tOriginal_ID\n"
-        )
 
     // ========================================================================
     // 2. INSTALLING DATABASES
@@ -93,21 +105,20 @@ workflow {
     // ========================================================================
     all_BGCs = UNITING_ALL_GBKS(ch_gbks)
 
-    // Dica: se quiser usar o banco recém baixado, use: DOWNLOAD_PFAM_DB.out.pfam_db
     bigscape_output = BIGSCAPE(all_BGCs.bgc_dir, file(params.pfam_db))
     filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork)
 
     // ========================================================================
     // 5. KOFAM PIPELINE
     // ========================================================================
-    cds_from_all_gbks = EXTRACTING_GBKS_CDS(ch_gbks)
+    cds_from_all_gbks = EXTRACTING_GBKS_CDS(ch_gbks_renamed)
     kofam = KOFAM(cds_from_all_gbks)
     kofam_results = FILTERING_KOFAM_RESULTS(kofam.kofam_output, filtered_bigscape_results.filtered_bigscape_results)
 
     // ========================================================================
     // 6. POEM PIPELINE (OPERON)
     // ========================================================================
-    sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks)
+    sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks_renamed)
     poem_output = POEM(sequences_from_all_gbks.bgc_sequences, DOWNLOAD_COG_DB.out.cog_db)
     poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
 
