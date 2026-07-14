@@ -52,7 +52,7 @@ workflow {
     ch_fna_concat = ch_meta_files.map { meta, fna, faa -> tuple(meta, fna) }
     ch_faa_concat     = ch_meta_files.map { meta, fna, faa -> tuple(meta, faa) }
 
-    ch_fna_concat
+    ids_correlation = ch_fna_concat
         .map { meta, file -> "${meta.id}\t${meta.original_id}\n" }
         .collectFile(
             name: 'ids_correlation.tsv', 
@@ -99,7 +99,7 @@ workflow {
     all_BGCs = UNITING_ALL_GBKS(ch_gbks)
 
     bigscape_output = BIGSCAPE(all_BGCs.bgc_dir, file(params.pfam_db))
-    filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork)
+    filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork, ids_correlation)
 
     // ========================================================================
     // 7. KOFAM PIPELINE
@@ -129,7 +129,9 @@ workflow {
         poem_results.poem_filtered_csv, 
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
-        filtered_diamond_results.diamond_filtered_result)
+        filtered_diamond_results.diamond_filtered_result,
+        ids_correlation
+        )
 
 }
 
