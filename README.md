@@ -45,7 +45,14 @@ Note that nextflow requires Java version 17 or higher.
 
 The workflow has two different pipelines. 
 
-main.nf: In this mode PATFinder obtains publicly available metagenomes from MGnify API. Changes in the search can be done by modifications in the url link in MGnify_download_functions.py. For usage do the following:
+## Option 1 – Public metagenomes (`main.nf`):
+This workflow automatically retrieves publicly available metagenomes from the MGnify API.
+
+The search criteria can be customized by modifying the URL defined in:
+
+```text
+bin/MGnify_download_functions.py
+```
 ```bash
 # If you are using conda
 nextflow run main.nf -resume -profile conda
