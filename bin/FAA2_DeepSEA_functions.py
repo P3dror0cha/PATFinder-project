@@ -306,7 +306,7 @@ def DS6_parse_antismash_gbks(input_directory):
                             )
 
                             row = {
-                                "record_id": record.id,
+                                "record_id": os.path.splitext(filename)[0].replace(".region", "_"),
                                 "feature_type": feature.type,
                                 "location": str(feature.location),
                                 "product": region_data["product"],

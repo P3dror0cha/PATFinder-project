@@ -73,6 +73,16 @@ workflow {
         }
     }
 
+    def genome_mapping = ch_paired_inputs.map { item, index ->
+        def (original_name, gbk_files_list, faa_file) = item
+        def clean_name = String.format("sample_%08d", index + 1)
+        return "${clean_name}\t${original_name}"
+    }.collectFile(
+        name: 'genome_mapping.tsv',
+        storeDir: 'results',
+        seed: "sample_id\toriginal_id\n"
+    )
+
     ch_gbks_renamed = RENAME_GBKS(plan_rename).collect()
 
     ch_faa_concat = ch_paired_inputs.map { item, index ->
@@ -83,6 +93,13 @@ workflow {
         return tuple(meta, faa_file) 
     }
 
+    ids_correlation = ch_faa_concat.map { meta, file ->
+            "${meta.id}\t${meta.original_id}\n"
+        }.collectFile(
+            name: 'ids_correlation.tsv',
+            storeDir: 'results',
+            seed: "Padronized_ID\tOriginal_ID\n"
+        )
 
     // ========================================================================
     // 2. INSTALLING DATABASES
@@ -98,7 +115,7 @@ workflow {
     ch_all_renamed_faa = ch_renamed_faa.map { meta, faa -> faa }.collect()
 
     deepsea = DEEPSEA(ch_all_renamed_faa)
-    deepsea_results = FILTERING_DEEPSEA_RESULTS(deepsea.deepsea_merged_table, ch_all_renamed_faa, ch_gbks)
+    deepsea_results = FILTERING_DEEPSEA_RESULTS(deepsea.deepsea_merged_table, ch_all_renamed_faa, ch_gbks_renamed)
 
     // ========================================================================
     // 4. BiG-SCAPE ANALYSIS
@@ -106,7 +123,7 @@ workflow {
     all_BGCs = UNITING_ALL_GBKS(ch_gbks)
 
     bigscape_output = BIGSCAPE(all_BGCs.bgc_dir, file(params.pfam_db))
-    filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork)
+    filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork, ids_correlation)
 
     // ========================================================================
     // 5. KOFAM PIPELINE
@@ -136,6 +153,7 @@ workflow {
         poem_results.poem_filtered_csv, 
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
-        filtered_diamond_results.diamond_filtered_result
+        filtered_diamond_results.diamond_filtered_result,
+        ids_correlation
     )
 }

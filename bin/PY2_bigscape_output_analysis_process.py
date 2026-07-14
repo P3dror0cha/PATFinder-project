@@ -6,18 +6,12 @@ from PY2_bigscape_output_analysis_functions import BS1_filtering_bigscape_result
 from PY2_bigscape_output_analysis_functions import BS2_reference_bgcs 
 from PY2_bigscape_output_analysis_functions import BS3_uniting_reference_with_sample_BGCs
 
-def BS4_processing_bigscape(fullnetwork_file_path, output_file):
-    """
-    This function is the filtering step for BiG-SCAPE results. 
-    """
-    df = BS1_filtering_bigscape_results(fullnetwork_file_path)
+def BS4_processing_bigscape(fullnetwork_file_path, genome_mapping_path, output_file):
+    df = BS1_filtering_bigscape_results(fullnetwork_file_path, genome_mapping_path)
     df_reference = BS2_reference_bgcs()
     df_united = BS3_uniting_reference_with_sample_BGCs(df_reference, df)
-    
     df_united.drop(columns=["ORF_coords_a", "ORF_coords_b"], inplace=True)
-
     df_united.to_csv(output_file, sep="\t", index=False)
-    
     return df_united
 
 def main():
@@ -36,10 +30,17 @@ def main():
         help="Path to output file."
     )
 
+    parser.add_argument(
+    "--genome_mapping",
+    required=True,
+    help="Path to genome_mapping.tsv mapping sample_id to original_id"
+    )
+
     args = parser.parse_args()
 
     BS4_processing_bigscape(
         fullnetwork_file_path=args.fullnetwork_file_path,
+        genome_mapping_path=args.genome_mapping,
         output_file=args.output_file
     )
 

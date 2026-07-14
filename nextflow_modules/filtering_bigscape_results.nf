@@ -7,6 +7,7 @@ process FILTERING_BIGSCAPE_RESULTS {
 
     input:
     path bigscape_fullnetwork
+    path ids_correlation
 
     output:
     path "filtered_bigscape_results.tsv", emit: filtered_bigscape_results
@@ -15,6 +16,7 @@ script:
     """
     python3 ${projectDir}/bin/PY2_bigscape_output_analysis_process.py \
         --fullnetwork_file_path ${bigscape_fullnetwork} \
+        --genome_mapping ${ids_correlation} \
         --output_file filtered_bigscape_results.tsv
     """
     }

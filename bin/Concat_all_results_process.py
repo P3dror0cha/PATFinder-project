@@ -7,10 +7,11 @@ from Concat_all_results_functions import (
     uniting_poem_deepsea_results,
     uniting_kofam_diamond_results,
     uniting_all_infos,
-    sorting_concat_columns
+    sorting_concat_columns,
+    create_bgc_class_correlation
 )
 
-def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diamond_results):
+def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diamond_results, ids_correlation):
 
     df_poem = pd.read_csv(poem_results)
     df_deepsea = pd.read_csv(deepsea_results)
@@ -18,14 +19,15 @@ def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diam
     df_diamond = pd.read_csv(diamond_results)
 
     df_bgc_product = product_from_gbk_files(gbk_files)
+    df_bgc_correlation = create_bgc_class_correlation(df_bgc_product, ids_correlation)
 
-    df_poem_deepsea = uniting_poem_deepsea_results(df_bgc_product, df_poem, df_deepsea)
+    df_poem_deepsea = uniting_poem_deepsea_results(df_bgc_correlation, df_poem, df_deepsea)
     df_kofam_diamond = uniting_kofam_diamond_results(df_kofam, df_diamond)
 
     df_final_concat = uniting_all_infos(df_poem_deepsea, df_kofam_diamond)
     df_final_concat = sorting_concat_columns(df_final_concat)
 
-    return df_final_concat
+    return df_final_concat, df_bgc_correlation
 
 if __name__ == "__main__":
 
@@ -36,15 +38,18 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--kofam", required=True, help="Path to Kofam results")
     parser.add_argument("-d", "--diamond", required=True, help="Path to Diamond and Uniprot results")
     parser.add_argument("-o", "--output", required=True, help="Path to save the final concatenated dataframe")
+    parser.add_argument("-i", "--ids-correlation", required=True, help="Path to ids_correlation.tsv")
 
     args = parser.parse_args()
 
-    df_final = concat_process(
+    df_final, df_bgc_correlation = concat_process(
         gbk_files=args.gbk,
         poem_results=args.poem,
         deepsea_results=args.deepsea,
         kofam_results=args.kofam,
-        diamond_results=args.diamond
+        diamond_results=args.diamond,
+        ids_correlation=args.ids_correlation
     )
     df_final.to_csv(args.output, index=False)
+    df_bgc_correlation.to_csv("bgc_class_correlation.csv", index=False)
 

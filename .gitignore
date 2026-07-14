@@ -3,6 +3,5 @@
 work
 .conda
 .gitmodules
-Docker*
 install.sh
 run_poem.sh

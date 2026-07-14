@@ -29,13 +29,11 @@ def extract_cds_from_gbk(gbk_files):
 
     for gbk in glob.glob(gbk_files):
         filename = os.path.basename(gbk)
+        record_id_from_filename = os.path.splitext(filename)[0].replace(".region", "_")
         
-        match = re.search(r'region_?(\d+)', filename, re.IGNORECASE)
-        region_suffix = f"_{match.group(1)}" if match else ""
-
         for record in SeqIO.parse(gbk, "genbank"):
             
-            final_record_id = f"{record.id}{region_suffix}"
+            final_record_id = record_id_from_filename
             
             cds_features = filter(lambda f: f.type == "CDS", record.features)
 

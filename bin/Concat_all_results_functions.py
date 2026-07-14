@@ -32,7 +32,7 @@ def product_from_gbk_files(gbk_files):
                             product_str = ", ".join(feat.qualifiers.get("product", ["NaN"]))
                             
                             all_rows.append({
-                                "record_id": record.id,
+                                "record_id": os.path.splitext(filename)[0].replace(".region", "_"),
                                 "query_bgc_class": product_str
                             })
 
@@ -41,7 +41,7 @@ def product_from_gbk_files(gbk_files):
 
     return pd.DataFrame(all_rows)
 
-def uniting_poem_deepsea_results(df_bgc_product, poem_result, deepsea_result):
+def uniting_poem_deepsea_results(df_bgc_correlation, poem_result, deepsea_result):
     '''
     Merges POEM and DeepSea results into a single DataFrame.
 
@@ -56,7 +56,7 @@ def uniting_poem_deepsea_results(df_bgc_product, poem_result, deepsea_result):
     Returns:
         pd.DataFrame: A unified DataFrame containing both results.
     '''
-    df_bgc_product = df_bgc_product.rename(columns={"record_id": "bgc_id"})
+    df_bgc_correlation = df_bgc_correlation.rename(columns={"padronized_name": "bgc_id"})
     poem_result = poem_result.rename(columns={"metagenome_id": "bgc_id"})
     deepsea_result = deepsea_result.rename(columns={"record_id": "bgc_id"})
 
@@ -69,7 +69,7 @@ def uniting_poem_deepsea_results(df_bgc_product, poem_result, deepsea_result):
 
     df_united = pd.merge(
         df_united,
-        df_bgc_product,
+        df_bgc_correlation,
         on="bgc_id",
         how="outer"
     )
@@ -158,6 +158,7 @@ def sorting_concat_columns(df_united):
 
     columns_order = [
         "bgc_id",
+        "original_name",
         "query_bgc_class",
         "MIBIG_bgc",
         "MIBIG_class",
@@ -190,3 +191,29 @@ def sorting_concat_columns(df_united):
     df_united = df_united.drop_duplicates()
 
     return df_united
+
+def create_bgc_class_correlation(df_bgc_product, ids_correlation_path):
+    ids_corr = pd.read_csv(ids_correlation_path, sep="\t")
+    original_to_sample = dict(zip(ids_corr["Original_ID"], ids_corr["Padronized_ID"]))
+
+    sorted_originals = sorted(original_to_sample.keys(), key=len, reverse=True)
+
+    rows = []
+    for _, row in df_bgc_product.iterrows():
+        record_id = row["record_id"]
+
+        matched_base = None
+        for original_base in sorted_originals:
+            if record_id.startswith(original_base):
+                matched_base = original_base
+                break
+
+        if matched_base:
+            suffix = record_id[len(matched_base):]
+            rows.append({
+                "original_name": record_id,
+                "padronized_name": original_to_sample[matched_base] + suffix,
+                "query_bgc_class": row["query_bgc_class"]
+            })
+
+    return pd.DataFrame(rows)

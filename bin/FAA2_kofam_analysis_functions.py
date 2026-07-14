@@ -111,9 +111,9 @@ def K3_kofam_without_best_hits(df, df_best_hits):
     final_df = pd.concat([df_best_hits, df_without_best_hits], ignore_index=True)
     final_df = final_df[~final_df["query"].isna() & (final_df["query"] != "NaN")]
 
-    final_df["metagenome_ID"] = final_df["query"].str.extract(r"(sample_\d+)") \
+    final_df["metagenome_ID"] = final_df["query"].str.extract(r"([a-zA-Z]+_\d+)") \
         .fillna("").astype(str).agg("_".join, axis=1)
-    final_df["BGC_ID"] = final_df["query"].str.extract(r"(sample_\d+_\d+)") \
+    final_df["BGC_ID"] = final_df["query"].str.extract(r"^([a-zA-Z]+_\d+(?:_\d+)*)") \
         .fillna("").astype(str).agg("_".join, axis=1)
 
     final_df["percentual"] = final_df.groupby("query")["quality"].transform("mean") * 100

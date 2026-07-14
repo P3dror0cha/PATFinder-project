@@ -7,10 +7,11 @@ import tarfile
 import os
 import glob
 import json
+import re
 
 
 #'./bigscape/*full.network'
-def BS1_filtering_bigscape_results(output_dir):
+def BS1_filtering_bigscape_results(output_dir, ids_correlation_path=None):
     """
     Filters and preprocesses BiG-SCAPE full_network results.
 
@@ -22,6 +23,7 @@ def BS1_filtering_bigscape_results(output_dir):
 
     Args:
         output_dir (str): Path to the BiG-SCAPE full network file (tab-separated).
+        genome_mapping_path (str, optional): Path to the genome mapping file.
 
     Returns:
         pd.DataFrame: A cleaned and filtered DataFrame ready for downstream analysis.
@@ -39,6 +41,25 @@ def BS1_filtering_bigscape_results(output_dir):
     #df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region(\d+)", r"_\1", regex=True)
     df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region", "_", regex=True)
     df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region", "_", regex=True)
+    
+    if ids_correlation_path:
+        mapping = {}
+        with open(ids_correlation_path) as f:
+            next(f)  
+            for line in f:
+                parts = line.strip().split("\t")
+                if len(parts) == 2:
+                    mapping[parts[1]] = parts[0]  
+
+    if mapping:
+        for mgg_id, sample_id in mapping.items():
+            df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(
+                f"^{re.escape(mgg_id)}", sample_id, regex=True
+            )
+            df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(
+                f"^{re.escape(mgg_id)}", sample_id, regex=True
+            )
+    
     mask = df_filtered["GBK_a"].str.startswith("BGC") & ~df_filtered["GBK_b"].str.startswith("BGC")
     df_filtered.loc[mask, ["GBK_a", "GBK_b", "ORF_coords_a", "ORF_coords_b"]] = df_filtered.loc[mask, ["GBK_b", "GBK_a", "ORF_coords_b", "ORF_coords_a"]].values
     return df_filtered
