@@ -46,13 +46,12 @@ Note that nextflow requires Java version 17 or higher.
 The workflow has two different pipelines. 
 
 ## Option 1 – Public metagenomes (`main.nf`):
-This workflow automatically retrieves publicly available metagenomes from the MGnify API.
-
-The search criteria can be customized by modifying the URL defined in:
-
+This workflow automatically retrieves publicly available metagenomes from the MGnify API. The search criteria can be customized by modifying the URL defined in:
 ```text
 bin/MGnify_download_functions.py
 ```
+
+For usage of this mode, run the following commands:
 ```bash
 # If you are using conda
 nextflow run main.nf -resume -profile conda
@@ -61,7 +60,8 @@ nextflow run main.nf -resume -profile conda
 nextflow run main.nf -resume -profile micromamba
 ```
 
-main_faa_and_gbk.nf: In this mode PATFinder takes your .gbk and .faa files as input. Before usage of the pipeline, the .gbk files must have a name similar to antiSMASH output and be present in the same folder. The name convention are: {sample_name}_{contig_number}.region{region_number}.gbk (ex. MGYG000296008_22.region001.gbk). The .faa files must have corresponding names with the .gbk files.
+## Option 2 – User-provided GBK and FAA files (`main_faa_and_gbk.nf`):
+In this mode PATFinder takes your .gbk and .faa files as input. Before usage of the pipeline, the .gbk files must have a name similar to antiSMASH output and be present in the same folder. The name convention are: {sample_name}_{contig_number}.region{region_number}.gbk (ex. MGYG000296008_22.region001.gbk). The .faa files must have corresponding names with the .gbk files.
 
 An example of accepted inputs are described below:
 ```text
