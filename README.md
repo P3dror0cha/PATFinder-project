@@ -51,6 +51,8 @@ This workflow automatically retrieves publicly available metagenomes from the MG
 bin/MGnify_download_functions.py
 ```
 
+If you want to increase the number of results, increase the number of pages queried from the API. Use the max_pages param in nextflow.config
+
 For usage of this mode, run the following commands:
 ```bash
 # If you are using conda
