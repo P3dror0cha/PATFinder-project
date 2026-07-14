@@ -1,0 +1,871 @@
+ClusterBlast scores for MGYG000296006_71
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg71_1	539	1409	+		
+ctg71_2	1714	2053	+		
+ctg71_3	2226	3084	+		
+ctg71_4	3080	3860	+		
+ctg71_5	3872	4478	+		
+ctg71_6	4474	5053	+		
+ctg71_7	5098	5257	+		
+ctg71_8	5349	5760	+		
+ctg71_9	5769	6108	+		
+
+
+Significant hits: 
+1. NZ_JRAA01000001	Solemya velum gill symbiont strain WH SV_sym_Scaffold_1, whole genome shotgun sequence
+2. NZ_KB849780	Acinetobacter calcoaceticus DSM 30006 = CIP 81.8 acLsb-supercont1.3, whole genome shotgun sequence
+3. NZ_KI530699	Acinetobacter gyllenbergii NIPH 230 adfcq-supercont1.1, whole genome shotgun sequence
+4. NZ_KK211067	Marinobacterium jannaschii DSM 6295 Q354DRAFT_scaffold00010.10, whole genome shotgun sequence
+5. NZ_CP059139	Pseudomonas sp. MSPm1 chromosome
+6. NZ_LR733826	Pseudomonas sp. 8Z isolate Pseudomonas sp. 8Z, whole genome shotgun sequence
+7. NZ_CP100553	Pseudomonas hydrolytica strain KHPS2 chromosome, complete genome
+8. NZ_CP099397	Pseudomonas hydrolytica strain DSWY01 chromosome, complete genome
+9. NZ_CP011508	Pseudomonas mendocina strain NSYSU chromosome, complete genome
+10. NZ_LR733267	Pseudomonas sp. 8O isolate Pseudomonas sp. 8O, whole genome shotgun sequence
+11. NZ_CP017290	Pseudomonas sp. LPH1 chromosome, complete genome
+12. NZ_RHQP01000024	Pseudomonas sp. o96-267 strain 297 NODE_24_length_86267_cov_35.0998, whole genome shotgun sequence
+13. NZ_CP060009	Pseudomonas sediminis strain B10D7D chromosome, complete genome
+14. NZ_CP070505	Pseudomonas toyotomiensis strain SM2 chromosome, complete genome
+15. NZ_CP027657	Pseudomonas mendocina strain NEB698 chromosome, complete genome
+16. NZ_LMMB01000039	Pseudomonas sp. Leaf83 contig_9, whole genome shotgun sequence
+17. NZ_CP016162	Pseudomonas alcaliphila JAB1 chromosome, complete genome
+18. NZ_ML178805	Pseudomonas sp. HS-2 Scaffold1, whole genome shotgun sequence
+19. NZ_CP095766	Pseudomonas chengduensis strain T1624 chromosome, complete genome
+20. NZ_QXDA01000003	Pseudomonas oleovorans strain E1205 Ga0222393_103, whole genome shotgun sequence
+21. NZ_CP060288	Pseudomonas mendocina strain CPS5 chromosome, complete genome
+22. NZ_CP115817	Pseudomonas mendocina strain GD22SC3150TT chromosome, complete genome
+23. NZ_PIYS01000001	Pseudomonas pharmacofabricae strain ZYSR67-Z 1, whole genome shotgun sequence
+24. NZ_CP072610	Pseudomonas wenzhouensis strain A20 chromosome, complete genome
+25. NC_015410	Pseudomonas mendocina NK-01, complete sequence
+26. NZ_CP016268	Woeseia oceani strain XK5 chromosome, complete genome
+27. NZ_CP071797	Pseudomonas fluorescens strain YK-310 chromosome, complete genome
+28. NZ_CP031704	Solimonas sp. K1W22B-7 chromosome, complete genome
+29. NZ_QICN01000007	Sinimarinibacterium flocculans strain DSM 104150 Ga0215726_107, whole genome shotgun sequence
+30. NZ_KB907126	Thioalkalivibrio sp. ALJT G332DRAFT_scaffold00006.6, whole genome shotgun sequence
+31. NZ_KB897934	Thioalkalivibrio sp. ALE25 C996DRAFT_scaffold00010.10, whole genome shotgun sequence
+32. NZ_KB898096	Thioalkalivibrio sp. ALE28 D105DRAFT_scaffold00004.4, whole genome shotgun sequence
+33. NZ_KB905025	Thioalkalivibrio sp. ALE31 D103DRAFT_scaffold00006.6, whole genome shotgun sequence
+34. NZ_AUDT01000013	Thioalkalivibrio sp. ALE17 H609DRAFT_scaffold00011.11_C, whole genome shotgun sequence
+35. NZ_KB898122	Thioalkalivibrio sp. ALE9 D106DRAFT_scaffold00001.1, whole genome shotgun sequence
+36. NZ_KB906359	Thioalkalivibrio sp. ALE16 F627DRAFT_scaffold00006.6, whole genome shotgun sequence
+37. NZ_KB906506	Thioalkalivibrio sp. ALE22 F793DRAFT_scaffold00008.8, whole genome shotgun sequence
+38. NZ_CP007029	Thioalkalivibrio paradoxus ARh 1 chromosome, complete genome
+39. NZ_KB906947	Thioalkalivibrio sp. AKL7 G315DRAFT_scaffold00001.1, whole genome shotgun sequence
+40. NC_019902	Thioalkalivibrio nitratireducens DSM 14787, complete sequence
+41. NZ_KB906226	Thioalkalivibrio sp. ALMg3 F622DRAFT_scaffold00008.8, whole genome shotgun sequence
+42. NZ_KB906115	Thioalkalivibrio sp. ALMg13-2 F618DRAFT_scaffold00016.16, whole genome shotgun sequence
+43. NZ_AQYC01000009	Thioalkalivibrio sp. ALMg9 F792DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+44. NZ_KB899538	Thioalkalivibrio sp. ALJ12 F467DRAFT_scaffold00001.1, whole genome shotgun sequence
+45. NZ_CP011367	Thioalkalivibrio versutus strain D301 chromosome, complete genome
+46. NZ_MVAR01000003	Thioalkalivibrio versutus strain AL 2 Ga0073318_103, whole genome shotgun sequence
+47. NZ_KB898900	Thioalkalivibrio sp. AKL12 D579DRAFT_scaffold00012.12, whole genome shotgun sequence
+48. NZ_KB907143	Thioalkalivibrio sp. AKL10 G333DRAFT_scaffold00002.2, whole genome shotgun sequence
+49. NZ_KB898877	Thioalkalivibrio sp. ALMg11 D578DRAFT_scaffold00007.7, whole genome shotgun sequence
+50. NZ_KB905112	Thioalkalivibrio sp. AKL9 D573DRAFT_scaffold00010.10, whole genome shotgun sequence
+
+
+Details:
+
+>>
+1. NZ_JRAA01000001
+Source: Solemya velum gill symbiont strain WH SV_sym_Scaffold_1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1158.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	JV46_RS00565	67	386	94.73684210526315	3.74e-134
+ctg71_4	JV46_RS00570	46	202	95.36679536679536	1.4e-62
+ctg71_5	JV46_RS00575	76	299	93.53233830845771	1.8e-102
+ctg71_6	JV46_RS00580	53	207	100.0	6.91e-66
+ctg71_7	JV46_RS00585	52	64	96.15384615384616	7.38e-14
+
+
+
+>>
+2. NZ_KB849780
+Source: Acinetobacter calcoaceticus DSM 30006 = CIP 81.8 acLsb-supercont1.3, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 752.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F936_RS12725	54	290	95.43859649122807	4.01e-96
+ctg71_4	F936_RS12720	31	84	75.67567567567568	4.5e-17
+ctg71_5	F936_RS12735	61	224	93.03482587064677	9.15e-73
+ctg71_6	F936_RS12715	43	154	90.625	1.96e-45
+
+
+
+>>
+3. NZ_KI530699
+Source: Acinetobacter gyllenbergii NIPH 230 adfcq-supercont1.1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 752.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F987_RS19340	51	285	96.84210526315789	3.62e-94
+ctg71_4	F987_RS19335	32	86	66.02316602316603	2.08e-18
+ctg71_5	F987_RS19350	59	229	93.53233830845771	7.54e-75
+ctg71_6	F987_RS19325	41	152	90.625	1.15e-44
+
+
+
+>>
+4. NZ_KK211067
+Source: Marinobacterium jannaschii DSM 6295 Q354DRAFT_scaffold00010.10, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 712.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	Q354_RS0120750	54	317	98.59649122807016	8.45e-107
+ctg71_4	Q354_RS0120755	36	145	96.52509652509652	3.04e-40
+ctg71_5	Q354_RS0120760	66	250	93.53233830845771	4.68e-83
+
+
+
+>>
+5. NZ_CP059139
+Source: Pseudomonas sp. MSPm1 chromosome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 674.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	HS968_RS17190	54	283	94.38596491228071	1.7e-93
+ctg71_4	HS968_RS17185	33	122	92.27799227799228	9.83e-32
+ctg71_5	HS968_RS17180	67	269	96.01990049751244	9.82e-91
+
+
+
+>>
+6. NZ_LR733826
+Source: Pseudomonas sp. 8Z isolate Pseudomonas sp. 8Z, whole genome shotgun sequence
+Type: NAGGN,RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 673.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	AERO9A_RS10355	53	285	97.19298245614036	1.48e-94
+ctg71_4	AERO9A_RS10360	31	115	92.27799227799228	4.44e-29
+ctg71_5	AERO9A_RS10365	68	273	94.5273631840796	4.05e-92
+
+
+
+>>
+7. NZ_CP100553
+Source: Pseudomonas hydrolytica strain KHPS2 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 673.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	NLY38_RS17375	53	283	96.14035087719299	1.2e-93
+ctg71_4	NLY38_RS17370	32	120	94.5945945945946	5.38e-31
+ctg71_5	NLY38_RS17365	68	270	93.53233830845771	6.91e-91
+
+
+
+>>
+8. NZ_CP099397
+Source: Pseudomonas hydrolytica strain DSWY01 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 670.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	L1F06_RS16640	53	284	96.14035087719299	4.21e-94
+ctg71_4	L1F06_RS16635	31	119	94.5945945945946	2.09e-30
+ctg71_5	L1F06_RS16630	68	267	93.53233830845771	5.66e-90
+
+
+
+>>
+9. NZ_CP011508
+Source: Pseudomonas mendocina strain NSYSU chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 669.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	PSMEN_RS15905	53	282	96.14035087719299	3.42e-93
+ctg71_4	PSMEN_RS15900	32	119	94.98069498069498	1.49e-30
+ctg71_5	PSMEN_RS15895	68	268	93.53233830845771	2.81e-90
+
+
+
+>>
+10. NZ_LR733267
+Source: Pseudomonas sp. 8O isolate Pseudomonas sp. 8O, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 668.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	GV002_RS22035	54	284	95.43859649122807	4.21e-94
+ctg71_4	GV002_RS22030	33	116	82.62548262548263	1.72e-29
+ctg71_5	GV002_RS22025	69	268	93.53233830845771	1.98e-90
+
+
+
+>>
+11. NZ_CP017290
+Source: Pseudomonas sp. LPH1 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 668.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	BHQ29_RS14710	54	284	95.43859649122807	5.97e-94
+ctg71_4	BHQ29_RS14705	32	119	92.66409266409266	1.49e-30
+ctg71_5	BHQ29_RS14700	66	265	93.53233830845771	3.26e-89
+
+
+
+>>
+12. NZ_RHQP01000024
+Source: Pseudomonas sp. o96-267 strain 297 NODE_24_length_86267_cov_35.0998, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 668.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	EGJ86_RS16675	53	283	97.19298245614036	1.2e-93
+ctg71_4	EGJ86_RS16670	32	120	92.27799227799228	3.83e-31
+ctg71_5	EGJ86_RS16665	66	265	93.53233830845771	6.57e-89
+
+
+
+>>
+13. NZ_CP060009
+Source: Pseudomonas sediminis strain B10D7D chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 668.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	HNQ25_RS16615	53	281	96.14035087719299	4.84e-93
+ctg71_4	HNQ25_RS16610	33	122	92.27799227799228	9.83e-32
+ctg71_5	HNQ25_RS16605	67	265	93.53233830845771	4.63e-89
+
+
+
+>>
+14. NZ_CP070505
+Source: Pseudomonas toyotomiensis strain SM2 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 667.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	JWV26_RS18435	53	282	97.19298245614036	3.42e-93
+ctg71_4	JWV26_RS18440	34	118	80.6949806949807	2.94e-30
+ctg71_5	JWV26_RS18445	67	267	93.53233830845771	8.03e-90
+
+
+
+>>
+15. NZ_CP027657
+Source: Pseudomonas mendocina strain NEB698 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 667.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	C7A17_RS01745	52	281	97.19298245614036	6.86e-93
+ctg71_4	C7A17_RS01740	33	113	77.22007722007721	3.38e-28
+ctg71_5	C7A17_RS01735	69	273	93.53233830845771	2.08e-92
+
+
+
+>>
+16. NZ_LMMB01000039
+Source: Pseudomonas sp. Leaf83 contig_9, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 666.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	ASF15_RS24355	53	283	96.14035087719299	8.46e-94
+ctg71_4	ASF15_RS24360	34	118	80.6949806949807	4.13e-30
+ctg71_5	ASF15_RS24365	67	265	93.53233830845771	3.26e-89
+
+
+
+>>
+17. NZ_CP016162
+Source: Pseudomonas alcaliphila JAB1 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	UYA_RS08245	53	284	96.14035087719299	4.21e-94
+ctg71_4	UYA_RS08250	32	115	90.34749034749035	6.22e-29
+ctg71_5	UYA_RS08255	67	266	93.53233830845771	1.62e-89
+
+
+
+>>
+18. NZ_ML178805
+Source: Pseudomonas sp. HS-2 Scaffold1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 664.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	E0W67_RS07020	54	280	94.38596491228071	2.77e-92
+ctg71_4	E0W67_RS07015	32	120	94.98069498069498	5.38e-31
+ctg71_5	E0W67_RS07010	67	264	93.53233830845771	1.32e-88
+
+
+
+>>
+19. NZ_CP095766
+Source: Pseudomonas chengduensis strain T1624 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	MYO55_RS08190	54	283	94.38596491228071	1.7e-93
+ctg71_4	MYO55_RS08195	34	115	82.62548262548263	6.22e-29
+ctg71_5	MYO55_RS08200	68	265	93.53233830845771	3.26e-89
+
+
+
+>>
+20. NZ_QXDA01000003
+Source: Pseudomonas oleovorans strain E1205 Ga0222393_103, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 661.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	DFO61_RS11020	53	281	96.14035087719299	4.84e-93
+ctg71_4	DFO61_RS11015	34	113	77.22007722007721	2.41e-28
+ctg71_5	DFO61_RS11010	68	267	93.53233830845771	5.66e-90
+
+
+
+>>
+21. NZ_CP060288
+Source: Pseudomonas mendocina strain CPS5 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 660.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	H7683_RS18010	54	283	95.43859649122807	8.46e-94
+ctg71_4	H7683_RS18015	33	112	77.60617760617761	6.65e-28
+ctg71_5	H7683_RS18020	67	265	93.53233830845771	6.57e-89
+
+
+
+>>
+22. NZ_CP115817
+Source: Pseudomonas mendocina strain GD22SC3150TT chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 657.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	PAK23_RS07505	54	282	94.03508771929825	2.37e-93
+ctg71_4	PAK23_RS07510	33	112	93.43629343629344	9.33e-28
+ctg71_5	PAK23_RS07515	66	263	93.53233830845771	2.67e-88
+
+
+
+>>
+23. NZ_PIYS01000001
+Source: Pseudomonas pharmacofabricae strain ZYSR67-Z 1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 657.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	CW360_RS00210	56	276	92.98245614035088	8.5e-91
+ctg71_4	CW360_RS00205	31	118	94.20849420849422	5.25e-30
+ctg71_5	CW360_RS00200	68	263	93.53233830845771	2.76e-88
+
+
+
+>>
+24. NZ_CP072610
+Source: Pseudomonas wenzhouensis strain A20 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 655.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	J7655_RS14145	53	283	97.19298245614036	1.2e-93
+ctg71_4	J7655_RS14140	33	113	94.5945945945946	3.38e-28
+ctg71_5	J7655_RS14135	65	259	93.53233830845771	8.86e-87
+
+
+
+>>
+25. NC_015410
+Source: Pseudomonas mendocina NK-01, complete sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 654.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	MDS_RS08115	53	284	96.14035087719299	5.97e-94
+ctg71_4	MDS_RS08120	33	105	75.67567567567568	2.88e-25
+ctg71_5	MDS_RS08125	67	265	93.53233830845771	6.57e-89
+
+
+
+>>
+26. NZ_CP016268
+Source: Woeseia oceani strain XK5 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 645.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	BA177_RS11190	54	294	94.38596491228071	6.28e-98
+ctg71_4	BA177_RS11195	34	117	76.06177606177607	1.37e-29
+ctg71_5	BA177_RS11200	64	234	91.04477611940298	7.23e-77
+
+
+
+>>
+27. NZ_CP071797
+Source: Pseudomonas fluorescens strain YK-310 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 644.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	JZM58_RS19555	51	273	96.84210526315789	1.68e-89
+ctg71_4	JZM58_RS19560	38	122	70.65637065637065	1.9e-31
+ctg71_5	JZM58_RS19565	65	249	91.04477611940298	9.75e-83
+
+
+
+>>
+28. NZ_CP031704
+Source: Solimonas sp. K1W22B-7 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 681.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D0B54_RS02110	54	298	97.54385964912281	1.14e-99
+ctg71_4	D0B54_RS02115	33	143	92.66409266409266	1.3e-39
+ctg71_5	D0B54_RS02100	62	240	96.01990049751244	3.8e-79
+
+
+
+>>
+29. NZ_QICN01000007
+Source: Sinimarinibacterium flocculans strain DSM 104150 Ga0215726_107, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	C8D93_RS13125	56	295	94.73684210526315	1.81e-98
+ctg71_4	C8D93_RS13120	31	116	96.13899613899613	4.12e-29
+ctg71_5	C8D93_RS13135	65	254	94.02985074626866	1.23e-84
+
+
+
+>>
+30. NZ_KB907126
+Source: Thioalkalivibrio sp. ALJT G332DRAFT_scaffold00006.6, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 662.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	G332_RS0108025	56	293	96.14035087719299	2.18e-97
+ctg71_4	G332_RS0108020	35	140	91.5057915057915	1.25e-38
+ctg71_5	G332_RS0108035	62	229	95.52238805970148	8.05e-75
+
+
+
+>>
+31. NZ_KB897934
+Source: Thioalkalivibrio sp. ALE25 C996DRAFT_scaffold00010.10, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 657.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	C996_RS0110035	54	293	100.0	2.18e-97
+ctg71_4	C996_RS0110040	33	134	92.66409266409266	5.88e-36
+ctg71_5	C996_RS0110025	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+32. NZ_KB898096
+Source: Thioalkalivibrio sp. ALE28 D105DRAFT_scaffold00004.4, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 657.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D105_RS0105970	54	293	100.0	2.18e-97
+ctg71_4	D105_RS0105965	33	134	92.66409266409266	5.88e-36
+ctg71_5	D105_RS0105980	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+33. NZ_KB905025
+Source: Thioalkalivibrio sp. ALE31 D103DRAFT_scaffold00006.6, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 657.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D103_RS0110975	54	293	100.0	2.18e-97
+ctg71_4	D103_RS0110970	33	134	92.66409266409266	5.88e-36
+ctg71_5	D103_RS0110985	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+34. NZ_AUDT01000013
+Source: Thioalkalivibrio sp. ALE17 H609DRAFT_scaffold00011.11_C, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 655.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	H609_RS0109260	54	293	100.0	2.18e-97
+ctg71_4	H609_RS0109265	34	132	92.66409266409266	2.3e-35
+ctg71_5	H609_RS0109250	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+35. NZ_KB898122
+Source: Thioalkalivibrio sp. ALE9 D106DRAFT_scaffold00001.1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 653.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D106_RS0101440	54	293	100.0	2.18e-97
+ctg71_4	D106_RS0101445	34	130	92.66409266409266	9e-35
+ctg71_5	D106_RS0101430	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+36. NZ_KB906359
+Source: Thioalkalivibrio sp. ALE16 F627DRAFT_scaffold00006.6, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 653.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F627_RS0106420	54	293	100.0	2.18e-97
+ctg71_4	F627_RS0106425	34	130	92.66409266409266	9e-35
+ctg71_5	F627_RS0106410	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+37. NZ_KB906506
+Source: Thioalkalivibrio sp. ALE22 F793DRAFT_scaffold00008.8, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 652.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F793_RS0108995	54	293	100.0	2.18e-97
+ctg71_4	F793_RS0109000	34	129	92.27799227799228	3.52e-34
+ctg71_5	F793_RS0108985	63	230	95.52238805970148	4.71e-75
+
+
+
+>>
+38. NZ_CP007029
+Source: Thioalkalivibrio paradoxus ARh 1 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 652.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	THITH_RS11165	56	283	92.28070175438596	1.03e-93
+ctg71_4	THITH_RS11170	34	135	94.5945945945946	1.18e-36
+ctg71_5	THITH_RS11155	64	234	96.51741293532339	5.27e-77
+
+
+
+>>
+39. NZ_KB906947
+Source: Thioalkalivibrio sp. AKL7 G315DRAFT_scaffold00001.1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 649.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	G315_RS0102675	54	295	99.64912280701755	2.69e-98
+ctg71_4	G315_RS0102670	33	127	94.98069498069498	1.37e-33
+ctg71_5	G315_RS0102685	61	227	95.52238805970148	4.63e-74
+
+
+
+>>
+40. NC_019902
+Source: Thioalkalivibrio nitratireducens DSM 14787, complete sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 649.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	TVNIR_RS04765	55	281	92.28070175438596	8.36e-93
+ctg71_4	TVNIR_RS04760	33	135	94.5945945945946	1.66e-36
+ctg71_5	TVNIR_RS04775	64	233	96.51741293532339	1.51e-76
+
+
+
+>>
+41. NZ_KB906226
+Source: Thioalkalivibrio sp. ALMg3 F622DRAFT_scaffold00008.8, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 647.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F622_RS0109280	55	293	95.78947368421052	2.18e-97
+ctg71_4	F622_RS0109275	33	127	93.05019305019306	1.93e-33
+ctg71_5	F622_RS0109290	61	227	95.52238805970148	4.63e-74
+
+
+
+>>
+42. NZ_KB906115
+Source: Thioalkalivibrio sp. ALMg13-2 F618DRAFT_scaffold00016.16, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 645.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F618_RS0110625	55	293	96.14035087719299	2.18e-97
+ctg71_4	F618_RS0110620	32	128	94.98069498069498	6.95e-34
+ctg71_5	F618_RS0110635	62	224	94.02985074626866	7.59e-73
+
+
+
+>>
+43. NZ_AQYC01000009
+Source: Thioalkalivibrio sp. ALMg9 F792DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 645.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F792_RS0113055	54	290	95.78947368421052	2.51e-96
+ctg71_4	F792_RS0113050	34	127	93.43629343629344	1.37e-33
+ctg71_5	F792_RS0113065	62	228	95.52238805970148	3.26e-74
+
+
+
+>>
+44. NZ_KB899538
+Source: Thioalkalivibrio sp. ALJ12 F467DRAFT_scaffold00001.1, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 645.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	F467_RS0106985	56	290	93.33333333333333	5.05e-96
+ctg71_4	F467_RS0106990	31	119	91.8918918918919	2.24e-30
+ctg71_5	F467_RS0106975	62	236	96.01990049751244	1.97e-77
+
+
+
+>>
+45. NZ_CP011367
+Source: Thioalkalivibrio versutus strain D301 chromosome, complete genome
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 643.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	TVD_RS08010	55	292	95.78947368421052	4.39e-97
+ctg71_4	TVD_RS08005	32	125	94.98069498069498	1.06e-32
+ctg71_5	TVD_RS08020	61	226	95.52238805970148	9.31e-74
+
+
+
+>>
+46. NZ_MVAR01000003
+Source: Thioalkalivibrio versutus strain AL 2 Ga0073318_103, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 643.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	B0684_RS00710	55	291	95.78947368421052	8.82e-97
+ctg71_4	B0684_RS00715	32	125	93.05019305019306	1.48e-32
+ctg71_5	B0684_RS00700	61	227	95.52238805970148	4.63e-74
+
+
+
+>>
+47. NZ_KB898900
+Source: Thioalkalivibrio sp. AKL12 D579DRAFT_scaffold00012.12, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 643.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D579_RS0110735	54	288	95.78947368421052	1.44e-95
+ctg71_4	D579_RS0110730	32	127	94.98069498069498	1.37e-33
+ctg71_5	D579_RS0110745	61	228	96.01990049751244	2.51e-74
+
+
+
+>>
+48. NZ_KB907143
+Source: Thioalkalivibrio sp. AKL10 G333DRAFT_scaffold00002.2, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 641.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	G333_RS0107050	54	288	96.84210526315789	1.44e-95
+ctg71_4	G333_RS0107055	32	124	91.11969111969111	2.93e-32
+ctg71_5	G333_RS0107040	62	229	95.52238805970148	8.05e-75
+
+
+
+>>
+49. NZ_KB898877
+Source: Thioalkalivibrio sp. ALMg11 D578DRAFT_scaffold00007.7, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 640.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D578_RS0112220	54	293	97.19298245614036	3.1e-97
+ctg71_4	D578_RS0112215	31	123	93.05019305019306	5.77e-32
+ctg71_5	D578_RS0112230	62	224	93.03482587064677	8.65e-73
+
+
+
+>>
+50. NZ_KB905112
+Source: Thioalkalivibrio sp. AKL9 D573DRAFT_scaffold00010.10, whole genome shotgun sequence
+Type: RiPP-like
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 639.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg71_3	D573_RS0110330	54	289	95.78947368421052	1.01e-95
+ctg71_4	D573_RS0110325	31	122	94.98069498069498	1.14e-31
+ctg71_5	D573_RS0110340	62	228	95.52238805970148	3.26e-74
+

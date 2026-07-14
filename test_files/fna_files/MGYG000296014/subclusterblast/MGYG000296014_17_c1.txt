@@ -1,0 +1,23 @@
+ClusterBlast scores for MGYG000296014_17
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg17_37	31840	32374	+		
+ctg17_38	32363	33317	+		
+ctg17_39	33313	33622	+		
+ctg17_40	33685	35254	+		
+ctg17_41	35243	35867	+		
+ctg17_42	36164	36260	+		
+ctg17_43	36235	36763	+		
+ctg17_44	36759	37542	-		
+ctg17_45	37830	38619	+		
+ctg17_46	38910	39222	+		
+ctg17_47	39267	41133	-		
+ctg17_48	41179	42085	-		
+ctg17_49	42144	42372	+		
+ctg17_50	42505	43114	+		
+
+
+Significant hits: 
+
+
+Details:

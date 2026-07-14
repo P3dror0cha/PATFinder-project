@@ -1,0 +1,26 @@
+ClusterBlast scores for MGYG000296008_22
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg22_1	2	206	-		
+ctg22_2	205	1723	-		
+ctg22_3	1709	2171	-		
+ctg22_4	2163	2628	-		
+ctg22_5	2637	3483	-		
+ctg22_6	3496	3928	-		
+ctg22_7	3980	4835	-		
+ctg22_8	4838	5849	-		
+ctg22_9	5851	6775	-		
+ctg22_10	6776	7556	-		
+ctg22_11	7552	8365	-		
+ctg22_12	8364	9717	-		
+ctg22_13	9718	10492	-		
+ctg22_14	10515	11205	-		
+ctg22_15	11204	11987	-		
+ctg22_16	11979	13134	-		
+ctg22_17	13135	13321	-		
+
+
+Significant hits: 
+
+
+Details:

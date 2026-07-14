@@ -1,0 +1,54 @@
+ClusterBlast scores for MGYG000296014_17
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg17_37	31840	32374	+		
+ctg17_38	32363	33317	+		
+ctg17_39	33313	33622	+		
+ctg17_40	33685	35254	+		
+ctg17_41	35243	35867	+		
+ctg17_42	36164	36260	+		
+ctg17_43	36235	36763	+		
+ctg17_44	36759	37542	-		
+ctg17_45	37830	38619	+		
+ctg17_46	38910	39222	+		
+ctg17_47	39267	41133	-		
+ctg17_48	41179	42085	-		
+ctg17_49	42144	42372	+		
+ctg17_50	42505	43114	+		
+
+
+Significant hits: 
+1. BGC0000668.5	12-epi-hapalindole C isonitrile/12-epi-hapalindole E/12-epi-fischerindole U isonitrile/fischerindole L/12-epi-fischerindole I isonitrile/welwitindolinone A isonitrile/welwitindolinone B isothiocyanate/welwitindolinone C isothiocyanate/N-methylwelwitindolinone C isothiocyanate/N-methylwelwitinsolinone C isonitrile/3-epi-welwitindolinone B isothiocyanate/3-(Z-2'-isocyanoethenyl)-indole
+2. BGC0001595.3	fischerindole
+
+
+Details:
+
+>>
+1. BGC0000668.5
+Source: 12-epi-hapalindole C isonitrile/12-epi-hapalindole E/12-epi-fischerindole U isonitrile/fischerindole L/12-epi-fischerindole I isonitrile/welwitindolinone A isonitrile/welwitindolinone B isothiocyanate/welwitindolinone C isothiocyanate/N-methylwelwitindolinone C isothiocyanate/N-methylwelwitinsolinone C isonitrile/3-epi-welwitindolinone B isothiocyanate/3-(Z-2'-isocyanoethenyl)-indole
+Type: terpene:Monoterpene+other:other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 795.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg17_47	AHI58837.1	49	554	101.77133655394526	1.67e-191
+ctg17_48	AHI58825.1	46	241	98.00664451827242	6.67e-78
+
+
+
+>>
+2. BGC0001595.3
+Source: fischerindole
+Type: other:other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 791.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg17_47	APZ79619.1	49	548	100.1610305958132	3.16e-189
+ctg17_48	APZ79611.1	47	243	98.00664451827242	2.08e-78
+

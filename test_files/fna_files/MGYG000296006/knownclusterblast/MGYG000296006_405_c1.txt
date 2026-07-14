@@ -1,0 +1,13 @@
+ClusterBlast scores for MGYG000296006_405
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg405_1	1	673	+		
+ctg405_2	815	1622	+		
+ctg405_3	1673	1865	-		
+ctg405_4	1951	2248	+		
+
+
+Significant hits: 
+
+
+Details:

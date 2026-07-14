@@ -1,0 +1,927 @@
+ClusterBlast scores for MGYG000296008_2
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg2_2	597	1188	-		
+ctg2_3	1168	1903	-		
+ctg2_4	1906	2476	-		
+ctg2_5	2476	3271	-		
+ctg2_6	3432	4482	+		
+ctg2_7	4481	5255	+		
+ctg2_8	5241	5796	+		
+ctg2_9	5837	6719	+		
+ctg2_10	6715	9865	+		
+ctg2_11	9883	10102	+		
+ctg2_12	10104	10965	+		
+ctg2_13	10961	12830	+		
+ctg2_14	12817	13402	-		
+ctg2_15	13398	13821	-		
+ctg2_16	13859	14813	-		
+ctg2_17	14766	15960	-		
+ctg2_18	16018	16327	-		
+ctg2_19	16380	19224	-		
+ctg2_20	19338	19992	+		
+
+
+Significant hits: 
+1. NZ_KE386569	Methylobacter luteus IMV-B-3098 MetluDRAFT_scaffold1.1, whole genome shotgun sequence
+2. NZ_KB912877	Methylobacter marinus A45 MetmaDRAFT_scaffold1.1, whole genome shotgun sequence
+3. NZ_CM001475	Methylomicrobium album BG8 chromosome, whole genome shotgun sequence
+4. NZ_KB889965	Methylosarcina fibrata AML-C10 A3OWDRAFT_scaffold1.1, whole genome shotgun sequence
+5. NZ_QPDS01000002	Pseudomonas cichorii strain 473 Contig_2, whole genome shotgun sequence
+6. NZ_CP076668	Pseudomonas lijiangensis strain LJ2 chromosome, complete genome
+7. NZ_JAIGOY010000001	Pseudomonas cichorii strain WSXC14 Scaffold1, whole genome shotgun sequence
+8. NZ_JAIGPY010000001	Pseudomonas cichorii strain LCDW06 Scaffold1, whole genome shotgun sequence
+9. NZ_QPEA01000002	Pseudomonas cichorii strain 481 Contig_2, whole genome shotgun sequence
+10. NZ_JAIGPF010000010	Pseudomonas cichorii strain LCYQ02 Scaffold10, whole genome shotgun sequence
+11. NZ_JAIGPO010000001	Pseudomonas cichorii strain LCYJ12 Scaffold1, whole genome shotgun sequence
+12. NZ_JAIGPP010000001	Pseudomonas cichorii strain LCYJ11 Scaffold1, whole genome shotgun sequence
+13. NZ_CP007039	Pseudomonas cichorii JBC1 chromosome, complete genome
+14. NZ_FYDI01000006	Pseudomonas sp. Irchel 3A18 isolate Pseudomonas sp. Irchel 3A18, whole genome shotgun sequence
+15. NZ_JAIGPG010000004	Pseudomonas cichorii strain LCYJ26 Scaffold4, whole genome shotgun sequence
+16. NZ_JAIGPV010000013	Pseudomonas cichorii strain LCYJ03 Scaffold13, whole genome shotgun sequence
+17. NZ_JAIGPC010000017	Pseudomonas cichorii strain LJDD01 Scaffold17, whole genome shotgun sequence
+18. NZ_JAIGPS010000007	Pseudomonas cichorii strain LCYJ07 Scaffold7, whole genome shotgun sequence
+19. NZ_JACYXQ010000010	Pseudomonas putida strain CFBP8769 CFBP876910, whole genome shotgun sequence
+20. NZ_CP009533	Pseudomonas rhizosphaerae strain DSM 16299 chromosome, complete genome
+21. NZ_LMOC01000007	Pseudomonas sp. Leaf129 contig_3, whole genome shotgun sequence
+22. NZ_CP016176	Xenorhabdus hominickii strain ANU1 chromosome, complete genome
+23. NZ_CABGPE010000002	Klebsiella oxytoca strain 4928STDY7071478, whole genome shotgun sequence
+24. NZ_CAKNCC010000006	Klebsiella oxytoca strain cpe088, whole genome shotgun sequence
+25. NZ_CP033844	Klebsiella oxytoca strain FDAARGOS_500 chromosome, complete genome
+26. NZ_CP056567	Klebsiella oxytoca strain RHBSTW-00373 chromosome, complete genome
+27. NZ_CP057330	Klebsiella oxytoca strain RHB30-C02 chromosome, complete genome
+28. NZ_CP069911	Klebsiella oxytoca strain FDAARGOS_1334 chromosome, complete genome
+29. NZ_CP069943	Klebsiella oxytoca strain FDAARGOS_1332 chromosome, complete genome
+30. NZ_CP070020	Klebsiella oxytoca strain FDAARGOS_1333 chromosome, complete genome
+31. NZ_CP072914	Klebsiella oxytoca isolate KoPF10 chromosome, complete genome
+32. NZ_CP090245	Klebsiella oxytoca strain KONSF-1 chromosome, complete genome
+33. NZ_CP114305	Klebsiella oxytoca strain 2022CK-00498 chromosome, complete genome
+34. NZ_FKZW01000002	Klebsiella oxytoca strain 2880STDY5682456, whole genome shotgun sequence
+35. NZ_FLAE01000001	Klebsiella oxytoca strain 2880STDY5682672, whole genome shotgun sequence
+36. NZ_FLAF01000004	Klebsiella oxytoca strain 2880STDY5682710, whole genome shotgun sequence
+37. NZ_JADNDL010000001	Klebsiella oxytoca strain 1001216B_150713_B10 NODE_1_length_506655_cov_23.6263, whole genome shotgun sequence
+38. NZ_JAFHTM010000003	Klebsiella oxytoca strain Survcare060 NODE_3_length_383698_cov_41.3786, whole genome shotgun sequence
+39. NZ_JH603143	Klebsiella oxytoca 10-5243 strain Oct-43 supercont1.1, whole genome shotgun sequence
+40. NZ_KI535631	Klebsiella oxytoca MGH 28 addUR-supercont1.1, whole genome shotgun sequence
+41. NZ_KK097709	Klebsiella oxytoca G54 adHqJ-supercont1.1, whole genome shotgun sequence
+42. NZ_KQ088007	Klebsiella oxytoca strain CHS143 aetza-supercont1.1, whole genome shotgun sequence
+43. NZ_KQ088036	Klebsiella oxytoca strain MGH88 aetyR-supercont1.1, whole genome shotgun sequence
+44. NZ_LR134333	Klebsiella oxytoca strain NCTC13727 chromosome 1, complete sequence
+45. NZ_OW849470	Klebsiella oxytoca isolate 325 chromosome main, complete sequence
+46. NZ_OW969781	Klebsiella oxytoca isolate 328 chromosome main, complete sequence
+47. NZ_CABGGR010000001	Klebsiella pasteurii isolate SB6416, whole genome shotgun sequence
+48. NZ_CABGGX010000001	Klebsiella pasteurii isolate SB6424, whole genome shotgun sequence
+49. NZ_CABGHB010000001	Klebsiella pasteurii isolate SB6423, whole genome shotgun sequence
+50. NZ_CABGHC010000001	Klebsiella pasteurii isolate SB6412, whole genome shotgun sequence
+
+
+Details:
+
+>>
+1. NZ_KE386569
+Source: Methylobacter luteus IMV-B-3098 MetluDRAFT_scaffold1.1, whole genome shotgun sequence
+Type: NI-siderophore,terpene
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1539.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_11	METLU_RS0109930	51	64	95.83333333333334	1.82e-13
+ctg2_12	METLU_RS0109935	35	134	79.72027972027972	2.45e-35
+ctg2_13	METLU_RS0109940	55	671	97.90996784565917	1.03e-235
+ctg2_13	METLU_RS0110000	54	670	98.23151125401928	2.07e-235
+
+
+
+>>
+2. NZ_KB912877
+Source: Methylobacter marinus A45 MetmaDRAFT_scaffold1.1, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1525.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_11	METMA_RS0119645	52	61	87.5	2.99e-12
+ctg2_12	METMA_RS0119640	35	135	79.72027972027972	8.87e-36
+ctg2_13	METMA_RS0119635	54	665	98.23151125401928	9.61e-234
+ctg2_13	METMA_RS0119570	54	664	98.23151125401928	3.88e-233
+
+
+
+>>
+3. NZ_CM001475
+Source: Methylomicrobium album BG8 chromosome, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1520.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_11	METAL_RS13790	49	62	95.83333333333334	1.05e-12
+ctg2_12	METAL_RS13795	35	129	79.72027972027972	2.76e-33
+ctg2_13	METAL_RS13800	54	667	97.90996784565917	4.95e-234
+ctg2_13	METAL_RS13855	54	662	98.39228295819936	3.15e-232
+
+
+
+>>
+4. NZ_KB889965
+Source: Methylosarcina fibrata AML-C10 A3OWDRAFT_scaffold1.1, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1479.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_11	A3OW_RS0107600	48	61	95.83333333333334	2.99e-12
+ctg2_12	A3OW_RS0107605	33	127	91.6083916083916	7.57e-33
+ctg2_13	A3OW_RS0107610	53	646	96.62379421221866	3.62e-226
+ctg2_13	A3OW_RS0107665	53	645	96.62379421221866	7.28e-226
+
+
+
+>>
+5. NZ_QPDS01000002
+Source: Pseudomonas cichorii strain 473 Contig_2, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1130.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	D2G36_RS02190	33	125	78.67132867132867	7.47e-32
+ctg2_13	D2G36_RS02195	57	699	99.67845659163987	8.81e-247
+ctg2_14	D2G36_RS02205	58	225	97.42268041237114	1.97e-73
+ctg2_15	D2G36_RS02210	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+6. NZ_CP076668
+Source: Pseudomonas lijiangensis strain LJ2 chromosome, complete genome
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1130.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	KQP88_RS21540	33	124	78.67132867132867	2.05e-31
+ctg2_13	KQP88_RS21545	57	699	99.67845659163987	8.81e-247
+ctg2_14	KQP88_RS21555	58	226	97.42268041237114	9.81e-74
+ctg2_15	KQP88_RS21560	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+7. NZ_JAIGOY010000001
+Source: Pseudomonas cichorii strain WSXC14 Scaffold1, whole genome shotgun sequence
+Type: NRPS-like,T1PKS,T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1129.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D38_RS02060	33	124	78.67132867132867	1.04e-31
+ctg2_13	K5D38_RS02065	57	699	99.67845659163987	8.81e-247
+ctg2_14	K5D38_RS02075	58	225	97.42268041237114	1.97e-73
+ctg2_15	K5D38_RS02080	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+8. NZ_JAIGPY010000001
+Source: Pseudomonas cichorii strain LCDW06 Scaffold1, whole genome shotgun sequence
+Type: NRPS-like,T1PKS,T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1129.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D50_RS01840	33	124	78.67132867132867	1.04e-31
+ctg2_13	K5D50_RS01845	57	699	99.67845659163987	8.81e-247
+ctg2_14	K5D50_RS01855	58	225	97.42268041237114	1.97e-73
+ctg2_15	K5D50_RS01860	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+9. NZ_QPEA01000002
+Source: Pseudomonas cichorii strain 481 Contig_2, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1129.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	D2G43_RS01885	33	124	78.67132867132867	1.04e-31
+ctg2_13	D2G43_RS01880	57	699	99.67845659163987	8.81e-247
+ctg2_14	D2G43_RS01870	58	225	97.42268041237114	1.97e-73
+ctg2_15	D2G43_RS01865	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+10. NZ_JAIGPF010000010
+Source: Pseudomonas cichorii strain LCYQ02 Scaffold10, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1129.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D37_RS16525	33	124	78.67132867132867	2.05e-31
+ctg2_13	K5D37_RS16520	57	699	99.67845659163987	1.25e-246
+ctg2_14	K5D37_RS16510	58	226	97.42268041237114	1.94e-73
+ctg2_15	K5D37_RS16505	37	80	96.42857142857143	1.24e-17
+
+
+
+>>
+11. NZ_JAIGPO010000001
+Source: Pseudomonas cichorii strain LCYJ12 Scaffold1, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1129.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D44_RS00760	33	124	78.67132867132867	2.05e-31
+ctg2_13	K5D44_RS00765	57	699	99.67845659163987	1.25e-246
+ctg2_14	K5D44_RS00775	58	226	97.42268041237114	1.94e-73
+ctg2_15	K5D44_RS00780	37	80	96.42857142857143	1.24e-17
+
+
+
+>>
+12. NZ_JAIGPP010000001
+Source: Pseudomonas cichorii strain LCYJ11 Scaffold1, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1128.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D57_RS01940	34	122	79.02097902097903	1.1e-30
+ctg2_13	K5D57_RS01945	57	699	99.67845659163987	1.25e-246
+ctg2_14	K5D57_RS01955	58	226	97.42268041237114	1.94e-73
+ctg2_15	K5D57_RS01960	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+13. NZ_CP007039
+Source: Pseudomonas cichorii JBC1 chromosome, complete genome
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1127.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	BH81_RS22410	33	124	78.67132867132867	1.04e-31
+ctg2_13	BH81_RS22415	57	698	98.55305466237942	1.77e-246
+ctg2_14	BH81_RS22425	58	224	97.42268041237114	8e-73
+ctg2_15	BH81_RS22430	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+14. NZ_FYDI01000006
+Source: Pseudomonas sp. Irchel 3A18 isolate Pseudomonas sp. Irchel 3A18, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1127.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	CKW23_RS14895	33	124	78.67132867132867	1.04e-31
+ctg2_13	CKW23_RS14900	57	698	98.55305466237942	1.77e-246
+ctg2_14	CKW23_RS14910	58	224	97.42268041237114	8e-73
+ctg2_15	CKW23_RS14915	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+15. NZ_JAIGPG010000004
+Source: Pseudomonas cichorii strain LCYJ26 Scaffold4, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1126.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D34_RS07295	35	123	79.02097902097903	2.86e-31
+ctg2_13	K5D34_RS07300	56	697	99.67845659163987	5.05e-246
+ctg2_14	K5D34_RS07310	58	226	97.42268041237114	1.94e-73
+ctg2_15	K5D34_RS07315	37	80	96.42857142857143	1.24e-17
+
+
+
+>>
+16. NZ_JAIGPV010000013
+Source: Pseudomonas cichorii strain LCYJ03 Scaffold13, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1126.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D56_RS17195	35	123	79.02097902097903	2.86e-31
+ctg2_13	K5D56_RS17200	56	697	99.67845659163987	5.05e-246
+ctg2_14	K5D56_RS17210	58	226	97.42268041237114	1.94e-73
+ctg2_15	K5D56_RS17215	37	80	96.42857142857143	1.24e-17
+
+
+
+>>
+17. NZ_JAIGPC010000017
+Source: Pseudomonas cichorii strain LJDD01 Scaffold17, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1126.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D69_RS18280	33	122	78.67132867132867	5.6e-31
+ctg2_13	K5D69_RS18275	57	699	99.67845659163987	1.25e-246
+ctg2_14	K5D69_RS18265	58	224	97.42268041237114	3.97e-73
+ctg2_15	K5D69_RS18260	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+18. NZ_JAIGPS010000007
+Source: Pseudomonas cichorii strain LCYJ07 Scaffold7, whole genome shotgun sequence
+Type: T3PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1126.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	K5D47_RS08420	33	122	78.67132867132867	5.6e-31
+ctg2_13	K5D47_RS08415	57	699	99.67845659163987	1.25e-246
+ctg2_14	K5D47_RS08405	58	224	97.42268041237114	3.97e-73
+ctg2_15	K5D47_RS08400	37	81	96.42857142857143	6.25e-18
+
+
+
+>>
+19. NZ_JACYXQ010000010
+Source: Pseudomonas putida strain CFBP8769 CFBP876910, whole genome shotgun sequence
+Type: NRPS-like
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1113.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	IFT69_RS23505	31	115	95.8041958041958	2.31e-28
+ctg2_13	IFT69_RS23500	57	697	100.16077170418008	7.68e-246
+ctg2_14	IFT69_RS23495	57	222	97.42268041237114	5.96e-72
+ctg2_15	IFT69_RS23485	37	79	89.28571428571429	4.88e-17
+
+
+
+>>
+20. NZ_CP009533
+Source: Pseudomonas rhizosphaerae strain DSM 16299 chromosome, complete genome
+Type: NRPS-like
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1111.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	LT40_RS18620	31	116	95.8041958041958	1.18e-28
+ctg2_13	LT40_RS18615	56	694	100.16077170418008	6.24e-245
+ctg2_14	LT40_RS18610	57	222	97.42268041237114	5.96e-72
+ctg2_15	LT40_RS18600	37	79	89.28571428571429	4.88e-17
+
+
+
+>>
+21. NZ_LMOC01000007
+Source: Pseudomonas sp. Leaf129 contig_3, whole genome shotgun sequence
+Type: NRPS-like
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1110.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	ASF66_RS11800	31	113	95.8041958041958	1.7e-27
+ctg2_13	ASF66_RS11795	56	696	100.16077170418008	2.19e-245
+ctg2_14	ASF66_RS11790	57	222	97.42268041237114	5.96e-72
+ctg2_15	ASF66_RS11780	37	79	89.28571428571429	4.88e-17
+
+
+
+>>
+22. NZ_CP016176
+Source: Xenorhabdus hominickii strain ANU1 chromosome, complete genome
+Type: NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1011.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	A9255_RS11585	35	139	95.45454545454545	5.57e-37
+ctg2_13	A9255_RS11590	54	645	97.26688102893891	1.51e-225
+ctg2_15	A9255_RS11640	32	78	93.57142857142857	6.01e-17
+ctg2_16	A9255_RS11645	31	149	100.63091482649841	2.4e-40
+
+
+
+>>
+23. NZ_CABGPE010000002
+Source: Klebsiella oxytoca strain 4928STDY7071478, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	FN294_RS04055	38	134	82.86713286713287	1.79e-35
+ctg2_13	FN294_RS04050	53	635	97.90996784565917	6.31e-222
+ctg2_15	FN294_RS04040	37	88	93.57142857142857	1.35e-20
+ctg2_16	FN294_RS04035	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+24. NZ_CAKNCC010000006
+Source: Klebsiella oxytoca strain cpe088, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	MJP42_RS18540	38	134	82.86713286713287	1.79e-35
+ctg2_13	MJP42_RS18545	53	635	97.90996784565917	6.31e-222
+ctg2_15	MJP42_RS18555	37	88	93.57142857142857	1.35e-20
+ctg2_16	MJP42_RS18560	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+25. NZ_CP033844
+Source: Klebsiella oxytoca strain FDAARGOS_500 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	EGY21_RS23430	38	134	82.86713286713287	1.79e-35
+ctg2_13	EGY21_RS23425	53	635	97.90996784565917	1.27e-221
+ctg2_15	EGY21_RS23415	37	88	93.57142857142857	1.35e-20
+ctg2_16	EGY21_RS23410	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+26. NZ_CP056567
+Source: Klebsiella oxytoca strain RHBSTW-00373 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	HV180_RS21860	38	134	82.86713286713287	1.79e-35
+ctg2_13	HV180_RS21865	53	635	97.90996784565917	1.27e-221
+ctg2_15	HV180_RS21875	37	88	93.57142857142857	1.35e-20
+ctg2_16	HV180_RS21880	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+27. NZ_CP057330
+Source: Klebsiella oxytoca strain RHB30-C02 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	HVY70_RS21875	38	134	82.86713286713287	1.79e-35
+ctg2_13	HVY70_RS21880	53	635	97.90996784565917	1.27e-221
+ctg2_15	HVY70_RS21890	37	88	93.57142857142857	1.35e-20
+ctg2_16	HVY70_RS21895	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+28. NZ_CP069911
+Source: Klebsiella oxytoca strain FDAARGOS_1334 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	I6K64_RS22365	38	134	82.86713286713287	1.79e-35
+ctg2_13	I6K64_RS22370	53	635	97.90996784565917	1.27e-221
+ctg2_15	I6K64_RS22380	37	88	93.57142857142857	1.35e-20
+ctg2_16	I6K64_RS22385	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+29. NZ_CP069943
+Source: Klebsiella oxytoca strain FDAARGOS_1332 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	I6K62_RS25565	38	134	82.86713286713287	1.79e-35
+ctg2_13	I6K62_RS25570	53	635	97.90996784565917	6.31e-222
+ctg2_15	I6K62_RS25580	37	88	93.57142857142857	1.35e-20
+ctg2_16	I6K62_RS25585	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+30. NZ_CP070020
+Source: Klebsiella oxytoca strain FDAARGOS_1333 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	I6K63_RS05430	38	134	82.86713286713287	1.79e-35
+ctg2_13	I6K63_RS05425	53	635	97.90996784565917	6.31e-222
+ctg2_15	I6K63_RS05415	37	88	93.57142857142857	1.35e-20
+ctg2_16	I6K63_RS05410	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+31. NZ_CP072914
+Source: Klebsiella oxytoca isolate KoPF10 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	KAT64_RS21070	38	134	82.86713286713287	1.79e-35
+ctg2_13	KAT64_RS21075	53	635	97.90996784565917	1.27e-221
+ctg2_15	KAT64_RS21085	37	88	93.57142857142857	1.35e-20
+ctg2_16	KAT64_RS21090	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+32. NZ_CP090245
+Source: Klebsiella oxytoca strain KONSF-1 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	LXH16_RS24925	38	134	82.86713286713287	1.79e-35
+ctg2_13	LXH16_RS24930	53	635	97.90996784565917	1.27e-221
+ctg2_15	LXH16_RS24940	37	88	93.57142857142857	1.35e-20
+ctg2_16	LXH16_RS24945	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+33. NZ_CP114305
+Source: Klebsiella oxytoca strain 2022CK-00498 chromosome, complete genome
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	OGU21_RS20935	38	134	82.86713286713287	1.79e-35
+ctg2_13	OGU21_RS20940	53	635	97.90996784565917	1.27e-221
+ctg2_15	OGU21_RS20950	37	88	93.57142857142857	1.35e-20
+ctg2_16	OGU21_RS20955	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+34. NZ_FKZW01000002
+Source: Klebsiella oxytoca strain 2880STDY5682456, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	A8T78_RS03540	38	134	82.86713286713287	1.79e-35
+ctg2_13	A8T78_RS03545	53	635	97.90996784565917	6.31e-222
+ctg2_15	A8T78_RS03555	37	88	93.57142857142857	1.35e-20
+ctg2_16	A8T78_RS03560	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+35. NZ_FLAE01000001
+Source: Klebsiella oxytoca strain 2880STDY5682672, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	A8U46_RS01020	38	134	82.86713286713287	1.79e-35
+ctg2_13	A8U46_RS01025	53	635	97.90996784565917	1.27e-221
+ctg2_15	A8U46_RS01035	37	88	93.57142857142857	1.35e-20
+ctg2_16	A8U46_RS01040	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+36. NZ_FLAF01000004
+Source: Klebsiella oxytoca strain 2880STDY5682710, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	A8U03_RS08940	38	134	82.86713286713287	1.79e-35
+ctg2_13	A8U03_RS08935	53	635	97.90996784565917	1.27e-221
+ctg2_15	A8U03_RS08925	37	88	93.57142857142857	1.35e-20
+ctg2_16	A8U03_RS08920	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+37. NZ_JADNDL010000001
+Source: Klebsiella oxytoca strain 1001216B_150713_B10 NODE_1_length_506655_cov_23.6263, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	I2E40_RS01280	38	134	82.86713286713287	1.79e-35
+ctg2_13	I2E40_RS01285	53	635	97.90996784565917	1.27e-221
+ctg2_15	I2E40_RS01295	37	88	93.57142857142857	1.35e-20
+ctg2_16	I2E40_RS01300	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+38. NZ_JAFHTM010000003
+Source: Klebsiella oxytoca strain Survcare060 NODE_3_length_383698_cov_41.3786, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	KKU26_RS08425	38	134	82.86713286713287	1.79e-35
+ctg2_13	KKU26_RS08420	53	635	97.90996784565917	1.27e-221
+ctg2_15	KKU26_RS08410	37	88	93.57142857142857	1.35e-20
+ctg2_16	KKU26_RS08405	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+39. NZ_JH603143
+Source: Klebsiella oxytoca 10-5243 strain Oct-43 supercont1.1, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	HMPREF9687_RS26085	38	134	82.86713286713287	1.79e-35
+ctg2_13	HMPREF9687_RS26090	53	635	97.90996784565917	1.27e-221
+ctg2_15	HMPREF9687_RS26100	37	88	93.57142857142857	1.35e-20
+ctg2_16	HMPREF9687_RS26105	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+40. NZ_KI535631
+Source: Klebsiella oxytoca MGH 28 addUR-supercont1.1, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	L374_RS17615	38	134	82.86713286713287	1.79e-35
+ctg2_13	L374_RS17620	53	635	97.90996784565917	1.27e-221
+ctg2_15	L374_RS17630	37	88	93.57142857142857	1.35e-20
+ctg2_16	L374_RS17635	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+41. NZ_KK097709
+Source: Klebsiella oxytoca G54 adHqJ-supercont1.1, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	T655_RS24975	38	134	82.86713286713287	1.79e-35
+ctg2_13	T655_RS24980	53	635	97.90996784565917	6.31e-222
+ctg2_15	T655_RS24990	37	88	93.57142857142857	1.35e-20
+ctg2_16	T655_RS24995	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+42. NZ_KQ088007
+Source: Klebsiella oxytoca strain CHS143 aetza-supercont1.1, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	SK88_RS07650	38	134	82.86713286713287	1.79e-35
+ctg2_13	SK88_RS07645	53	635	97.90996784565917	1.27e-221
+ctg2_15	SK88_RS07635	37	88	93.57142857142857	1.35e-20
+ctg2_16	SK88_RS07630	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+43. NZ_KQ088036
+Source: Klebsiella oxytoca strain MGH88 aetyR-supercont1.1, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	SK92_RS14490	38	134	82.86713286713287	1.79e-35
+ctg2_13	SK92_RS14485	53	635	97.90996784565917	6.31e-222
+ctg2_15	SK92_RS14475	37	88	93.57142857142857	1.35e-20
+ctg2_16	SK92_RS14470	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+44. NZ_LR134333
+Source: Klebsiella oxytoca strain NCTC13727 chromosome 1, complete sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	EL226_RS22725	38	134	82.86713286713287	1.79e-35
+ctg2_13	EL226_RS22730	53	635	97.90996784565917	1.27e-221
+ctg2_15	EL226_RS22740	37	88	93.57142857142857	1.35e-20
+ctg2_16	EL226_RS22745	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+45. NZ_OW849470
+Source: Klebsiella oxytoca isolate 325 chromosome main, complete sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	LQ213_RS21015	38	134	82.86713286713287	1.79e-35
+ctg2_13	LQ213_RS21020	53	635	97.90996784565917	1.27e-221
+ctg2_15	LQ213_RS21030	37	88	93.57142857142857	1.35e-20
+ctg2_16	LQ213_RS21035	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+46. NZ_OW969781
+Source: Klebsiella oxytoca isolate 328 chromosome main, complete sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 993.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	LQ195_RS20420	38	134	82.86713286713287	1.79e-35
+ctg2_13	LQ195_RS20425	53	635	97.90996784565917	1.27e-221
+ctg2_15	LQ195_RS20435	37	88	93.57142857142857	1.35e-20
+ctg2_16	LQ195_RS20440	31	136	101.26182965299684	1.83e-35
+
+
+
+>>
+47. NZ_CABGGR010000001
+Source: Klebsiella pasteurii isolate SB6416, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 992.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	FN069_RS06090	38	135	82.86713286713287	6.47e-36
+ctg2_13	FN069_RS06095	53	634	97.90996784565917	1.8e-221
+ctg2_15	FN069_RS06105	37	87	93.57142857142857	1.78e-20
+ctg2_16	FN069_RS06110	31	136	101.26182965299684	1.87e-35
+
+
+
+>>
+48. NZ_CABGGX010000001
+Source: Klebsiella pasteurii isolate SB6424, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 992.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	FN086_RS06510	38	135	82.86713286713287	6.47e-36
+ctg2_13	FN086_RS06515	53	634	97.90996784565917	1.8e-221
+ctg2_15	FN086_RS06525	37	87	93.57142857142857	1.78e-20
+ctg2_16	FN086_RS06530	31	136	101.26182965299684	1.34e-35
+
+
+
+>>
+49. NZ_CABGHB010000001
+Source: Klebsiella pasteurii isolate SB6423, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 992.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	FN071_RS06035	38	135	82.86713286713287	6.47e-36
+ctg2_13	FN071_RS06040	53	634	97.90996784565917	1.8e-221
+ctg2_15	FN071_RS06050	37	87	93.57142857142857	1.78e-20
+ctg2_16	FN071_RS06055	31	136	101.26182965299684	1.87e-35
+
+
+
+>>
+50. NZ_CABGHC010000001
+Source: Klebsiella pasteurii isolate SB6412, whole genome shotgun sequence
+Type: HR-T2PKS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 992.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg2_12	FN076_RS05765	38	135	82.86713286713287	6.47e-36
+ctg2_13	FN076_RS05770	53	634	97.90996784565917	1.8e-221
+ctg2_15	FN076_RS05780	37	87	93.57142857142857	1.78e-20
+ctg2_16	FN076_RS05785	31	136	101.26182965299684	1.87e-35
+

@@ -1,0 +1,220 @@
+ClusterBlast scores for MGYG000296006_405
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg405_1	1	673	+		
+ctg405_2	815	1622	+		
+ctg405_3	1673	1865	-		
+ctg405_4	1951	2248	+		
+
+
+Significant hits: 
+1. NC_008344	Nitrosomonas eutropha C91, complete sequence
+2. NC_004757	Nitrosomonas europaea ATCC 19718, complete sequence
+3. NZ_AP019755	Nitrosomonas stercoris strain KYUHI-S chromosome 1, complete sequence
+4. NZ_JQKP01000003	Ferriphaselus sp. R-1 DM08DRAFT_scaffold00003.3_C, whole genome shotgun sequence
+5. NZ_FPBL01000002	Nitrosomonas eutropha strain Nm24, whole genome shotgun sequence
+6. NZ_FMWY01000022	Nitrosospira sp. Nsp18, whole genome shotgun sequence
+7. NZ_CP012371	Nitrosospira briensis C-128 chromosome, complete genome
+8. NZ_JACHYP010000004	Paraburkholderia sp. WP4_3_2 Ga0348323_04, whole genome shotgun sequence
+9. NZ_CP059488	Acidithiobacillus ferrivorans strain XJFY6S-08 chromosome, complete genome
+10. NZ_CP076444	Mycoavidus sp. HKI chromosome, complete genome
+11. NZ_CP102085	Mycoavidus sp. SF9855 chromosome, complete genome
+12. NZ_KK211205	Brackiella oedipodis DSM 13743 Q335DRAFT_scaffold00001.1, whole genome shotgun sequence
+13. NZ_CP040709	Inhella inkyongensis strain IMCC1713 chromosome, complete genome
+
+
+Details:
+
+>>
+1. NC_008344
+Source: Nitrosomonas eutropha C91, complete sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 622.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	NEUT_RS07605	56	237	99.10313901345292	2.21e-76
+ctg405_2	NEUT_RS07615	74	385	95.8955223880597	3.15e-134
+
+
+
+>>
+2. NC_004757
+Source: Nitrosomonas europaea ATCC 19718, complete sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 622.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	ALW85_RS06025	56	235	99.10313901345292	1.26e-75
+ctg405_2	ALW85_RS06040	75	387	95.1492537313433	2.8e-135
+
+
+
+>>
+3. NZ_AP019755
+Source: Nitrosomonas stercoris strain KYUHI-S chromosome 1, complete sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 618.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	Nstercoris_RS08035	56	238	98.65470852017937	1.1e-76
+ctg405_2	Nstercoris_RS08025	73	380	95.8955223880597	2.11e-132
+
+
+
+>>
+4. NZ_JQKP01000003
+Source: Ferriphaselus sp. R-1 DM08DRAFT_scaffold00003.3_C, whole genome shotgun sequence
+Type: arylpolyene,resorcinol
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 618.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	DM08_RS05210	60	237	99.10313901345292	2.15e-76
+ctg405_2	DM08_RS05200	73	381	95.1492537313433	7.37e-133
+
+
+
+>>
+5. NZ_FPBL01000002
+Source: Nitrosomonas eutropha strain Nm24, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 612.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	BM331_RS03565	54	228	99.10313901345292	1.34e-72
+ctg405_2	BM331_RS03575	74	384	95.8955223880597	9.33e-134
+
+
+
+>>
+6. NZ_FMWY01000022
+Source: Nitrosospira sp. Nsp18, whole genome shotgun sequence
+Type: NRPS
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 604.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	BLS94_RS10490	57	244	99.10313901345292	4.18e-79
+ctg405_2	BLS94_RS10500	68	360	94.77611940298507	1.17e-124
+
+
+
+>>
+7. NZ_CP012371
+Source: Nitrosospira briensis C-128 chromosome, complete genome
+Type: NRPS
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 591.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	F822_RS09035	56	240	99.10313901345292	1.93e-77
+ctg405_2	F822_RS09045	65	351	94.77611940298507	5.23e-121
+
+
+
+>>
+8. NZ_JACHYP010000004
+Source: Paraburkholderia sp. WP4_3_2 Ga0348323_04, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 520.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	FHW21_RS08920	52	209	98.65470852017937	2.1e-65
+ctg405_2	FHW21_RS08910	61	311	93.65671641791045	2.53e-105
+
+
+
+>>
+9. NZ_CP059488
+Source: Acidithiobacillus ferrivorans strain XJFY6S-08 chromosome, complete genome
+Type: T2PKS
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 501.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	H2515_RS07325	51	187	100.44843049327355	1.66e-56
+ctg405_2	H2515_RS07315	61	314	95.1492537313433	2.97e-106
+
+
+
+>>
+10. NZ_CP076444
+Source: Mycoavidus sp. HKI chromosome, complete genome
+Type: transAT-PKS-like
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 492.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	KMZ15_RS04655	51	194	99.10313901345292	1.55e-59
+ctg405_2	KMZ15_RS04645	58	298	97.76119402985076	7.05e-100
+
+
+
+>>
+11. NZ_CP102085
+Source: Mycoavidus sp. SF9855 chromosome, complete genome
+Type: NRPS,transAT-PKS-like
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 490.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	NQD60_RS04580	50	194	99.10313901345292	2.19e-59
+ctg405_2	NQD60_RS04570	58	296	97.76119402985076	2.85e-99
+
+
+
+>>
+12. NZ_KK211205
+Source: Brackiella oedipodis DSM 13743 Q335DRAFT_scaffold00001.1, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 435.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	Q335_RS0106435	46	179	98.65470852017937	1.32e-53
+ctg405_2	Q335_RS0106445	52	256	97.76119402985076	2.41e-83
+
+
+
+>>
+13. NZ_CP040709
+Source: Inhella inkyongensis strain IMCC1713 chromosome, complete genome
+Type: hserlactone
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 392.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg405_1	FF090_RS06920	50	184	99.55156950672645	2e-55
+ctg405_2	FF090_RS06930	46	208	95.52238805970148	1.25e-64
+

@@ -1,0 +1,1099 @@
+ClusterBlast scores for MGYG000296008_22
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg22_1	2	206	-		
+ctg22_2	205	1723	-		
+ctg22_3	1709	2171	-		
+ctg22_4	2163	2628	-		
+ctg22_5	2637	3483	-		
+ctg22_6	3496	3928	-		
+ctg22_7	3980	4835	-		
+ctg22_8	4838	5849	-		
+ctg22_9	5851	6775	-		
+ctg22_10	6776	7556	-		
+ctg22_11	7552	8365	-		
+ctg22_12	8364	9717	-		
+ctg22_13	9718	10492	-		
+ctg22_14	10515	11205	-		
+ctg22_15	11204	11987	-		
+ctg22_16	11979	13134	-		
+ctg22_17	13135	13321	-		
+
+
+Significant hits: 
+1. NZ_CP063446	Novosphingobium sp. ES2-1 plasmid p1, complete sequence
+2. NZ_CP040517	Luteithermobacter gelatinilyticus strain MEBiC09520 chromosome, complete genome
+3. NZ_LXVY01000003	Sphingomonas sp. TDK1 TDK1_contig_11, whole genome shotgun sequence
+4. NZ_CP036423	Aequoribacter fuscus strain IMCC3088 chromosome, complete genome
+5. NZ_CP022684	Ketobacter alkanivorans strain GI5 chromosome, complete genome
+6. NZ_AUAC01000003	Hellea balneolensis DSM 19091 F569DRAFT_scaffold00002.2_C, whole genome shotgun sequence
+7. NZ_JAAOIX010000001	Pseudomaricurvus alcaniphilus strain MEBiC06469 NODE_1_length_1472829_cov_39.411191, whole genome shotgun sequence
+8. NZ_FOFV01000012	Lentzea albida strain DSM 44437, whole genome shotgun sequence
+9. NZ_CP099738	Lentzea sp. HUAS12 chromosome
+10. NZ_CM004192	Burkholderia territorii strain MSMB2203WGS chromosome 2, whole genome shotgun sequence
+11. NZ_BMNC01000001	Lentzea pudingi strain CGMCC 4.7319 sequence01, whole genome shotgun sequence
+12. NZ_QQAU01000009	Lentzea flaviverrucosa strain DSM 44664 Ga0244493_109, whole genome shotgun sequence
+13. NZ_BNAR01000001	Lentzea cavernae strain CGMCC 4.7367 sequence01, whole genome shotgun sequence
+14. NZ_JAPJDL010000004	Lentzea sp. NEAU-D7 Scaffold4, whole genome shotgun sequence
+15. NZ_CP061281	Streptomyces xanthii strain CRXT-Y-14 chromosome
+16. NZ_CM002285	Streptomyces roseochromogenus subsp. oscitans DS 12.976 voucher DS:12.976 chromosome, whole genome shotgun sequence
+17. NZ_CP066770	Burkholderia anthina strain BJQ0011 chromosome 2, complete sequence
+18. NZ_CP013363	Burkholderia diffusa strain RF2-non-BP9 chromosome 2, complete sequence
+19. NC_018514	Burkholderia cepacia GG4 chromosome 2, complete sequence
+20. NZ_FZOW01000004	Rhodococcus kyotonensis strain JCM 23211, whole genome shotgun sequence
+21. NZ_CP045929	Allosaccharopolyspora coralli strain E2A chromosome, complete genome
+22. NZ_QGHB01000004	Lentzea atacamensis strain DSM 45480 Ga0215650_104, whole genome shotgun sequence
+23. NZ_QLTT01000001	Lentzea atacamensis strain DSM 45479 Ga0215649_101, whole genome shotgun sequence
+24. NZ_LMHJ01000002	Nocardioides sp. Root682 contig_2, whole genome shotgun sequence
+25. NZ_CP053928	Nocardioides sp. WS12 chromosome, complete genome
+26. NZ_CP042807	Rhodanobacter glycinis strain T01E-68 chromosome, complete genome
+27. NZ_CP059556	Saccharopolyspora gregorii strain BM8-3 chromosome, complete genome
+28. NZ_CP059557	Saccharopolyspora gloriosae strain MLY014 chromosome, complete genome
+29. NZ_JANYMP010000014	Umezawaea endophytica strain DSM 103496 DSM103496_AS2_SC14, whole genome shotgun sequence
+30. NZ_CP016793	Lentzea guizhouensis strain DHS C013 chromosome, complete genome
+31. NZ_CP049866	Nocardioides piscis strain HDW12A chromosome, complete genome
+32. NZ_CP080409	Nocardioides panacisoli strain DP1N28-12 chromosome, complete genome
+33. NZ_CP059903	Nocardioides dongkuii strain S-713 chromosome, complete genome
+34. NZ_CP088149	Pseudomonas sp. S06B 330 chromosome, complete genome
+35. NZ_CP024478	Pseudomonas sp. HLS-6 chromosome, complete genome
+36. NZ_CABVIU010000003	Pseudomonas fluorescens isolate PS874, whole genome shotgun sequence
+37. NZ_CABVIL010000002	Pseudomonas fluorescens isolate PS850, whole genome shotgun sequence
+38. NZ_CP014870	Pseudomonas silesiensis strain A3 chromosome, complete genome
+39. NZ_CABVIS010000012	Pseudomonas fluorescens isolate PS903, whole genome shotgun sequence
+40. NZ_CABVHU010000001	Pseudomonas fluorescens isolate PS833, whole genome shotgun sequence
+41. NZ_CABVID010000002	Pseudomonas fluorescens isolate PS838, whole genome shotgun sequence
+42. NZ_CABVJA010000005	Pseudomonas fluorescens isolate PS914, whole genome shotgun sequence
+43. NZ_CABVJF010000002	Pseudomonas fluorescens isolate PS928, whole genome shotgun sequence
+44. NZ_CP026115	Pseudomonas putida strain W5 chromosome, complete genome
+45. NZ_CP034783	Pseudomonas sp. MPC6 chromosome, complete genome
+46. NZ_PCQN01000023	Pseudomonas poae strain MYb114 MYb114_23, whole genome shotgun sequence
+47. NZ_CABVIX010000001	Pseudomonas fluorescens isolate PS910, whole genome shotgun sequence
+48. NZ_CP032677	Pseudomonas sp. Leaf58 chromosome, complete genome
+49. NZ_LMLH01000031	Pseudomonas sp. Leaf48 contig_7, whole genome shotgun sequence
+50. NZ_CP044409	Pseudomonas umsongensis strain GO16 chromosome
+
+
+Details:
+
+>>
+1. NZ_CP063446
+Source: Novosphingobium sp. ES2-1 plasmid p1, complete sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2621.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	IM701_RS15530	47	451	99.20792079207921	8.7e-153
+ctg22_8	IM701_RS15580	76	503	98.51190476190477	1.96e-178
+ctg22_9	IM701_RS15585	62	377	100.3257328990228	5.48e-130
+ctg22_10	IM701_RS15590	58	304	97.2972972972973	1.71e-102
+ctg22_11	IM701_RS15595	41	191	90.74074074074075	5.53e-58
+ctg22_15	IM701_RS15510	56	272	98.46153846153847	4.49e-90
+ctg22_16	IM701_RS15485	61	471	99.21875	2.02e-164
+ctg22_17	IM701_RS15480	43	52	98.36065573770492	1.2e-07
+
+
+
+>>
+2. NZ_CP040517
+Source: Luteithermobacter gelatinilyticus strain MEBiC09520 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2554.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	FE788_RS11435	46	465	101.98019801980197	2.27e-158
+ctg22_3	FE788_RS11425	34	109	98.69281045751634	5.55e-29
+ctg22_8	FE788_RS11400	76	511	99.40476190476191	6.67e-182
+ctg22_9	FE788_RS11405	66	390	99.6742671009772	7.26e-135
+ctg22_10	FE788_RS11410	55	281	97.2972972972973	9.89e-94
+ctg22_11	FE788_RS11415	43	243	98.14814814814815	4.84e-78
+ctg22_16	FE788_RS11355	66	503	99.21875	2.44e-177
+ctg22_17	FE788_RS11360	42	52	93.44262295081968	1.2e-07
+
+
+
+>>
+3. NZ_LXVY01000003
+Source: Sphingomonas sp. TDK1 TDK1_contig_11, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2504.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	A7X12_RS03255	47	455	99.00990099009901	1.63e-154
+ctg22_8	A7X12_RS03220	76	506	99.10714285714286	1.15e-179
+ctg22_9	A7X12_RS03215	65	390	100.0	7.78e-135
+ctg22_10	A7X12_RS03210	62	316	100.77220077220078	1.92e-107
+ctg22_11	A7X12_RS03205	43	219	94.44444444444444	6.4e-69
+ctg22_15	A7X12_RS03180	35	104	95.38461538461539	7.03e-25
+ctg22_16	A7X12_RS03295	61	462	99.21875	4.43e-161
+ctg22_17	A7X12_RS03290	44	52	93.44262295081968	1.19e-07
+
+
+
+>>
+4. NZ_CP036423
+Source: Aequoribacter fuscus strain IMCC3088 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2252.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	EYZ66_RS12940	48	461	102.37623762376238	1.17e-156
+ctg22_8	EYZ66_RS12970	52	363	99.40476190476191	1.2e-123
+ctg22_9	EYZ66_RS12965	51	284	100.9771986970684	1.58e-93
+ctg22_10	EYZ66_RS12960	57	272	94.20849420849422	8e-90
+ctg22_11	EYZ66_RS12955	44	224	99.62962962962963	6.32e-71
+ctg22_15	EYZ66_RS13035	32	98	91.15384615384615	3.31e-22
+ctg22_16	EYZ66_RS12910	65	495	98.69791666666666	3.93e-174
+ctg22_17	EYZ66_RS12915	47	55	90.1639344262295	9.83e-09
+
+
+
+>>
+5. NZ_CP022684
+Source: Ketobacter alkanivorans strain GI5 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2461.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	Kalk_RS07825	50	512	101.38613861386139	1.24e-176
+ctg22_2	Kalk_RS07905	36	265	103.96039603960396	1.82e-80
+ctg22_8	Kalk_RS07865	54	353	99.40476190476191	1.09e-119
+ctg22_9	Kalk_RS07860	55	290	98.69706840390879	8.74e-96
+ctg22_10	Kalk_RS07855	58	297	97.68339768339769	6.54e-100
+ctg22_11	Kalk_RS07850	45	211	91.48148148148148	1.28e-65
+ctg22_16	Kalk_RS07780	63	475	99.21875	4.15e-166
+ctg22_17	Kalk_RS07785	45	58	95.08196721311475	1.08e-09
+
+
+
+>>
+6. NZ_AUAC01000003
+Source: Hellea balneolensis DSM 19091 F569DRAFT_scaffold00002.2_C, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2375.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F569_RS0109590	47	472	100.0	3.83e-161
+ctg22_8	F569_RS0109620	77	517	99.10714285714286	4.76e-184
+ctg22_9	F569_RS0109610	66	397	99.6742671009772	1.2e-137
+ctg22_10	F569_RS0109605	60	299	97.68339768339769	1.46e-100
+ctg22_11	F569_RS0109600	42	198	99.62962962962963	1.09e-60
+ctg22_16	F569_RS0109665	57	436	99.21875	9.33e-151
+ctg22_17	F569_RS0109660	46	56	93.44262295081968	4.77e-09
+
+
+
+>>
+7. NZ_JAAOIX010000001
+Source: Pseudomaricurvus alcaniphilus strain MEBiC06469 NODE_1_length_1472829_cov_39.411191, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2167.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	G8764_RS04015	48	475	103.76237623762377	5.17e-162
+ctg22_8	G8764_RS04050	52	354	98.21428571428571	4.88e-120
+ctg22_9	G8764_RS04045	51	270	100.6514657980456	6.06e-88
+ctg22_10	G8764_RS04040	57	291	97.68339768339769	2.85e-97
+ctg22_11	G8764_RS04035	46	250	101.85185185185186	9.49e-81
+ctg22_16	G8764_RS03985	61	471	98.95833333333334	1.52e-164
+ctg22_17	G8764_RS03990	47	56	90.1639344262295	5.21e-09
+
+
+
+>>
+8. NZ_FOFV01000012
+Source: Lentzea albida strain DSM 44437, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2310.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	BMY74_RS27535	45	404	96.83168316831683	8.98e-135
+ctg22_5	BMY74_RS27620	36	154	83.98576512455516	4.05e-42
+ctg22_6	BMY74_RS27620	47	120	81.11888111888112	1.73e-31
+ctg22_8	BMY74_RS27595	50	330	97.91666666666666	1.61e-110
+ctg22_9	BMY74_RS27600	51	278	98.0456026058632	2.58e-91
+ctg22_10	BMY74_RS27605	43	195	95.36679536679536	6.41e-60
+ctg22_15	BMY74_RS27525	57	277	95.76923076923077	3e-92
+ctg22_15	BMY74_RS27490	32	88	91.92307692307692	1.28e-18
+ctg22_16	BMY74_RS27515	60	464	99.21875	1.02e-161
+
+
+
+>>
+9. NZ_CP099738
+Source: Lentzea sp. HUAS12 chromosome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2308.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	ND450_RS12805	44	403	98.61386138613861	3.03e-134
+ctg22_5	ND450_RS12890	36	153	83.98576512455516	7.96e-42
+ctg22_6	ND450_RS12890	46	120	81.11888111888112	3.39e-31
+ctg22_8	ND450_RS12865	50	329	97.91666666666666	3.23e-110
+ctg22_9	ND450_RS12870	51	279	98.0456026058632	1.29e-91
+ctg22_10	ND450_RS12875	43	195	95.36679536679536	6.41e-60
+ctg22_15	ND450_RS12795	57	278	95.76923076923077	2.12e-92
+ctg22_15	ND450_RS12760	32	88	91.92307692307692	1.78e-18
+ctg22_16	ND450_RS12785	60	463	99.21875	2.05e-161
+
+
+
+>>
+10. NZ_CM004192
+Source: Burkholderia territorii strain MSMB2203WGS chromosome 2, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2289.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	WT52_RS20930	49	489	101.1881188118812	8.26e-168
+ctg22_5	WT52_RS20955	42	196	80.42704626334519	1.86e-58
+ctg22_5	WT52_RS20975	42	194	77.58007117437722	1.01e-57
+ctg22_6	WT52_RS20955	43	116	79.02097902097903	5.22e-30
+ctg22_8	WT52_RS20920	55	380	99.70238095238095	2.8e-130
+ctg22_9	WT52_RS20915	56	306	100.9771986970684	5.74e-102
+ctg22_10	WT52_RS20910	54	283	97.2972972972973	3.35e-94
+ctg22_11	WT52_RS20890	42	220	97.4074074074074	4.62e-69
+ctg22_15	WT52_RS20945	33	105	92.3076923076923	1.11e-24
+
+
+
+>>
+11. NZ_BMNC01000001
+Source: Lentzea pudingi strain CGMCC 4.7319 sequence01, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2283.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	IEY88_RS03630	44	401	98.61386138613861	1.06e-133
+ctg22_5	IEY88_RS03545	36	155	83.98576512455516	7.47e-43
+ctg22_6	IEY88_RS03545	45	123	81.11888111888112	2.31e-32
+ctg22_8	IEY88_RS03570	50	329	97.02380952380952	5.23e-110
+ctg22_9	IEY88_RS03565	52	280	98.37133550488599	1.03e-91
+ctg22_10	IEY88_RS03560	43	194	95.36679536679536	2.42e-59
+ctg22_15	IEY88_RS03640	57	275	95.76923076923077	1.72e-91
+ctg22_15	IEY88_RS03675	31	79	92.3076923076923	2.33e-15
+ctg22_16	IEY88_RS03650	58	447	99.21875	2.04e-155
+
+
+
+>>
+12. NZ_QQAU01000009
+Source: Lentzea flaviverrucosa strain DSM 44664 Ga0244493_109, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2279.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	DFR72_RS27040	43	394	98.61386138613861	7.73e-131
+ctg22_5	DFR72_RS27120	36	156	83.98576512455516	3.56e-43
+ctg22_6	DFR72_RS27120	46	122	81.11888111888112	4.31e-32
+ctg22_8	DFR72_RS27095	50	332	98.21428571428571	4.55e-111
+ctg22_9	DFR72_RS27100	52	278	98.37133550488599	4.16e-91
+ctg22_10	DFR72_RS27105	43	193	93.05019305019306	3.63e-59
+ctg22_15	DFR72_RS27030	57	274	95.76923076923077	4.92e-91
+ctg22_15	DFR72_RS26995	31	81	92.3076923076923	8.83e-16
+ctg22_16	DFR72_RS27020	58	449	99.21875	3.55e-156
+
+
+
+>>
+13. NZ_BNAR01000001
+Source: Lentzea cavernae strain CGMCC 4.7367 sequence01, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2277.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	IE307_RS01395	44	394	99.00990099009901	5.47e-131
+ctg22_5	IE307_RS01480	36	155	83.98576512455516	9.82e-43
+ctg22_6	IE307_RS01480	46	123	81.11888111888112	2.2e-32
+ctg22_8	IE307_RS01455	50	326	97.02380952380952	5.81e-109
+ctg22_9	IE307_RS01460	51	276	98.37133550488599	2.3e-90
+ctg22_10	IE307_RS01465	43	192	93.05019305019306	7.49e-59
+ctg22_15	IE307_RS01385	57	275	95.76923076923077	2.45e-91
+ctg22_15	IE307_RS01350	31	83	92.3076923076923	1.26e-16
+ctg22_16	IE307_RS01375	59	453	99.21875	1.53e-157
+
+
+
+>>
+14. NZ_JAPJDL010000004
+Source: Lentzea sp. NEAU-D7 Scaffold4, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2276.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	ORI60_RS11960	43	388	98.61386138613861	1.4e-128
+ctg22_5	ORI60_RS11880	36	154	83.98576512455516	2.71e-42
+ctg22_6	ORI60_RS11880	45	121	81.11888111888112	1.18e-31
+ctg22_8	ORI60_RS11905	50	332	99.10714285714286	1.98e-111
+ctg22_9	ORI60_RS11900	52	279	98.37133550488599	1.29e-91
+ctg22_10	ORI60_RS11895	43	194	95.36679536679536	1.28e-59
+ctg22_15	ORI60_RS11970	57	278	95.76923076923077	1.49e-92
+ctg22_15	ORI60_RS12005	32	84	92.3076923076923	6.47e-17
+ctg22_16	ORI60_RS11980	58	446	99.21875	8.27e-155
+
+
+
+>>
+15. NZ_CP061281
+Source: Streptomyces xanthii strain CRXT-Y-14 chromosome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2253.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	IAG42_RS26605	43	421	100.99009900990099	5.2e-141
+ctg22_5	IAG42_RS26625	34	139	81.85053380782918	1.27e-36
+ctg22_6	IAG42_RS26625	44	122	81.81818181818183	7.51e-32
+ctg22_8	IAG42_RS26620	52	340	97.02380952380952	1.71e-114
+ctg22_9	IAG42_RS26615	53	287	99.3485342019544	1.85e-94
+ctg22_10	IAG42_RS26610	38	178	96.91119691119691	4.51e-53
+ctg22_15	IAG42_RS26560	57	283	98.84615384615385	2.05e-94
+ctg22_16	IAG42_RS26570	62	483	99.73958333333334	2.1e-169
+
+
+
+>>
+16. NZ_CM002285
+Source: Streptomyces roseochromogenus subsp. oscitans DS 12.976 voucher DS:12.976 chromosome, whole genome shotgun sequence
+Type: NRPS,RiPP-like,betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2235.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	M878_RS51605	45	412	94.05940594059405	7.37e-137
+ctg22_5	M878_RS51640	37	149	80.0711743772242	2.63e-40
+ctg22_6	M878_RS51640	43	124	84.61538461538461	9.28e-33
+ctg22_8	M878_RS51645	49	314	97.61904761904762	4.18e-104
+ctg22_9	M878_RS51650	53	287	98.37133550488599	1.26e-94
+ctg22_10	M878_RS51655	37	181	91.8918918918919	4.63e-54
+ctg22_15	M878_RS51705	57	281	98.07692307692307	1.61e-93
+ctg22_16	M878_RS51695	62	487	99.73958333333334	8.99e-171
+
+
+
+>>
+17. NZ_CP066770
+Source: Burkholderia anthina strain BJQ0011 chromosome 2, complete sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2090.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	JFN94_RS25670	48	478	100.1980198019802	2.88e-163
+ctg22_5	JFN94_RS25695	42	195	80.42704626334519	3.7e-58
+ctg22_6	JFN94_RS25695	45	120	79.02097902097903	1.29e-31
+ctg22_8	JFN94_RS25660	56	381	98.21428571428571	1.97e-130
+ctg22_9	JFN94_RS25655	55	306	100.9771986970684	5.74e-102
+ctg22_10	JFN94_RS25650	54	287	97.2972972972973	7.18e-96
+ctg22_11	JFN94_RS25630	43	222	97.4074074074074	5.24e-70
+ctg22_15	JFN94_RS25685	33	101	92.3076923076923	2.16e-23
+
+
+
+>>
+18. NZ_CP013363
+Source: Burkholderia diffusa strain RF2-non-BP9 chromosome 2, complete sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2082.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	WI26_RS21175	49	483	101.1881188118812	3.08e-165
+ctg22_5	WI26_RS21200	42	195	80.42704626334519	3.7e-58
+ctg22_6	WI26_RS21200	42	110	79.02097902097903	1.11e-27
+ctg22_8	WI26_RS21165	55	381	99.70238095238095	1.97e-130
+ctg22_9	WI26_RS21160	55	303	100.9771986970684	4.66e-101
+ctg22_10	WI26_RS21155	53	282	97.2972972972973	4.76e-94
+ctg22_11	WI26_RS21135	42	224	97.4074074074074	1.43e-70
+ctg22_15	WI26_RS21190	33	104	90.38461538461539	2.12e-24
+
+
+
+>>
+19. NC_018514
+Source: Burkholderia cepacia GG4 chromosome 2, complete sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2082.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	GEM_RS20350	48	475	101.1881188118812	4.61e-162
+ctg22_5	GEM_RS20325	42	193	80.42704626334519	1.46e-57
+ctg22_6	GEM_RS20325	45	120	79.02097902097903	1.29e-31
+ctg22_8	GEM_RS20360	55	382	99.70238095238095	9.81e-131
+ctg22_9	GEM_RS20365	55	306	100.9771986970684	5.74e-102
+ctg22_10	GEM_RS20370	54	282	97.2972972972973	6.75e-94
+ctg22_11	GEM_RS20390	42	219	97.4074074074074	1.31e-68
+ctg22_15	GEM_RS20335	33	105	92.3076923076923	7.8e-25
+
+
+
+>>
+20. NZ_FZOW01000004
+Source: Rhodococcus kyotonensis strain JCM 23211, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 1844.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	CHB96_RS09080	43	407	101.78217821782178	7.34e-136
+ctg22_5	CHB96_RS09105	35	149	80.78291814946618	2.23e-40
+ctg22_6	CHB96_RS09105	44	119	79.02097902097903	8.98e-31
+ctg22_8	CHB96_RS09115	51	326	97.61904761904762	6e-109
+ctg22_9	CHB96_RS09120	52	280	99.3485342019544	1.22e-91
+ctg22_10	CHB96_RS09125	39	199	97.68339768339769	2.39e-61
+ctg22_11	CHB96_RS09095	31	135	103.7037037037037	6.95e-36
+ctg22_16	CHB96_RS09050	35	229	100.26041666666667	7.35e-70
+
+
+
+>>
+21. NZ_CP045929
+Source: Allosaccharopolyspora coralli strain E2A chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 1732.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	GIY23_RS13320	42	399	103.96039603960396	2.84e-132
+ctg22_5	GIY23_RS13370	34	150	82.91814946619218	1.45e-40
+ctg22_6	GIY23_RS13370	45	120	81.11888111888112	3.95e-31
+ctg22_7	GIY23_RS13300	35	53	30.985915492957744	6.13e-06
+ctg22_8	GIY23_RS13345	48	313	98.21428571428571	9.05e-104
+ctg22_9	GIY23_RS13350	50	273	98.37133550488599	5.33e-89
+ctg22_10	GIY23_RS13355	37	175	91.5057915057915	1.86e-51
+ctg22_16	GIY23_RS13315	37	249	103.125	1.28e-77
+
+
+
+>>
+22. NZ_QGHB01000004
+Source: Lentzea atacamensis strain DSM 45480 Ga0215650_104, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2293.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	C8D88_RS18380	44	400	98.61386138613861	2.42e-133
+ctg22_5	C8D88_RS18290	36	158	83.98576512455516	7.31e-44
+ctg22_6	C8D88_RS18290	47	120	81.11888111888112	2.5e-31
+ctg22_8	C8D88_RS18320	51	338	98.21428571428571	1.72e-113
+ctg22_9	C8D88_RS18315	52	282	99.0228013029316	1.41e-92
+ctg22_10	C8D88_RS18305	43	192	93.05019305019306	7.26e-59
+ctg22_15	C8D88_RS18390	57	274	95.76923076923077	4.92e-91
+ctg22_15	C8D88_RS18425	32	83	91.53846153846153	8.67e-17
+ctg22_16	C8D88_RS18400	58	446	99.21875	1.17e-154
+
+
+
+>>
+23. NZ_QLTT01000001
+Source: Lentzea atacamensis strain DSM 45479 Ga0215649_101, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 2293.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	C8D87_RS02485	44	400	98.61386138613861	2.42e-133
+ctg22_5	C8D87_RS02575	36	158	83.98576512455516	7.31e-44
+ctg22_6	C8D87_RS02575	47	120	81.11888111888112	2.5e-31
+ctg22_8	C8D87_RS02545	51	336	98.21428571428571	6.93e-113
+ctg22_9	C8D87_RS02550	52	284	99.0228013029316	2.47e-93
+ctg22_10	C8D87_RS02560	43	192	93.05019305019306	7.26e-59
+ctg22_15	C8D87_RS02475	57	274	95.76923076923077	4.92e-91
+ctg22_15	C8D87_RS02440	32	83	91.53846153846153	8.67e-17
+ctg22_16	C8D87_RS02465	58	446	99.21875	1.17e-154
+
+
+
+>>
+24. NZ_LMHJ01000002
+Source: Nocardioides sp. Root682 contig_2, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2028.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	ASD84_RS14800	44	422	99.20792079207921	9.61e-142
+ctg22_8	ASD84_RS14750	49	325	97.02380952380952	4.98e-108
+ctg22_9	ASD84_RS14745	52	285	99.3485342019544	1.24e-93
+ctg22_10	ASD84_RS14740	39	163	96.13899613899613	2.73e-47
+ctg22_11	ASD84_RS14760	32	120	97.77777777777777	2.2e-30
+ctg22_15	ASD84_RS14810	55	253	99.23076923076923	1.46e-82
+ctg22_16	ASD84_RS14820	60	460	100.52083333333333	4.3e-160
+
+
+
+>>
+25. NZ_CP053928
+Source: Nocardioides sp. WS12 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2019.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	HRC28_RS16105	45	414	99.20792079207921	7.45e-139
+ctg22_8	HRC28_RS16155	50	325	97.02380952380952	2.48e-108
+ctg22_9	HRC28_RS16160	51	285	99.0228013029316	6.32e-94
+ctg22_10	HRC28_RS16165	39	166	96.13899613899613	3.45e-48
+ctg22_11	HRC28_RS16145	31	114	97.77777777777777	4.95e-28
+ctg22_15	HRC28_RS16095	55	253	99.23076923076923	2.94e-82
+ctg22_16	HRC28_RS16085	61	462	100.52083333333333	7.48e-161
+
+
+
+>>
+26. NZ_CP042807
+Source: Rhodanobacter glycinis strain T01E-68 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1757.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	CS053_RS01725	48	475	101.1881188118812	4.39e-162
+ctg22_8	CS053_RS01770	55	381	99.70238095238095	1.71e-130
+ctg22_9	CS053_RS01765	54	303	100.6514657980456	7.8e-101
+ctg22_10	CS053_RS01760	57	303	98.84169884169884	2.35e-102
+ctg22_11	CS053_RS01755	35	197	101.85185185185186	5.19e-60
+ctg22_15	CS053_RS01780	31	98	95.0	3.8e-22
+
+
+
+>>
+27. NZ_CP059556
+Source: Saccharopolyspora gregorii strain BM8-3 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 1668.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	H1226_RS14730	41	397	103.96039603960396	1.51e-131
+ctg22_5	H1226_RS14785	35	147	82.56227758007117	8.75e-40
+ctg22_6	H1226_RS14785	41	119	81.11888111888112	9.12e-31
+ctg22_8	H1226_RS14760	49	320	97.61904761904762	2.68e-106
+ctg22_9	H1226_RS14765	50	267	97.39413680781759	1.27e-86
+ctg22_10	H1226_RS14770	36	172	95.36679536679536	8.75e-51
+ctg22_16	H1226_RS14725	39	246	101.5625	2.4e-76
+
+
+
+>>
+28. NZ_CP059557
+Source: Saccharopolyspora gloriosae strain MLY014 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 1624.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	H2Q94_RS16825	48	358	71.28712871287128	8.29e-116
+ctg22_5	H2Q94_RS16875	35	150	82.91814946619218	9.37e-41
+ctg22_6	H2Q94_RS16875	41	117	81.11888111888112	3.8e-30
+ctg22_8	H2Q94_RS16850	50	316	97.02380952380952	8.63e-105
+ctg22_9	H2Q94_RS16855	51	273	97.39413680781759	7.07e-89
+ctg22_10	H2Q94_RS16860	34	170	95.75289575289575	4.92e-50
+ctg22_16	H2Q94_RS16820	38	240	103.125	4.98e-74
+
+
+
+>>
+29. NZ_JANYMP010000014
+Source: Umezawaea endophytica strain DSM 103496 DSM103496_AS2_SC14, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 2006.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	NZH93_RS27425	43	393	102.17821782178218	3.31e-130
+ctg22_5	NZH93_RS27505	37	160	84.34163701067615	1.73e-44
+ctg22_6	NZH93_RS27505	47	120	81.11888111888112	1.68e-31
+ctg22_8	NZH93_RS27480	50	323	97.02380952380952	1.13e-107
+ctg22_9	NZH93_RS27485	53	284	97.39413680781759	2.05e-93
+ctg22_15	NZH93_RS27415	56	275	97.3076923076923	4.84e-91
+ctg22_16	NZH93_RS27405	57	451	99.21875	1.16e-156
+
+
+
+>>
+30. NZ_CP016793
+Source: Lentzea guizhouensis strain DHS C013 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 1992.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	BBK82_RS38875	44	397	98.61386138613861	4.52e-132
+ctg22_5	BBK82_RS38955	37	156	83.98576512455516	3.72e-43
+ctg22_6	BBK82_RS38955	47	124	81.11888111888112	1.16e-32
+ctg22_8	BBK82_RS38930	49	327	97.91666666666666	1.85e-109
+ctg22_9	BBK82_RS38935	53	280	98.0456026058632	4.52e-92
+ctg22_15	BBK82_RS38865	57	270	95.38461538461539	3.26e-89
+ctg22_16	BBK82_RS38855	58	438	99.21875	1.32e-151
+
+
+
+>>
+31. NZ_CP049866
+Source: Nocardioides piscis strain HDW12A chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1926.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	G7071_RS15875	44	412	99.8019801980198	1.11e-137
+ctg22_8	G7071_RS15925	50	325	97.61904761904762	4.67e-108
+ctg22_9	G7071_RS15930	54	297	98.0456026058632	2.6e-98
+ctg22_10	G7071_RS15935	37	164	98.45559845559846	1.38e-47
+ctg22_15	G7071_RS15865	57	264	99.23076923076923	8.37e-87
+ctg22_16	G7071_RS15855	60	464	100.52083333333333	6.25e-162
+
+
+
+>>
+32. NZ_CP080409
+Source: Nocardioides panacisoli strain DP1N28-12 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1921.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	KUV85_RS04315	45	420	99.20792079207921	4.79e-141
+ctg22_8	KUV85_RS04275	50	331	98.51190476190477	2.3e-110
+ctg22_9	KUV85_RS04270	53	290	99.3485342019544	1.38e-95
+ctg22_10	KUV85_RS04265	39	162	84.94208494208493	7.66e-47
+ctg22_15	KUV85_RS04325	56	262	99.23076923076923	6.79e-86
+ctg22_16	KUV85_RS04335	59	456	100.52083333333333	1.42e-158
+
+
+
+>>
+33. NZ_CP059903
+Source: Nocardioides dongkuii strain S-713 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1916.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	H4O22_RS11570	44	420	99.00990099009901	1.25e-140
+ctg22_8	H4O22_RS11615	49	323	97.02380952380952	3.34e-107
+ctg22_9	H4O22_RS11620	52	291	99.0228013029316	4.96e-96
+ctg22_10	H4O22_RS11625	41	163	86.87258687258688	2.73e-47
+ctg22_15	H4O22_RS11560	55	261	99.23076923076923	1.36e-85
+ctg22_16	H4O22_RS11550	60	458	100.52083333333333	1.68e-159
+
+
+
+>>
+34. NZ_CP088149
+Source: Pseudomonas sp. S06B 330 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1903.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	CX511_RS12525	46	450	101.78217821782178	3.08e-152
+ctg22_8	CX511_RS12495	57	381	98.21428571428571	1.78e-130
+ctg22_9	CX511_RS12500	54	297	100.6514657980456	2.36e-98
+ctg22_10	CX511_RS12505	60	316	100.0	2.28e-107
+ctg22_11	CX511_RS12540	41	238	99.25925925925925	4.62e-76
+ctg22_15	CX511_RS12545	36	133	91.53846153846153	6.77e-36
+ctg22_15	CX511_RS12550	31	88	92.6923076923077	1.4e-18
+
+
+
+>>
+35. NZ_CP024478
+Source: Pseudomonas sp. HLS-6 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1895.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	CS390_RS14370	47	462	101.78217821782178	9.1e-157
+ctg22_8	CS390_RS14400	55	378	99.40476190476191	3.12e-129
+ctg22_9	CS390_RS14395	54	300	100.6514657980456	1.5e-99
+ctg22_10	CS390_RS14390	59	312	99.22779922779922	7.53e-106
+ctg22_11	CS390_RS14355	40	228	99.25925925925925	1.95e-72
+ctg22_15	CS390_RS14350	35	123	91.53846153846153	6.23e-32
+ctg22_15	CS390_RS14345	31	92	92.6923076923077	3.75e-20
+
+
+
+>>
+36. NZ_CABVIU010000003
+Source: Pseudomonas fluorescens isolate PS874, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1889.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N79_RS08840	47	451	101.78217821782178	1.2e-152
+ctg22_8	F8N79_RS08875	56	379	99.40476190476191	7.72e-130
+ctg22_9	F8N79_RS08870	56	306	100.6514657980456	7.74e-102
+ctg22_10	F8N79_RS08865	58	310	100.38610038610038	4.33e-105
+ctg22_11	F8N79_RS08825	40	227	99.25925925925925	7.84e-72
+ctg22_15	F8N79_RS08820	35	125	91.53846153846153	5.76e-33
+ctg22_15	F8N79_RS08815	31	91	96.92307692307692	1.95e-19
+
+
+
+>>
+37. NZ_CABVIL010000002
+Source: Pseudomonas fluorescens isolate PS850, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1888.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N73_RS05400	47	454	101.78217821782178	1.05e-153
+ctg22_8	F8N73_RS05365	56	380	99.40476190476191	5.44e-130
+ctg22_9	F8N73_RS05370	55	303	100.6514657980456	6.28e-101
+ctg22_10	F8N73_RS05375	58	308	100.38610038610038	2.49e-104
+ctg22_11	F8N73_RS05435	40	229	99.25925925925925	9.74e-73
+ctg22_15	F8N73_RS05440	35	124	91.53846153846153	1.6e-32
+ctg22_15	F8N73_RS05445	31	90	96.92307692307692	3.76e-19
+
+
+
+>>
+38. NZ_CP014870
+Source: Pseudomonas silesiensis strain A3 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1888.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	PMA3_RS11765	47	451	101.78217821782178	1.2e-152
+ctg22_8	PMA3_RS11735	56	379	99.40476190476191	7.72e-130
+ctg22_9	PMA3_RS11740	56	305	100.6514657980456	1.56e-101
+ctg22_10	PMA3_RS11745	58	310	100.38610038610038	4.33e-105
+ctg22_11	PMA3_RS11780	40	227	99.25925925925925	7.84e-72
+ctg22_15	PMA3_RS11785	35	125	91.53846153846153	5.76e-33
+ctg22_15	PMA3_RS11790	31	91	96.92307692307692	1.95e-19
+
+
+
+>>
+39. NZ_CABVIS010000012
+Source: Pseudomonas fluorescens isolate PS903, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1885.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N58_RS23365	47	452	101.78217821782178	8.47e-153
+ctg22_8	F8N58_RS23325	56	379	99.40476190476191	7.72e-130
+ctg22_9	F8N58_RS23330	56	305	100.6514657980456	2.21e-101
+ctg22_10	F8N58_RS23335	58	309	100.38610038610038	1.24e-104
+ctg22_11	F8N58_RS23380	39	224	99.25925925925925	8.94e-71
+ctg22_15	F8N58_RS23385	35	125	91.53846153846153	1.14e-32
+ctg22_15	F8N58_RS23390	31	91	96.92307692307692	1.95e-19
+
+
+
+>>
+40. NZ_CABVHU010000001
+Source: Pseudomonas fluorescens isolate PS833, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1884.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N96_RS02130	47	454	101.78217821782178	1.49e-153
+ctg22_8	F8N96_RS02100	56	380	99.40476190476191	5.44e-130
+ctg22_9	F8N96_RS02105	55	303	100.6514657980456	6.28e-101
+ctg22_10	F8N96_RS02110	57	306	100.38610038610038	2.03e-103
+ctg22_11	F8N96_RS02155	40	227	99.62962962962963	5.72e-72
+ctg22_15	F8N96_RS02160	35	125	91.53846153846153	1.14e-32
+ctg22_15	F8N96_RS02165	31	89	96.92307692307692	1.01e-18
+
+
+
+>>
+41. NZ_CABVID010000002
+Source: Pseudomonas fluorescens isolate PS838, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1884.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N48_RS03885	47	451	101.78217821782178	1.2e-152
+ctg22_8	F8N48_RS03920	56	380	99.40476190476191	5.44e-130
+ctg22_9	F8N48_RS03915	55	304	100.6514657980456	4.43e-101
+ctg22_10	F8N48_RS03910	57	308	100.38610038610038	2.49e-104
+ctg22_11	F8N48_RS03870	39	225	99.25925925925925	3.15e-71
+ctg22_15	F8N48_RS03865	35	125	91.53846153846153	5.76e-33
+ctg22_15	F8N48_RS03860	31	91	96.92307692307692	1.95e-19
+
+
+
+>>
+42. NZ_CABVJA010000005
+Source: Pseudomonas fluorescens isolate PS914, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1883.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8O11_RS12395	47	454	101.78217821782178	1.05e-153
+ctg22_8	F8O11_RS12435	56	380	99.40476190476191	5.44e-130
+ctg22_9	F8O11_RS12430	55	303	100.6514657980456	6.28e-101
+ctg22_10	F8O11_RS12425	57	306	100.38610038610038	2.03e-103
+ctg22_11	F8O11_RS12370	40	226	99.62962962962963	2.3e-71
+ctg22_15	F8O11_RS12365	35	125	91.53846153846153	1.14e-32
+ctg22_15	F8O11_RS12360	31	89	96.92307692307692	1.01e-18
+
+
+
+>>
+43. NZ_CABVJF010000002
+Source: Pseudomonas fluorescens isolate PS928, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1883.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N86_RS03810	46	447	101.78217821782178	5.48e-151
+ctg22_8	F8N86_RS03845	56	379	99.40476190476191	7.72e-130
+ctg22_9	F8N86_RS03840	56	304	100.6514657980456	3.13e-101
+ctg22_10	F8N86_RS03835	58	312	99.22779922779922	1.07e-105
+ctg22_11	F8N86_RS03795	40	227	99.62962962962963	5.72e-72
+ctg22_15	F8N86_RS03790	35	123	91.53846153846153	4.44e-32
+ctg22_15	F8N86_RS03785	31	91	95.38461538461539	1.95e-19
+
+
+
+>>
+44. NZ_CP026115
+Source: Pseudomonas putida strain W5 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1882.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	C2H86_RS00055	46	449	101.78217821782178	6.18e-152
+ctg22_8	C2H86_RS00085	56	381	99.70238095238095	1.26e-130
+ctg22_9	C2H86_RS00080	55	300	98.37133550488599	1.99e-99
+ctg22_10	C2H86_RS00075	59	311	100.38610038610038	3.05e-105
+ctg22_11	C2H86_RS00040	40	231	99.25925925925925	2.42e-73
+ctg22_15	C2H86_RS00035	35	122	91.53846153846153	4.67e-31
+ctg22_15	C2H86_RS00030	31	88	92.6923076923077	1.37e-18
+
+
+
+>>
+45. NZ_CP034783
+Source: Pseudomonas sp. MPC6 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1882.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	ELQ88_RS20620	46	447	101.78217821782178	5.48e-151
+ctg22_8	ELQ88_RS20650	56	379	99.40476190476191	7.72e-130
+ctg22_9	ELQ88_RS20645	56	304	100.6514657980456	3.13e-101
+ctg22_10	ELQ88_RS20640	58	311	99.22779922779922	3.05e-105
+ctg22_11	ELQ88_RS20605	40	227	99.62962962962963	5.72e-72
+ctg22_15	ELQ88_RS20600	35	123	91.53846153846153	4.44e-32
+ctg22_15	ELQ88_RS20595	31	91	95.38461538461539	1.95e-19
+
+
+
+>>
+46. NZ_PCQN01000023
+Source: Pseudomonas poae strain MYb114 MYb114_23, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1877.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	CQZ97_RS23550	47	454	101.78217821782178	1.05e-153
+ctg22_8	CQZ97_RS23580	56	381	99.40476190476191	1.84e-130
+ctg22_9	CQZ97_RS23575	53	292	100.6514657980456	1.86e-96
+ctg22_10	CQZ97_RS23570	59	315	100.38610038610038	4.58e-107
+ctg22_11	CQZ97_RS23535	39	226	99.25925925925925	2.23e-71
+ctg22_15	CQZ97_RS23530	34	122	91.53846153846153	8.76e-32
+ctg22_15	CQZ97_RS23525	31	87	94.23076923076923	2.69e-18
+
+
+
+>>
+47. NZ_CABVIX010000001
+Source: Pseudomonas fluorescens isolate PS910, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1876.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F8N10_RS03110	45	443	101.78217821782178	2.67e-149
+ctg22_8	F8N10_RS03080	56	382	99.70238095238095	9.48e-131
+ctg22_9	F8N10_RS03085	53	293	99.3485342019544	1.13e-96
+ctg22_10	F8N10_RS03090	57	306	99.61389961389962	1.43e-103
+ctg22_11	F8N10_RS03125	42	238	99.25925925925925	4.62e-76
+ctg22_15	F8N10_RS03130	34	125	91.53846153846153	8.72e-33
+ctg22_15	F8N10_RS03135	33	89	95.0	1.01e-18
+
+
+
+>>
+48. NZ_CP032677
+Source: Pseudomonas sp. Leaf58 chromosome, complete genome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1872.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	DV532_RS14240	45	443	101.78217821782178	2.27e-149
+ctg22_8	DV532_RS14270	56	380	99.70238095238095	5.08e-130
+ctg22_9	DV532_RS14265	55	301	100.6514657980456	3.48e-100
+ctg22_10	DV532_RS14260	58	305	99.22779922779922	4.09e-103
+ctg22_11	DV532_RS14225	41	232	99.25925925925925	8.53e-74
+ctg22_15	DV532_RS14220	35	119	91.53846153846153	1.86e-30
+ctg22_15	DV532_RS14215	32	92	92.6923076923077	7.13e-20
+
+
+
+>>
+49. NZ_LMLH01000031
+Source: Pseudomonas sp. Leaf48 contig_7, whole genome shotgun sequence
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1802.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	ASE98_RS22240	47	456	101.78217821782178	2.62e-154
+ctg22_8	ASE98_RS22210	56	382	99.40476190476191	6.69e-131
+ctg22_9	ASE98_RS22215	55	303	100.6514657980456	8.9e-101
+ctg22_10	ASE98_RS22220	57	307	99.22779922779922	1.01e-103
+ctg22_11	ASE98_RS22255	40	225	99.25925925925925	3.15e-71
+ctg22_15	ASE98_RS22260	36	129	91.53846153846153	2.68e-34
+
+
+
+>>
+50. NZ_CP044409
+Source: Pseudomonas umsongensis strain GO16 chromosome
+Type: betalactone
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1797.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg22_2	F6476_RS19890	46	455	101.58415841584159	3.71e-154
+ctg22_8	F6476_RS19925	56	380	98.21428571428571	5.44e-130
+ctg22_9	F6476_RS19920	55	303	100.6514657980456	6.28e-101
+ctg22_10	F6476_RS19915	59	306	99.22779922779922	1.43e-103
+ctg22_11	F6476_RS19875	41	234	99.25925925925925	7.47e-75
+ctg22_15	F6476_RS19870	35	119	91.53846153846153	1.86e-30
+

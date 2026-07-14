@@ -1,0 +1,28 @@
+ClusterBlast scores for MGYG000296008_2
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg2_2	597	1188	-		
+ctg2_3	1168	1903	-		
+ctg2_4	1906	2476	-		
+ctg2_5	2476	3271	-		
+ctg2_6	3432	4482	+		
+ctg2_7	4481	5255	+		
+ctg2_8	5241	5796	+		
+ctg2_9	5837	6719	+		
+ctg2_10	6715	9865	+		
+ctg2_11	9883	10102	+		
+ctg2_12	10104	10965	+		
+ctg2_13	10961	12830	+		
+ctg2_14	12817	13402	-		
+ctg2_15	13398	13821	-		
+ctg2_16	13859	14813	-		
+ctg2_17	14766	15960	-		
+ctg2_18	16018	16327	-		
+ctg2_19	16380	19224	-		
+ctg2_20	19338	19992	+		
+
+
+Significant hits: 
+
+
+Details:

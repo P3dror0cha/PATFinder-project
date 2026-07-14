@@ -1,0 +1,29 @@
+ClusterBlast scores for MGYG000296009_1
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg1_73	68657	70046	+		
+ctg1_74	70064	72581	+		
+ctg1_75	72676	73003	+		
+ctg1_76	73139	74402	+		
+ctg1_77	74442	75630	+		
+ctg1_78	75619	76015	+		
+ctg1_79	76019	77159	+		
+ctg1_80	77155	77989	+		
+ctg1_81	77990	78209	+		
+ctg1_82	78225	79080	+		
+ctg1_83	79076	80021	-		
+ctg1_84	80013	81051	-		
+ctg1_85	81057	81255	-		
+ctg1_86	81259	81769	-		
+ctg1_87	81845	82589	-		
+ctg1_88	82600	83515	-		
+ctg1_89	83507	85685	-		
+ctg1_90	85876	87037	+		
+ctg1_91	87036	87894	+		
+ctg1_92	87911	88865	+		
+
+
+Significant hits: 
+
+
+Details:

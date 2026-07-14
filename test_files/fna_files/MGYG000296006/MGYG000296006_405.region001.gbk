@@ -1,0 +1,123 @@
+LOCUS       MGYG000296006_405       2248 bp    DNA              UNK 01-JAN-1980
+DEFINITION  MGYG000296006_405.
+ACCESSION   MGYG000296006_405
+VERSION     MGYG000296006_405
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version     :: 8.0.4
+            Run date    :: 2026-07-05 12:18:56
+            NOTE :: This is a single region extracted from a larger record!
+            Orig. start :: 0
+            Orig. end   :: 2248
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     region          1..2248
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="terpene-precursor"
+                     /region_number="1"
+                     /rules="(PT_FPPS_like and not PT_HPP)"
+                     /tool="antismash"
+     cand_cluster    1..2248
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(PT_FPPS_like and not PT_HPP)"
+                     /kind="single"
+                     /product="terpene-precursor"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..2248
+                     /aStool="rule-based-clusters"
+                     /category="terpene"
+                     /contig_edge="True"
+                     /core_location="[1:673](+)"
+                     /cutoff="10000"
+                     /detection_rule="(PT_FPPS_like and not PT_HPP)"
+                     /neighbourhood="10000"
+                     /product="terpene-precursor"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      2..673
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(PT_FPPS_like and not PT_HPP)"
+                     /neighbourhood="10000"
+                     /product="terpene-precursor"
+                     /protocluster_number="1"
+     CDS             2..673
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene-precursor: PT_FPPS_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1182: Polyprenyl synthetase"
+                     /gene_kind="biosynthetic"
+                     /locus_tag="ctg405_1"
+                     /sec_met_domain="PT_FPPS_like (E-value: 1.1e-52, bitscore:
+                     166.9, seeds: 145, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSLIHDDLPAMDDDDLRRGQPTCHVKFGEATAILAGDALKALALQ
+                     CLSTEENPTDHPLSLSAKTRLNMIEHLTLASGSRGMCGGQAIDLESVGKHLDIVQLENM
+                     HIHKTGALIRAAVNLGAMAAEDAATEDLKKLDHYAMCIGLAFQIHDDILDVEGSAATLG
+                     KTHGKDAANDKPTYPGLLGLEGARDKAEDLRQDALEQLQGFGHAADPLRGLANYIVERK
+                     R"
+     CDS             816..1622
+                     /locus_tag="ctg405_2"
+                     /transl_table=11
+                     /translation="MSAVTTPGSEAIEDVQSSADTRKIAINKVGIKDIRHPVKVADRSE
+                     GEQHTIANFNMYVFLPHNFKGTHMSRFVQILNNHEREISVKSFKDMLVEMADRLESDAG
+                     HIEMTFPYFINKTAPVSGVQSLLDYEVTLIGEIANGKPEMFIKVVVPVTSLCPCSKSIS
+                     DYGAHNQRSHVTVTVQTKDFIWIEEVIDLVEKQASCELYGLLKRPDEKFVTERAYDNPK
+                     FVEDMVRDVAGQLNNDSRIIGYTVESENFEYIHNHSAYALIEKKPD"
+     CDS             complement(1674..1865)
+                     /locus_tag="ctg405_3"
+                     /transl_table=11
+                     /translation="MGRKNIHATFKINAILIHYICLLEMPFYHPVIEEALQDALKQSSK
+                     LIEEYSDKSQQPKVAAVS"
+     CDS             1952..2248
+                     /locus_tag="ctg405_4"
+                     /transl_table=11
+                     /translation="MRTARQHQQHSHLTTFASSLQKLAIALLLSLSPGILLAAEGQQDF
+                     TMHWIGWFSLILFVLAYSLVIAEESLHLRKSKPVMVAAGVIWALTAYAYAQHGD"
+ORIGIN
+        1 ttattcgtta atacacgatg acctgccggc aatggatgat gacgatttac gtcgtggaca
+       61 acccacatgc catgtcaaat tcggcgaggc aaccgccatt cttgccggtg atgccttaaa
+      121 ggccctcgcc ttacagtgtc tcagcacaga ggaaaaccct actgaccatc cgctcagttt
+      181 aagtgcgaaa acccgcttga atatgatcga acatctgaca ctggccagtg gctccagagg
+      241 catgtgcggt ggccaggcca ttgatctcga gtcggttggg aaacacctgg atattgtgca
+      301 actggaaaac atgcacattc acaaaaccgg tgccctgatt cgtgcggcag tcaaccttgg
+      361 cgccatggct gcagaggatg cggcaacaga agatctgaaa aaactcgatc attacgctat
+      421 gtgcatcggt ctggcctttc agatccacga tgacattctt gatgtagagg gcagcgcggc
+      481 aacactgggt aagacccatg gcaaagatgc ggccaatgac aaacccacct atccgggtct
+      541 gctcgggctc gagggtgccc gtgacaaagc cgaagacctg cgacaggatg cccttgaaca
+      601 actgcagggc ttcggacatg ctgccgatcc actgcgcggt ttggctaact acattgtcga
+      661 acgcaagcgc tgagcaacgt cgacagacac gtcaatgaca agagctgctt agatcccttg
+      721 cccatgcagc ggtcatttta agtgcactca agttgctgct gccggttctg tccggtatca
+      781 tccgccttcg aaaaaaacga tttttggaag taaaaatgag tgcagtaacc acccccggta
+      841 gcgaagccat cgaagacgta caaagcagtg ccgacacccg caaaattgcg atcaataaag
+      901 ttggcatcaa agatattcgc cacccggtca aagtcgctga ccgcagtgaa ggcgaacagc
+      961 atactattgc aaatttcaat atgtatgttt ttttgccgca taatttcaaa ggcacgcaca
+     1021 tgtcacgttt tgtgcagatt ctgaacaatc atgagcgtga gatttcagtc aaatccttca
+     1081 aggatatgtt agttgaaatg gctgaccggc tcgaatcaga tgccggccac attgaaatga
+     1141 cgttccctta tttcatcaac aaaaccgcac cggtttccgg tgtccagagt ctcctggatt
+     1201 atgaagtcac cttgattggt gaaattgcca atggcaaacc ggaaatgttc atcaaggtcg
+     1261 ttgtaccggt aaccagccta tgcccttgtt ccaagtccat ttctgattat ggtgctcata
+     1321 atcagcgctc tcatgtaacc gtcacggtac aaacaaagga cttcatctgg atagaagaag
+     1381 ttatcgatct tgttgaaaaa caggcctcat gcgaacttta tggtttgttg aaacgccctg
+     1441 atgagaagtt cgttaccgaa cgcgcctatg acaatccaaa atttgtcgaa gatatggtgc
+     1501 gtgatgttgc cggccagcta aataatgaca gccgcattat tggctacact gtcgagtctg
+     1561 aaaacttcga atacatacac aatcactcag cctatgcgtt gattgaaaaa aagccggatt
+     1621 aatcagtttc tctaaacact cccgcattag cgggagtgtt tgtatctgcc tgcctaactc
+     1681 acggctgcta ctttcggctg ttggctctta tcagagtatt cttcaataag ctttgaggat
+     1741 tgtttcaacg catcctgcag ggcttcttct atgactgggt gataaaatgg catctccagc
+     1801 agacagatat aatgaattaa aatcgcatta attttaaaag tcgcatgaat gttttttctt
+     1861 cccattcaga ctaaatcaac tatattgatt gtggattatt tttaatatta aaaatcaagc
+     1921 catggtcaat aaacgctcag gagagccacg aatgcgtaca gctaggcaac accagcaaca
+     1981 tagtcatctt acaacctttg cctccagcct gcagaaatta gccatagctc tcctgctgtc
+     2041 actgtcgcca ggcatcctgt tggcagccga aggacaacag gacttcacca tgcactggat
+     2101 tggctggttc agcctcatcc tgtttgttct ggcatactct ctggtgattg ccgaagaatc
+     2161 tctgcacctg cgtaaatcca aaccggtaat ggtcgctgcg ggtgtaatct gggcactgac
+     2221 cgcatatgcc tatgcacagc atggcgat
+//

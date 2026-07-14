@@ -1,0 +1,958 @@
+ClusterBlast scores for MGYG000296008_6
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg6_37	28290	28647	+		
+ctg6_38	28650	29040	+		
+ctg6_39	29049	29670	+		
+ctg6_40	29689	30652	+		
+ctg6_41	30665	31070	+		
+ctg6_42	31066	33892	-		
+ctg6_43	33958	34393	+		
+ctg6_44	34376	35234	+		
+ctg6_45	35230	36439	-		
+ctg6_46	36438	36963	-		
+ctg6_47	36959	37919	-		
+ctg6_48	38000	38318	+		
+ctg6_49	38319	38577	+		
+ctg6_50	38578	39574	+		
+ctg6_51	39570	39837	-		
+ctg6_52	40278	40746	-		
+ctg6_53	40780	40996	-		
+ctg6_54	41184	42516	+		
+ctg6_55	42519	42936	+		
+ctg6_56	42932	43217	+		
+ctg6_57	43206	43527	-		
+ctg6_58	43576	43987	+		
+ctg6_59	44042	44576	+		
+ctg6_60	44585	46511	+		
+ctg6_61	46513	47614	+		
+
+
+Significant hits: 
+1. NZ_CP055157	Microbulbifer sp. YPW1 chromosome, complete genome
+2. NZ_CP019650	Microbulbifer agarilyticus strain GP101 chromosome, complete genome
+3. NZ_CP020038	Agarilytica rhodophyticola strain 017 chromosome, complete genome
+4. NZ_KB898650	Halomonas zhanjiangensis DSM 21076 D467DRAFT_scaffold00005.5, whole genome shotgun sequence
+5. NZ_BMZI01000009	Salinicola rhizosphaerae strain KCTC 32998 sequence09, whole genome shotgun sequence
+6. NZ_PZJP01000015	Salinicola aestuarinus strain CPA62 Salinicola-sp-CPA62_contig_15, whole genome shotgun sequence
+7. NZ_PZJT01000014	Salinicola salarius strain DSM 18044 Salinicola-salarius_contig_14, whole genome shotgun sequence
+8. NC_017856	Methylophaga frappieri, complete sequence
+9. NC_017857	Methylophaga nitratireducenticrescens, complete sequence
+10. NZ_CP021973	Methylophaga nitratireducenticrescens strain GP59 chromosome
+11. NZ_GG657897	Methylophaga thiooxydans DMS010 scf_1104571000282, whole genome shotgun sequence
+12. NZ_JADFAB010000064	MAG: Methylophaga thiooxydans isolate C15_61_62_3 c_000000000072, whole genome shotgun sequence
+13. NC_007614	Nitrosospira multiformis ATCC 25196, complete sequence
+14. NZ_FNQL01000003	Nitrosospira multiformis strain Nl4, whole genome shotgun sequence
+15. NZ_FOHI01000001	Nitrosospira multiformis strain Nl7, whole genome shotgun sequence
+16. NZ_FPBZ01000002	Nitrosospira multiformis strain Nl14, whole genome shotgun sequence
+17. NZ_FOCT01000005	Nitrosospira multiformis strain Nl18, whole genome shotgun sequence
+18. NZ_JAKZKK010000001	Rosenbergiella epipactidis strain K24 NODE_1_length_558292_cov_97.351764, whole genome shotgun sequence
+19. NZ_CP090207	Pantoea agglomerans strain HJS002 chromosome, complete genome
+20. NZ_CP015579	Tatumella citrea strain DSM 13699 chromosome, complete genome
+21. NZ_CP024768	Pantoea cypripedii strain NE1 chromosome
+22. NZ_LS483499	Tatumella ptyseos strain NCTC11468 chromosome 1, complete sequence
+23. NZ_LR733469	Pantoea sp. 111 isolate Pantoea sp. 111, whole genome shotgun sequence
+24. NZ_CP083809	Pantoea agglomerans strain 33.1 chromosome, complete genome
+25. NZ_CP104758	Kalamiella piersonii strain GABEKP28 chromosome, complete genome
+26. NZ_CP115895	Kalamiella piersonii strain URMC-2103A041 chromosome, complete genome
+27. NZ_RARB01000004	Kalamiella piersonii strain IIIF1SW-P2 scaffold4.1, whole genome shotgun sequence
+28. NZ_LR026978	[Erwinia] mediterraneensis strain Marseille-P5165, whole genome shotgun sequence
+29. NZ_CP092373	Pantoea sp. Z09 chromosome, complete genome
+30. NZ_DDLA01000016	MAG: Pantoea septica isolate UBA2584 UBA2584_contig_18, whole genome shotgun sequence
+31. NZ_CP028349	Pantoea vagans strain PV989 chromosome, complete genome
+32. NZ_CP024636	Pantoea sp. MSR2 chromosome
+33. NC_014562	Pantoea vagans C9-1, complete sequence
+34. NZ_CEFP01000005	Pantoea vagans strain PaVv11, whole genome shotgun sequence
+35. NZ_CP014129	Pantoea vagans strain FDAARGOS_160 chromosome, complete genome
+36. NZ_CP016889	Pantoea agglomerans strain C410P1 chromosome, complete genome
+37. NZ_CP031649	Pantoea agglomerans strain TH81 chromosome, complete genome
+38. NZ_CP034148	Pantoea agglomerans strain L15 chromosome, complete genome
+39. NZ_CP034474	Pantoea agglomerans strain CFSAN047154 chromosome, complete genome
+40. NZ_CP038853	Pantoea vagans strain LMG 24199 chromosome, complete genome
+41. NZ_CP046722	Pantoea agglomerans strain ASB05 chromosome, complete genome
+42. NZ_CP048033	Pantoea agglomerans strain UAEU18 chromosome, complete genome
+43. NZ_CP059089	Pantoea agglomerans strain AR1a chromosome, complete genome
+44. NZ_CP064872	Pantoea sp. SM3640 chromosome, complete genome
+45. NZ_CP068440	Pantoea agglomerans strain ZJU23 chromosome, complete genome
+46. NZ_CP077366	Pantoea agglomerans strain FDAARGOS 1447 chromosome, complete genome
+47. NZ_CP082292	Pantoea agglomerans strain CQ10 chromosome, complete genome
+48. NZ_CP084197	Pantoea agglomerans strain CB1 chromosome, complete genome
+49. NZ_CP086133	Pantoea agglomerans strain DBM 3797 chromosome, complete genome
+50. NZ_CP091099	Pantoea agglomerans strain Pa58 chromosome, complete genome
+
+
+Details:
+
+>>
+1. NZ_CP055157
+Source: Microbulbifer sp. YPW1 chromosome, complete genome
+Type: NI-siderophore
+Number of proteins with BLAST hits to this cluster: 11
+Cumulative BLAST score: 2784.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	HUW35_RS10190	37	179	93.41692789968651	5.43e-52
+ctg6_48	HUW35_RS10195	50	100	96.19047619047619	1.35e-26
+ctg6_49	HUW35_RS10200	74	124	96.47058823529412	4.63e-37
+ctg6_50	HUW35_RS10205	49	293	98.48942598187311	2.68e-95
+ctg6_51	HUW35_RS10215	54	65	97.72727272727273	3.09e-13
+ctg6_52	HUW35_RS10100	48	150	99.35483870967742	6e-45
+ctg6_54	HUW35_RS10105	34	202	98.64559819413093	7.97e-58
+ctg6_54	HUW35_RS10095	34	202	100.0	8.39e-58
+ctg6_58	HUW35_RS10125	64	185	99.26470588235294	2.06e-59
+ctg6_59	HUW35_RS10140	44	117	76.27118644067797	2.92e-31
+ctg6_60	HUW35_RS10145	72	856	99.68798751950078	4.57e-308
+ctg6_61	HUW35_RS10150	50	311	101.09289617486338	4.13e-102
+
+
+
+>>
+2. NZ_CP019650
+Source: Microbulbifer agarilyticus strain GP101 chromosome, complete genome
+Type: NRPS
+Number of proteins with BLAST hits to this cluster: 9
+Cumulative BLAST score: 2795.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_42	Mag101_RS14520	63	1203	100.21253985122209	0.0
+ctg6_43	Mag101_RS14510	66	158	84.72222222222221	7.5e-48
+ctg6_45	Mag101_RS14500	58	464	100.99502487562188	4.97e-161
+ctg6_46	Mag101_RS14495	59	219	98.85057471264368	1.27e-71
+ctg6_47	Mag101_RS14480	37	171	94.67084639498434	7.14e-49
+ctg6_48	Mag101_RS14475	50	100	96.19047619047619	4.72e-27
+ctg6_49	Mag101_RS14470	74	124	96.47058823529412	4.63e-37
+ctg6_50	Mag101_RS14465	51	291	87.31117824773413	1.39e-94
+ctg6_51	Mag101_RS14455	54	65	97.72727272727273	3.09e-13
+
+
+
+>>
+3. NZ_CP020038
+Source: Agarilytica rhodophyticola strain 017 chromosome, complete genome
+Type: RiPP-like,arylpolyene
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1572.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_45	BVC89_RS21215	60	476	100.0	8.81e-166
+ctg6_45	BVC89_RS20980	36	213	101.49253731343283	5.94e-63
+ctg6_46	BVC89_RS21210	59	215	100.0	2.97e-70
+ctg6_47	BVC89_RS21170	35	173	91.84952978056427	1.29e-49
+ctg6_48	BVC89_RS21165	49	99	96.19047619047619	1.91e-26
+ctg6_49	BVC89_RS21160	65	110	100.0	1.42e-31
+ctg6_50	BVC89_RS21155	49	286	90.03021148036254	2.04e-92
+
+
+
+>>
+4. NZ_KB898650
+Source: Halomonas zhanjiangensis DSM 21076 D467DRAFT_scaffold00005.5, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 820.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_45	D467_RS0111290	32	120	63.681592039801	3.5e-28
+ctg6_47	D467_RS0111210	38	179	89.34169278996865	7.86e-52
+ctg6_48	D467_RS0111205	52	108	97.14285714285714	3.03e-30
+ctg6_49	D467_RS0111200	64	111	98.82352941176471	7.06e-32
+ctg6_50	D467_RS0111195	48	302	100.0	1.01e-98
+
+
+
+>>
+5. NZ_BMZI01000009
+Source: Salinicola rhizosphaerae strain KCTC 32998 sequence09, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 761.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	IE125_RS18130	37	171	89.0282131661442	1.11e-48
+ctg6_48	IE125_RS18125	52	107	97.14285714285714	1.23e-29
+ctg6_49	IE125_RS18120	66	113	100.0	1.22e-32
+ctg6_50	IE125_RS18115	50	315	100.60422960725074	1.09e-103
+ctg6_51	IE125_RS18105	47	55	97.72727272727273	2.64e-09
+
+
+
+>>
+6. NZ_PZJP01000015
+Source: Salinicola aestuarinus strain CPA62 Salinicola-sp-CPA62_contig_15, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 746.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	DOM41_RS15280	37	168	92.47648902821317	1.41e-47
+ctg6_48	DOM41_RS15285	53	106	97.14285714285714	2.48e-29
+ctg6_49	DOM41_RS15290	67	114	100.0	4.26e-33
+ctg6_50	DOM41_RS15295	52	302	88.51963746223565	7.59e-99
+ctg6_51	DOM41_RS15305	47	56	97.72727272727273	9.29e-10
+
+
+
+>>
+7. NZ_PZJT01000014
+Source: Salinicola salarius strain DSM 18044 Salinicola-salarius_contig_14, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 739.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	DOM32_RS13465	41	162	72.72727272727273	3.28e-45
+ctg6_48	DOM32_RS13460	51	104	97.14285714285714	2.03e-28
+ctg6_49	DOM32_RS13455	66	114	100.0	6.05e-33
+ctg6_50	DOM32_RS13450	48	302	100.60422960725074	7.36e-99
+ctg6_51	DOM32_RS13440	48	57	97.72727272727273	4.64e-10
+
+
+
+>>
+8. NC_017856
+Source: Methylophaga frappieri, complete sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 734.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	Q7C_RS10400	37	182	97.17868338557993	3.7e-53
+ctg6_48	Q7C_RS10405	46	95	97.14285714285714	8.97e-25
+ctg6_49	Q7C_RS10410	68	115	98.82352941176471	2.11e-33
+ctg6_50	Q7C_RS10415	45	282	100.30211480362539	1.08e-91
+ctg6_51	Q7C_RS10425	52	60	97.72727272727273	2.73e-11
+
+
+
+>>
+9. NC_017857
+Source: Methylophaga nitratireducenticrescens, complete sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 724.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	Q7A_RS02725	38	172	84.63949843260188	1.92e-49
+ctg6_48	Q7A_RS02730	42	90	97.14285714285714	1.2e-22
+ctg6_49	Q7A_RS02735	67	114	98.82352941176471	8.59e-33
+ctg6_50	Q7A_RS02740	47	290	100.0	1.1e-94
+ctg6_51	Q7A_RS02750	49	58	97.72727272727273	1.56e-10
+
+
+
+>>
+10. NZ_CP021973
+Source: Methylophaga nitratireducenticrescens strain GP59 chromosome
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 724.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	CDW43_RS02640	38	172	84.63949843260188	1.92e-49
+ctg6_48	CDW43_RS02645	42	90	97.14285714285714	1.2e-22
+ctg6_49	CDW43_RS02650	67	114	98.82352941176471	8.59e-33
+ctg6_50	CDW43_RS02655	47	290	100.0	1.1e-94
+ctg6_51	CDW43_RS02665	49	58	97.72727272727273	1.56e-10
+
+
+
+>>
+11. NZ_GG657897
+Source: Methylophaga thiooxydans DMS010 scf_1104571000282, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 718.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	MDMS009_RS07085	38	172	92.16300940438872	3.8e-49
+ctg6_48	MDMS009_RS07080	44	93	97.14285714285714	7.3e-24
+ctg6_49	MDMS009_RS07075	67	115	98.82352941176471	3e-33
+ctg6_50	MDMS009_RS07070	47	280	91.54078549848943	1.02e-90
+ctg6_51	MDMS009_RS07060	48	58	97.72727272727273	1.1e-10
+
+
+
+>>
+12. NZ_JADFAB010000064
+Source: MAG: Methylophaga thiooxydans isolate C15_61_62_3 c_000000000072, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 717.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	NWT61_RS10820	37	171	92.16300940438872	1.06e-48
+ctg6_48	NWT61_RS10825	44	93	97.14285714285714	7.3e-24
+ctg6_49	NWT61_RS10830	67	115	98.82352941176471	3e-33
+ctg6_50	NWT61_RS10835	45	280	100.0	7.2e-91
+ctg6_51	NWT61_RS10845	48	58	97.72727272727273	1.1e-10
+
+
+
+>>
+13. NC_007614
+Source: Nitrosospira multiformis ATCC 25196, complete sequence
+Type: NRP-metallophore,NRPS,T1PKS,linaridin
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 712.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	NMUL_RS09505	38	164	76.8025078369906	3.48e-46
+ctg6_48	NMUL_RS09510	51	103	98.09523809523809	4.08e-28
+ctg6_49	NMUL_RS09515	78	135	97.6470588235294	1.75e-41
+ctg6_50	NMUL_RS09520	48	310	98.79154078549848	1.27e-102
+
+
+
+>>
+14. NZ_FNQL01000003
+Source: Nitrosospira multiformis strain Nl4, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS,T1PKS,linaridin
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 709.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BLV78_RS04770	38	161	76.8025078369906	3.77e-45
+ctg6_48	BLV78_RS04765	51	103	98.09523809523809	4.08e-28
+ctg6_49	BLV78_RS04760	78	135	97.6470588235294	1.75e-41
+ctg6_50	BLV78_RS04755	48	310	98.79154078549848	1.27e-102
+
+
+
+>>
+15. NZ_FOHI01000001
+Source: Nitrosospira multiformis strain Nl7, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS,T1PKS,linaridin
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 709.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BMW46_RS02880	38	161	76.8025078369906	3.77e-45
+ctg6_48	BMW46_RS02875	51	103	98.09523809523809	2.87e-28
+ctg6_49	BMW46_RS02870	78	135	97.6470588235294	1.75e-41
+ctg6_50	BMW46_RS02865	49	310	98.48942598187311	2.54e-102
+
+
+
+>>
+16. NZ_FPBZ01000002
+Source: Nitrosospira multiformis strain Nl14, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS,T1PKS,linaridin
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 709.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BM324_RS02500	38	160	76.8025078369906	7.45e-45
+ctg6_48	BM324_RS02505	50	104	98.09523809523809	1.43e-28
+ctg6_49	BM324_RS02510	78	136	97.6470588235294	1.23e-41
+ctg6_50	BM324_RS02515	49	309	98.48942598187311	3.6e-102
+
+
+
+>>
+17. NZ_FOCT01000005
+Source: Nitrosospira multiformis strain Nl18, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS,T1PKS,linaridin
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 708.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BMY01_RS07075	38	162	76.8025078369906	1.91e-45
+ctg6_48	BMY01_RS07080	51	103	98.09523809523809	2.87e-28
+ctg6_49	BMY01_RS07085	78	135	97.6470588235294	1.75e-41
+ctg6_50	BMY01_RS07090	48	308	98.79154078549848	7.22e-102
+
+
+
+>>
+18. NZ_JAKZKK010000001
+Source: Rosenbergiella epipactidis strain K24 NODE_1_length_558292_cov_97.351764, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 669.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	MKS02_RS00395	43	167	70.84639498432603	3.29e-47
+ctg6_48	MKS02_RS00400	49	97	97.14285714285714	1.56e-25
+ctg6_49	MKS02_RS00405	64	114	98.82352941176471	6.05e-33
+ctg6_50	MKS02_RS00410	47	291	101.2084592145015	1.45e-94
+
+
+
+>>
+19. NZ_CP090207
+Source: Pantoea agglomerans strain HJS002 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 667.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	LZU96_RS18030	40	161	73.66771159874608	5.44e-45
+ctg6_48	LZU96_RS18025	47	96	97.14285714285714	6.32e-25
+ctg6_49	LZU96_RS18020	67	118	98.82352941176471	1.27e-34
+ctg6_50	LZU96_RS18015	47	292	102.41691842900302	7e-95
+
+
+
+>>
+20. NZ_CP015579
+Source: Tatumella citrea strain DSM 13699 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 666.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	A7K98_RS01140	43	164	70.21943573667711	2.54e-46
+ctg6_48	A7K98_RS01145	48	96	97.14285714285714	3.14e-25
+ctg6_49	A7K98_RS01150	66	116	98.82352941176471	1.05e-33
+ctg6_50	A7K98_RS01155	46	290	101.81268882175227	4.23e-94
+
+
+
+>>
+21. NZ_CP024768
+Source: Pantoea cypripedii strain NE1 chromosome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 666.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	CUN67_RS02275	40	159	73.66771159874608	4.18e-44
+ctg6_48	CUN67_RS02280	48	96	97.14285714285714	3.14e-25
+ctg6_49	CUN67_RS02285	67	118	98.82352941176471	1.81e-34
+ctg6_50	CUN67_RS02290	47	293	101.51057401812689	3.61e-95
+
+
+
+>>
+22. NZ_LS483499
+Source: Tatumella ptyseos strain NCTC11468 chromosome 1, complete sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	DQM83_RS01335	38	164	79.3103448275862	5.02e-46
+ctg6_48	DQM83_RS01340	48	97	97.14285714285714	2.21e-25
+ctg6_49	DQM83_RS01345	64	115	98.82352941176471	3e-33
+ctg6_50	DQM83_RS01355	46	289	101.51057401812689	8.46e-94
+
+
+
+>>
+23. NZ_LR733469
+Source: Pantoea sp. 111 isolate Pantoea sp. 111, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BOSE7B_RS09170	40	161	73.66771159874608	5.44e-45
+ctg6_48	BOSE7B_RS09175	47	96	97.14285714285714	6.32e-25
+ctg6_49	BOSE7B_RS09180	67	118	98.82352941176471	1.27e-34
+ctg6_50	BOSE7B_RS09185	47	290	102.41691842900302	5.62e-94
+
+
+
+>>
+24. NZ_CP083809
+Source: Pantoea agglomerans strain 33.1 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	LB453_RS19855	39	160	76.48902821316614	1.07e-44
+ctg6_48	LB453_RS19850	46	93	97.14285714285714	5.15e-24
+ctg6_49	LB453_RS19845	67	118	98.82352941176471	1.27e-34
+ctg6_50	LB453_RS19840	47	294	100.90634441087613	1.23e-95
+
+
+
+>>
+25. NZ_CP104758
+Source: Kalamiella piersonii strain GABEKP28 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	N5580_RS16235	39	160	76.48902821316614	1.07e-44
+ctg6_48	N5580_RS16230	46	93	97.14285714285714	5.15e-24
+ctg6_49	N5580_RS16225	67	118	98.82352941176471	1.27e-34
+ctg6_50	N5580_RS16220	47	294	100.90634441087613	8.72e-96
+
+
+
+>>
+26. NZ_CP115895
+Source: Kalamiella piersonii strain URMC-2103A041 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	PG877_RS16740	39	160	76.48902821316614	1.07e-44
+ctg6_48	PG877_RS16735	46	93	97.14285714285714	5.15e-24
+ctg6_49	PG877_RS16730	67	118	98.82352941176471	1.27e-34
+ctg6_50	PG877_RS16725	47	294	100.90634441087613	1.23e-95
+
+
+
+>>
+27. NZ_RARB01000004
+Source: Kalamiella piersonii strain IIIF1SW-P2 scaffold4.1, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	D7S44_RS12705	39	160	76.48902821316614	1.07e-44
+ctg6_48	D7S44_RS12710	46	93	97.14285714285714	5.15e-24
+ctg6_49	D7S44_RS12715	67	118	98.82352941176471	1.27e-34
+ctg6_50	D7S44_RS12720	47	294	100.90634441087613	1.23e-95
+
+
+
+>>
+28. NZ_LR026978
+Source: [Erwinia] mediterraneensis strain Marseille-P5165, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	E0E17_RS09200	42	160	70.21943573667711	1.51e-44
+ctg6_48	E0E17_RS09205	48	96	97.14285714285714	3.14e-25
+ctg6_49	E0E17_RS09210	68	119	98.82352941176471	6.31e-35
+ctg6_50	E0E17_RS09215	46	290	100.0	3.97e-94
+
+
+
+>>
+29. NZ_CP092373
+Source: Pantoea sp. Z09 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	MC269_RS16415	38	159	76.48902821316614	2.98e-44
+ctg6_48	MC269_RS16410	46	93	97.14285714285714	5.15e-24
+ctg6_49	MC269_RS16405	67	118	98.82352941176471	1.27e-34
+ctg6_50	MC269_RS16400	47	295	100.90634441087613	6.16e-96
+
+
+
+>>
+30. NZ_DDLA01000016
+Source: MAG: Pantoea septica isolate UBA2584 UBA2584_contig_18, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 665.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	B3Q49_RS07090	39	159	76.48902821316614	4.18e-44
+ctg6_48	B3Q49_RS07085	46	93	97.14285714285714	5.15e-24
+ctg6_49	B3Q49_RS07080	67	118	98.82352941176471	1.27e-34
+ctg6_50	B3Q49_RS07075	47	295	100.90634441087613	4.22e-96
+
+
+
+>>
+31. NZ_CP028349
+Source: Pantoea vagans strain PV989 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 664.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	C9381_RS04310	40	161	73.66771159874608	3.87e-45
+ctg6_48	C9381_RS04315	46	93	97.14285714285714	5.15e-24
+ctg6_49	C9381_RS04320	67	118	98.82352941176471	1.81e-34
+ctg6_50	C9381_RS04325	47	292	100.90634441087613	7e-95
+
+
+
+>>
+32. NZ_CP024636
+Source: Pantoea sp. MSR2 chromosome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 664.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	CTZ24_RS02460	42	159	70.21943573667711	2.12e-44
+ctg6_48	CTZ24_RS02465	48	96	97.14285714285714	3.14e-25
+ctg6_49	CTZ24_RS02470	67	118	98.82352941176471	1.27e-34
+ctg6_50	CTZ24_RS02475	46	291	101.51057401812689	2.05e-94
+
+
+
+>>
+33. NC_014562
+Source: Pantoea vagans C9-1, complete sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	PVAG_RS21935	40	161	73.66771159874608	3.87e-45
+ctg6_48	PVAG_RS21940	46	93	97.14285714285714	5.15e-24
+ctg6_49	PVAG_RS21945	67	118	98.82352941176471	1.81e-34
+ctg6_50	PVAG_RS21950	47	291	100.90634441087613	9.91e-95
+
+
+
+>>
+34. NZ_CEFP01000005
+Source: Pantoea vagans strain PaVv11, whole genome shotgun sequence
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	A0869_RS07710	40	161	73.66771159874608	3.87e-45
+ctg6_48	A0869_RS07715	46	93	97.14285714285714	5.15e-24
+ctg6_49	A0869_RS07720	67	118	98.82352941176471	1.81e-34
+ctg6_50	A0869_RS07725	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+35. NZ_CP014129
+Source: Pantoea vagans strain FDAARGOS_160 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	AL522_RS06555	40	161	73.66771159874608	3.87e-45
+ctg6_48	AL522_RS06560	46	93	97.14285714285714	5.15e-24
+ctg6_49	AL522_RS06565	67	118	98.82352941176471	1.81e-34
+ctg6_50	AL522_RS06570	47	291	100.90634441087613	9.91e-95
+
+
+
+>>
+36. NZ_CP016889
+Source: Pantoea agglomerans strain C410P1 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	BEE12_RS09155	40	161	73.66771159874608	3.87e-45
+ctg6_48	BEE12_RS09160	46	93	97.14285714285714	5.15e-24
+ctg6_49	BEE12_RS09165	67	118	98.82352941176471	1.81e-34
+ctg6_50	BEE12_RS09170	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+37. NZ_CP031649
+Source: Pantoea agglomerans strain TH81 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	D0A61_RS17560	40	161	73.66771159874608	3.87e-45
+ctg6_48	D0A61_RS17555	46	93	97.14285714285714	5.15e-24
+ctg6_49	D0A61_RS17550	67	118	98.82352941176471	1.81e-34
+ctg6_50	D0A61_RS17545	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+38. NZ_CP034148
+Source: Pantoea agglomerans strain L15 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	CBF16_RS01975	40	161	73.66771159874608	3.87e-45
+ctg6_48	CBF16_RS01980	46	93	97.14285714285714	5.15e-24
+ctg6_49	CBF16_RS01985	67	118	98.82352941176471	1.81e-34
+ctg6_50	CBF16_RS01990	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+39. NZ_CP034474
+Source: Pantoea agglomerans strain CFSAN047154 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	D1629_RS01045	40	161	73.66771159874608	3.87e-45
+ctg6_48	D1629_RS01050	46	93	97.14285714285714	5.15e-24
+ctg6_49	D1629_RS01055	67	118	98.82352941176471	1.81e-34
+ctg6_50	D1629_RS01060	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+40. NZ_CP038853
+Source: Pantoea vagans strain LMG 24199 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	EGO56_RS17170	40	161	73.66771159874608	3.87e-45
+ctg6_48	EGO56_RS17165	46	93	97.14285714285714	5.15e-24
+ctg6_49	EGO56_RS17160	67	118	98.82352941176471	1.81e-34
+ctg6_50	EGO56_RS17155	47	291	100.90634441087613	1.98e-94
+
+
+
+>>
+41. NZ_CP046722
+Source: Pantoea agglomerans strain ASB05 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	PAASB05_RS16915	40	161	73.66771159874608	3.87e-45
+ctg6_48	PAASB05_RS16910	46	93	97.14285714285714	5.15e-24
+ctg6_49	PAASB05_RS16905	67	118	98.82352941176471	1.81e-34
+ctg6_50	PAASB05_RS16900	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+42. NZ_CP048033
+Source: Pantoea agglomerans strain UAEU18 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	GW574_RS15160	40	161	73.66771159874608	3.87e-45
+ctg6_48	GW574_RS15165	46	93	97.14285714285714	5.15e-24
+ctg6_49	GW574_RS15170	67	118	98.82352941176471	1.81e-34
+ctg6_50	GW574_RS15175	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+43. NZ_CP059089
+Source: Pantoea agglomerans strain AR1a chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	H0Z11_RS18670	40	161	73.66771159874608	3.87e-45
+ctg6_48	H0Z11_RS18665	46	93	97.14285714285714	5.15e-24
+ctg6_49	H0Z11_RS18660	67	118	98.82352941176471	1.81e-34
+ctg6_50	H0Z11_RS18655	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+44. NZ_CP064872
+Source: Pantoea sp. SM3640 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	IV493_RS15945	40	161	73.66771159874608	3.87e-45
+ctg6_48	IV493_RS15940	46	93	97.14285714285714	5.15e-24
+ctg6_49	IV493_RS15935	67	118	98.82352941176471	1.81e-34
+ctg6_50	IV493_RS15930	47	291	100.90634441087613	9.91e-95
+
+
+
+>>
+45. NZ_CP068440
+Source: Pantoea agglomerans strain ZJU23 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	JK642_RS01845	40	161	73.66771159874608	3.87e-45
+ctg6_48	JK642_RS01850	46	93	97.14285714285714	5.15e-24
+ctg6_49	JK642_RS01855	67	118	98.82352941176471	1.81e-34
+ctg6_50	JK642_RS01860	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+46. NZ_CP077366
+Source: Pantoea agglomerans strain FDAARGOS 1447 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	I6L77_RS00705	40	161	73.66771159874608	3.87e-45
+ctg6_48	I6L77_RS00700	46	93	97.14285714285714	5.15e-24
+ctg6_49	I6L77_RS00695	67	118	98.82352941176471	1.81e-34
+ctg6_50	I6L77_RS00690	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+47. NZ_CP082292
+Source: Pantoea agglomerans strain CQ10 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	K6R05_RS16705	40	161	73.66771159874608	3.87e-45
+ctg6_48	K6R05_RS16700	46	93	97.14285714285714	5.15e-24
+ctg6_49	K6R05_RS16695	67	118	98.82352941176471	1.81e-34
+ctg6_50	K6R05_RS16690	47	291	100.90634441087613	9.91e-95
+
+
+
+>>
+48. NZ_CP084197
+Source: Pantoea agglomerans strain CB1 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	LDO72_RS17585	40	161	73.66771159874608	3.87e-45
+ctg6_48	LDO72_RS17580	46	93	97.14285714285714	5.15e-24
+ctg6_49	LDO72_RS17575	67	118	98.82352941176471	1.81e-34
+ctg6_50	LDO72_RS17570	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+49. NZ_CP086133
+Source: Pantoea agglomerans strain DBM 3797 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	LKW31_RS17300	40	161	73.66771159874608	3.87e-45
+ctg6_48	LKW31_RS17295	46	93	97.14285714285714	5.15e-24
+ctg6_49	LKW31_RS17290	67	118	98.82352941176471	1.81e-34
+ctg6_50	LKW31_RS17285	47	291	100.90634441087613	1.4e-94
+
+
+
+>>
+50. NZ_CP091099
+Source: Pantoea agglomerans strain Pa58 chromosome, complete genome
+Type: NRP-metallophore,NRPS
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 663.0
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+ctg6_47	LZ609_RS16565	40	161	73.66771159874608	3.87e-45
+ctg6_48	LZ609_RS16560	46	93	97.14285714285714	5.15e-24
+ctg6_49	LZ609_RS16555	67	118	98.82352941176471	1.81e-34
+ctg6_50	LZ609_RS16550	47	291	100.90634441087613	1.4e-94
+

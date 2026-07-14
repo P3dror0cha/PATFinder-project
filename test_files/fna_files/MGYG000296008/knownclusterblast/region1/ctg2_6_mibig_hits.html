@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>XP_001217689.1</td>
+              <td>phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001517.3">BGC0001517.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>50.0</td>
+              <td>97.7</td>
+              <td>325.0</td>
+              <td>9.33e-110</td>
+          </tr>
+    
+          <tr>
+              <td>AJG44378.1</td>
+              <td>DAHP_synthase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002619.2">BGC0002619.2</a></td>
+              <td>PKS</td>
+              <td>49.0</td>
+              <td>99.1</td>
+              <td>323.0</td>
+              <td>5.11e-109</td>
+          </tr>
+    
+          <tr>
+              <td>PHM31514.1</td>
+              <td>phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001868.4">BGC0001868.4</a></td>
+              <td>other:phenazine</td>
+              <td>47.0</td>
+              <td>98.0</td>
+              <td>322.0</td>
+              <td>9.92e-109</td>
+          </tr>
+    
+          <tr>
+              <td>WP_024483794.1</td>
+              <td>3-deoxy-7-phosphoheptulonate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002002.3">BGC0002002.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>47.0</td>
+              <td>95.4</td>
+              <td>319.0</td>
+              <td>8.11e-108</td>
+          </tr>
+    
+          <tr>
+              <td>AEI58892.1</td>
+              <td>putative_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000455.6">BGC0000455.6</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>49.0</td>
+              <td>99.1</td>
+              <td>309.0</td>
+              <td>1.06e-103</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ50910.1</td>
+              <td>3-deoxy-7-phosphoheptulonate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001461.5">BGC0001461.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>99.1</td>
+              <td>309.0</td>
+              <td>1.06e-103</td>
+          </tr>
+    
+          <tr>
+              <td>AYA22305.1</td>
+              <td>DahP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001955.4">BGC0001955.4</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>49.0</td>
+              <td>99.1</td>
+              <td>309.0</td>
+              <td>1.06e-103</td>
+          </tr>
+    
+          <tr>
+              <td>OKA09448.1</td>
+              <td>3-deoxy-7-phosphoheptulonate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001459.5">BGC0001459.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>50.0</td>
+              <td>98.6</td>
+              <td>309.0</td>
+              <td>1.09e-103</td>
+          </tr>
+    
+          <tr>
+              <td>AIE77089.1</td>
+              <td>putative_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000418.5">BGC0000418.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>98.6</td>
+              <td>309.0</td>
+              <td>1.13e-103</td>
+          </tr>
+    
+          <tr>
+              <td>EME52961.1</td>
+              <td>phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001460.5">BGC0001460.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>98.6</td>
+              <td>307.0</td>
+              <td>6.01e-103</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79211.1</td>
+              <td>Phospho-2-dehydro-3-deoxyheptonate_aldolase,_Phe-sensitive</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000419.5">BGC0000419.5</a></td>
+              <td>NRPS:Type I+saccharide</td>
+              <td>49.0</td>
+              <td>99.1</td>
+              <td>307.0</td>
+              <td>8.51e-103</td>
+          </tr>
+    
+          <tr>
+              <td>CAG25757.1</td>
+              <td>putative_alodlase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000311.6">BGC0000311.6</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>49.0</td>
+              <td>98.6</td>
+              <td>296.0</td>
+              <td>1.27e-98</td>
+          </tr>
+    
+          <tr>
+              <td>AKP45401.1</td>
+              <td>CysN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001413.5">BGC0001413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>48.0</td>
+              <td>90.5</td>
+              <td>288.0</td>
+              <td>2.06e-95</td>
+          </tr>
+    
+          <tr>
+              <td>AAO07756.1</td>
+              <td>3-deoxy-7-phosphoheptulonate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000460.5">BGC0000460.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>46.0</td>
+              <td>93.4</td>
+              <td>284.0</td>
+              <td>9.08e-94</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44169.1</td>
+              <td>2-keto-3-deoxy-D-arabino-heptulosonate-7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001193.5">BGC0001193.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>94.8</td>
+              <td>275.0</td>
+              <td>1.21e-90</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ45633.1</td>
+              <td>DAHP_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000454.5">BGC0000454.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>48.0</td>
+              <td>83.4</td>
+              <td>271.0</td>
+              <td>1.71e-89</td>
+          </tr>
+    
+          <tr>
+              <td>ACU36652.1</td>
+              <td>phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000392.5">BGC0000392.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>94.6</td>
+              <td>271.0</td>
+              <td>7.78e-89</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ52526.1</td>
+              <td>DAHP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002533.2">BGC0002533.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>45.0</td>
+              <td>90.8</td>
+              <td>268.0</td>
+              <td>1.82e-87</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,18 @@
+ClusterBlast scores for MGYG000296006_71
+
+Table of genes, locations, strands and annotations of query cluster:
+ctg71_1	539	1409	+		
+ctg71_2	1714	2053	+		
+ctg71_3	2226	3084	+		
+ctg71_4	3080	3860	+		
+ctg71_5	3872	4478	+		
+ctg71_6	4474	5053	+		
+ctg71_7	5098	5257	+		
+ctg71_8	5349	5760	+		
+ctg71_9	5769	6108	+		
+
+
+Significant hits: 
+
+
+Details:
