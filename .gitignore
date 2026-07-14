@@ -5,3 +5,5 @@ work
 .gitmodules
 install.sh
 run_poem.sh
+results*
+*files
