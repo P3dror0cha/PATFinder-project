@@ -57,7 +57,7 @@ nextflow run main.nf -resume -profile micromamba
 main_faa_and_gbk.nf: In this mode PATFinder takes your .gbk and .faa files as input. Before usage of the pipeline, the .gbk files must have a name similar to antiSMASH output and be present in the same folder. The name convention are: {sample_name}_{contig_number}.region{region_number}.gbk (ex. MGYG000296008_22.region001.gbk). The .faa files must have corresponding names with the .gbk files.
 
 An example of accepted inputs are described below:
-
+```text
 PATFinder-project/
 ├── gbk_files/
 │   ├── MGYG000296008_2.region001.gbk
@@ -72,7 +72,7 @@ PATFinder-project/
 │   ├── MGYG000296006.faa
 │   ├── MGYG000296009.faa
 │   └── MGYG000296014.faa
-
+```
 For running this mode, use:
 ```bash
 # If you are using conda
