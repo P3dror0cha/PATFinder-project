@@ -21,64 +21,63 @@ Below is the current pipeline workflow.
 
 Follow the steps below to set up the environment and run the pipeline.
 
-### 1. Clone the repository
+### 1. Clone the repository and activate the submodules
 
 ```bash
-git clone https://github.com/P3dror0cha/Segunda_IC.git
-cd Segunda_IC
+git clone https://github.com/P3dror0cha/Segunda_IC.git](https://github.com/P3dror0cha/PATFinder-project.git
+cd PATFinder-project
+git submodule update --init --recursive
 ```
-### 2. Installing dependencies and creating ambients
 
-This section shows the commands used to make the necessary ambients for this pipeline to work. For instance, the ambients create are: 1 - antismash_bigscape, 2 - deepsea-project, 3 - DIAMOND_ambient and 4 - POEM_pipeline_ambient.
-
-## 2.1 antiSMASH and BIG-SCAPE
-Create a conda environment for antismash_bigscape.yml file in envs folder:
+### 2. Installing Nextflow in your ambient 
 
 ```bash
-conda env create -f envs/antismash_bigscape.yml
-```
-For BIG-SCAPE to work, you will need the Pfam database. In the repository folder, run the following commands:
+# If you are using conda
+conda install -c conda-forge -c bioconda nextflow
 
+# If you are using micromamba
+micromamba install -c conda-forge -c bioconda nextflow
+
+```
+Note that nextflow requires Java version 17 or higher.
+
+### 3. Running PATFinder
+
+The workflow has two different pipelines. 
+
+main.nf: In this mode PATFinder obtains publicly available metagenomes from MGnify API. Changes in the search can be done by modifications in the url link in MGnify_download_functions.py. For usage do the following:
 ```bash
-mkdir databases
-cd databases
-wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
-gunzip Pfam-A.hmm.gz
-hmmpress Pfam-A.hmm
-cd ..
-```
-## 2.2 DeepSEA
-In the repository folder (PATFinder_project), use the following commands:
+# If you are using conda
+nextflow run main.nf -resume -profile conda
 
+# If you are using micromamba
+nextflow run main.nf -resume -profile micromamba
+```
+
+main_faa_and_gbk.nf: In this mode PATFinder takes your .gbk and .faa files as input. Before usage of the pipeline, the .gbk files must have a name similar to antiSMASH output and be present in the same folder. The name convention are: {sample_name}_{contig_number}.region{region_number}.gbk (ex. MGYG000296008_22.region001.gbk). The .faa files must have corresponding names with the .gbk files.
+
+An example of accepted inputs are described below:
+
+PATFinder-project/
+├── gbk_files/
+│   ├── MGYG000296008_2.region001.gbk
+│   ├── MGYG000296008_6.region001.gbk
+│   ├── MGYG000296008_22.region001.gbk
+│   ├── MGYG000296006_405.region001.gbk
+│   ├── MGYG000296006_71.region001.gbk
+│   ├── MGYG000296009_1.region001.gbk
+│   └── MGYG000296014_17.region001.gbk
+├── faa_files/
+│   ├── MGYG000296008.faa
+│   ├── MGYG000296006.faa
+│   ├── MGYG000296009.faa
+│   └── MGYG000296014.faa
+
+For running this mode, use:
 ```bash
-git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
-cd DeepSEA-project
-conda env create -f environment-gpu.yml 
+# If you are using conda
+nextflow run main_faa_and_gbk.nf -resume -profile conda --gbk_files "path/to/your/gbk_files/*.gbk" --faa_files "path/to/your/faa_files/*.faa"
+
+# If you are using micromamba
+nextflow run main_faa_and_gbk.nf -resume -profile micromamba --gbk_files "path/to/your/gbk_files/*.gbk" --faa_files "path/to/your/faa_files/*.faa"
 ```
-## 2.3 DIAMOND and KOfam
-In the repository folder, use the following commands to make the env and install KOfam database:
-
-```bash
-conda env create -f envs/diamond_kofam.yml
-
-cd databases
-wget ftp://ftp.genome.jp/pub/db/kofam/ko_list.gz
-wget ftp://ftp.genome.jp/pub/db/kofam/profiles.tar.gz
-
-gunzip ko_list.gz
-tar -xzf profiles.tar.gz
-```
-## 2.4 POEM-pipeline
-In the repository folder, use the following commands to make the env
-
-```bash
-conda activate diamond_kofam
-git clone https://github.com/Rinoahu/POEM_py3k
-cd ./POEM_py3k
-bash ./install.sh
-```
-Obs: Note that if you do not use conda, changes in install.sh are necessary!
-
-### 3. Installing important repositories
-
-To ensure this workflow functions properly, you must first install BIG-SCAPE, KOfam, POEM-pipeline, and DeepSEA by following their respective installation instructions.
