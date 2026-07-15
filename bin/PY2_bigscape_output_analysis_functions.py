@@ -10,8 +10,40 @@ import json
 import re
 
 
+def load_bigscape_network(path):
+    df = pd.read_csv(path, sep='\t', header=None)
+    df.columns = df.iloc[0]
+    df = df[1:]
+    df = df.drop(columns=['Record_a', 'Record_Type_a', 'Record_Number_a',
+                          'Record_b', 'Record_Type_b', 'Record_Number_b',
+                          "alignment_mode", "extend_strategy"])
+    return df
+
+##############################################################################################
+
+def apply_id_mapping(df, ids_correlation_path):
+    mapping = {}
+    with open(ids_correlation_path) as f:
+        next(f)
+        for line in f:
+            parts = line.strip().split("\t")
+            if len(parts) == 2:
+                mapping[parts[1]] = parts[0]
+
+    df = df.copy()
+    for original_id, sample_id in mapping.items():
+        df["GBK_a"] = df["GBK_a"].str.replace(
+            f"^{re.escape(original_id)}", sample_id, regex=True
+        )
+        df["GBK_b"] = df["GBK_b"].str.replace(
+            f"^{re.escape(original_id)}", sample_id, regex=True
+        )
+    return df
+
+##############################################################################################
+
 #'./bigscape/*full.network'
-def BS1_filtering_bigscape_results(output_dir, ids_correlation_path=None):
+def BS1_filtering_bigscape_results(df):
     """
     Filters and preprocesses BiG-SCAPE full_network results.
 
@@ -29,39 +61,16 @@ def BS1_filtering_bigscape_results(output_dir, ids_correlation_path=None):
         pd.DataFrame: A cleaned and filtered DataFrame ready for downstream analysis.
     """
 
-    df = pd.read_csv(output_dir, sep='\t', header=None)
+    df_filtered = df[~(df["GBK_a"].str.contains("BGC") & df["GBK_b"].str.contains("BGC"))]
+    df_filtered = df_filtered[~(df_filtered["GBK_a"].str.contains("sample") & df_filtered["GBK_b"].str.contains("sample"))]
 
-    df_filtered = df[~(df[1].str.contains("BGC") & df[6].str.contains("BGC"))]
-    df_filtered = df_filtered[~(df_filtered[1].str.contains("sample") & df_filtered[6].str.contains("sample"))]
-    df_filtered.columns = df_filtered.iloc[0]
-    df_filtered = df_filtered[1:]
-    df_filtered = df_filtered.drop(columns=['Record_a', 'Record_Type_a', 'Record_Number_a', 'Record_b', 'Record_Type_b', 'Record_Number_b', "alignment_mode", "extend_strategy"])
-    
-    #df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region(\d+)", r"_\1", regex=True)
-    #df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region(\d+)", r"_\1", regex=True)
     df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(r"\.region", "_", regex=True)
     df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(r"\.region", "_", regex=True)
-    
-    if ids_correlation_path:
-        mapping = {}
-        with open(ids_correlation_path) as f:
-            next(f)  
-            for line in f:
-                parts = line.strip().split("\t")
-                if len(parts) == 2:
-                    mapping[parts[1]] = parts[0]  
 
-    if mapping:
-        for mgg_id, sample_id in mapping.items():
-            df_filtered["GBK_a"] = df_filtered["GBK_a"].str.replace(
-                f"^{re.escape(mgg_id)}", sample_id, regex=True
-            )
-            df_filtered["GBK_b"] = df_filtered["GBK_b"].str.replace(
-                f"^{re.escape(mgg_id)}", sample_id, regex=True
-            )
-    
     mask = df_filtered["GBK_a"].str.startswith("BGC") & ~df_filtered["GBK_b"].str.startswith("BGC")
-    df_filtered.loc[mask, ["GBK_a", "GBK_b", "ORF_coords_a", "ORF_coords_b"]] = df_filtered.loc[mask, ["GBK_b", "GBK_a", "ORF_coords_b", "ORF_coords_a"]].values
+    df_filtered.loc[mask, ["GBK_a", "GBK_b", "ORF_coords_a", "ORF_coords_b"]] = \
+        df_filtered.loc[mask, ["GBK_b", "GBK_a", "ORF_coords_b", "ORF_coords_a"]].values
+
     return df_filtered
 
 ##############################################################################################

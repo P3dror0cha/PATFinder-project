@@ -2,12 +2,18 @@
 
 import argparse
 
-from PY2_bigscape_output_analysis_functions import BS1_filtering_bigscape_results 
-from PY2_bigscape_output_analysis_functions import BS2_reference_bgcs 
-from PY2_bigscape_output_analysis_functions import BS3_uniting_reference_with_sample_BGCs
+from PY2_bigscape_output_analysis_functions import (
+    load_bigscape_network,
+    apply_id_mapping,
+    BS1_filtering_bigscape_results,
+    BS2_reference_bgcs,
+    BS3_uniting_reference_with_sample_BGCs
+)
 
 def BS4_processing_bigscape(fullnetwork_file_path, genome_mapping_path, output_file):
-    df = BS1_filtering_bigscape_results(fullnetwork_file_path, genome_mapping_path)
+    df = load_bigscape_network(fullnetwork_file_path)
+    df = apply_id_mapping(df, genome_mapping_path)
+    df = BS1_filtering_bigscape_results(df)
     df_reference = BS2_reference_bgcs()
     df_united = BS3_uniting_reference_with_sample_BGCs(df_reference, df)
     df_united.drop(columns=["ORF_coords_a", "ORF_coords_b"], inplace=True)
