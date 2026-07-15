@@ -29,7 +29,7 @@ cd PATFinder-project
 git submodule update --init --recursive
 ```
 
-## 2. Installing Nextflow in your ambient 
+## 2. Install Nextflow in your ambient 
 
 ```bash
 # If you are using conda
