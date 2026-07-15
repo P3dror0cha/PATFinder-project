@@ -5,7 +5,7 @@ import requests
 import re
 import argparse 
 
-from FAA2_kofam_analysis_functions import (
+from kofam_analysis_functions import (
     K1_kofam_import, 
     K2_kofam_best_hits,
     K3_kofam_without_best_hits,

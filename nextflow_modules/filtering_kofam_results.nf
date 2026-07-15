@@ -15,7 +15,7 @@ process FILTERING_KOFAM_RESULTS {
 
     script:
     """
-    python3 ${projectDir}/bin/FAA2_kofam_analysis_process.py \\
+    python3 ${projectDir}/bin/kofam_analysis_process.py \\
         --kofam_results ${kofam_output} \\
         --bgc_dir ${filtered_bigscape_results} \\
         --out_raw kofam_bigscape_raw_results.csv \\

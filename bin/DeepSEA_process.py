@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 from Bio import SeqIO
 
-from FAA2_DeepSEA_functions import (
+from DeepSEA_functions import (
     DS1_append_deepsea_results,
     DS2_append_faa,
     DS3_merge_deepsea_df,

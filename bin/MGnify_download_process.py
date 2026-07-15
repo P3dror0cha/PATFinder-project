@@ -2,9 +2,9 @@
 
 import argparse
 
-from PY1_MGnify_download_functions import D1_MGnify_search
-from PY1_MGnify_download_functions import D2_genome_urls_list
-from PY1_MGnify_download_functions import D3_download_genome_url
+from MGnify_download_functions import D1_MGnify_search
+from MGnify_download_functions import D2_genome_urls_list
+from MGnify_download_functions import D3_download_genome_url
 
 def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output_dir="./genomes_MGnify"):
     """

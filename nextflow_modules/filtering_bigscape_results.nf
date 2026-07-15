@@ -14,7 +14,7 @@ process FILTERING_BIGSCAPE_RESULTS {
 
 script:
     """
-    python3 ${projectDir}/bin/PY2_bigscape_output_analysis_process.py \
+    python3 ${projectDir}/bin/bigscape_output_analysis_process.py \
         --fullnetwork_file_path ${bigscape_fullnetwork} \
         --genome_mapping ${ids_correlation} \
         --output_file filtered_bigscape_results.tsv

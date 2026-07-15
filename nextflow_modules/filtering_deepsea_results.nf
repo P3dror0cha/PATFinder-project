@@ -16,7 +16,7 @@ process FILTERING_DEEPSEA_RESULTS {
 
 script: 
     """
-    python3 ${projectDir}/bin/FAA2_DeepSEA_process.py \
+    python3 ${projectDir}/bin/DeepSEA_process.py \
         --path_to_deepsea_tsv ${path_to_deepsea_tsv} \
         --path_to_all_faa faa_temp_folder \
         --antismash_output gbks_temp_folder

@@ -2,7 +2,7 @@
 
 import argparse
 
-from PY2_bigscape_output_analysis_functions import (
+from bigscape_output_analysis_functions import (
     load_bigscape_network,
     apply_id_mapping,
     BS1_filtering_bigscape_results,
