@@ -24,7 +24,7 @@ Follow the steps below to set up the environment and run the pipeline.
 ## 1. Clone the repository and activate the submodules
 
 ```bash
-git clone https://github.com/P3dror0cha/Segunda_IC.git](https://github.com/P3dror0cha/PATFinder-project.git
+git clone https://github.com/P3dror0cha/PATFinder-project.git
 cd PATFinder-project
 git submodule update --init --recursive
 ```
