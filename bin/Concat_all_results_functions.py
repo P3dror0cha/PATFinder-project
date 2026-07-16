@@ -181,7 +181,11 @@ def sorting_concat_columns(df_united):
         "KO",
         "filtered_pathways",
         "strand",
-        "coordinates"
+        "coordinates",
+        "amrfinder_element_symbol",
+        "amrfinder_class",
+        "amrfinder_subclass",
+        "amrfinder_hits_count"
         ]
     
     df_united = df_united[columns_order]
@@ -217,3 +221,13 @@ def create_bgc_class_correlation(df_bgc_product, ids_correlation_path):
             })
 
     return pd.DataFrame(rows)
+
+
+def uniting_amrfinder_results(df_concat, df_amrfinder):
+    df_united = pd.merge(
+        df_concat,
+        df_amrfinder,
+        how="outer",
+        on="bgc_id"
+    )
+    return df_united

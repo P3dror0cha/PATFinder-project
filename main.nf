@@ -20,6 +20,9 @@ include { FILTERING_POEM_RESULTS } from './nextflow_modules/filtering_POEM_resul
 include { DIAMOND } from './nextflow_modules/diamond.nf'
 include { FILTERING_DIAMOND_RESULTS } from './nextflow_modules/filtering_diamond_results.nf'
 include { CONCAT_ALL_RESULTS } from './nextflow_modules/concat_all_results.nf'
+include { DOWNLOAD_AMRFINDER_DB } from './nextflow_modules/download_amrfinder_db.nf'
+include { AMRFINDER } from './nextflow_modules/amrfinder.nf'
+include { FILTERING_AMRFINDER_RESULTS } from './nextflow_modules/filtering_amrfinder_results.nf'
 
 workflow {
 
@@ -67,6 +70,7 @@ workflow {
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
     DOWNLOAD_COG_DB()
+    DOWNLOAD_AMRFINDER_DB()
 
     // ========================================================================
     // 4. ANTISMASH PIPELINE
@@ -122,7 +126,14 @@ workflow {
     filtered_diamond_results = FILTERING_DIAMOND_RESULTS(diamond_results.diamond_result)
 
     // ========================================================================
-    // 10. UNITING ALL RESULTS 
+    // 10. AMRFINDER PIPELINE
+    // ========================================================================
+
+    amrfinder_results = AMRFINDER(cds_from_all_gbks, DOWNLOAD_AMRFINDER_DB.out.db_ready)
+    filtered_amrfinder_results = FILTERING_AMRFINDER_RESULTS(amrfinder_results.amrfinder_result)
+
+    // ========================================================================
+    // 11. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
         all_BGCs,
@@ -130,7 +141,8 @@ workflow {
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
         filtered_diamond_results.diamond_filtered_result,
-        ids_correlation
+        ids_correlation,
+        filtered_amrfinder_results.amrfinder_filtered_result
         )
 
 }
