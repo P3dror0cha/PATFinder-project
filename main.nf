@@ -1,3 +1,4 @@
+include { CREATE_CONDA_ENVS } from './nextflow_modules/create_conda_envs.nf'
 include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
 include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
 include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
@@ -26,10 +27,16 @@ include { FILTERING_AMRFINDER_RESULTS } from './nextflow_modules/filtering_amrfi
 
 workflow {
 
+    if (params.create_conda_envs) {
+        CREATE_CONDA_ENVS()
+        ch_envs_done = CREATE_CONDA_ENVS.out.done
+    } else {
+        ch_envs_done = Channel.of('skip')
+    }   
     // ========================================================================
     // 1. DOWNLOAD METAGENOMES
     // ========================================================================
-    results = MGNIFY_DOWNLOAD(params.max_pages, params.output_prefix)
+    results = MGNIFY_DOWNLOAD(params.max_pages, params.output_prefix, ch_envs_done.first())
     
 
     // ========================================================================
@@ -76,7 +83,7 @@ workflow {
     // 4. ANTISMASH PIPELINE
     // ========================================================================
     ch_db_antismash = DOWNLOAD_ANTISMASH_DB.out.db_antismash
-    ch_renamed_fasta = RENAME_FASTA(ch_fna_concat)
+    ch_renamed_fasta = RENAME_FASTA(ch_fna_concat, ch_envs_done.first())
 
     ch_antismash_input = ch_renamed_fasta.combine(ch_db_antismash)
 

@@ -1,6 +1,7 @@
 // ========================================================================
 // INCLUDES (Módulos de Processamento)
 // ========================================================================
+include { CREATE_CONDA_ENVS } from './nextflow_modules/create_conda_envs.nf'
 include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
 include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
 include { DOWNLOAD_COG_DB } from './nextflow_modules/download_cog_db.nf'
@@ -32,6 +33,12 @@ params.faa_files = null
 params.pfam_db   = null 
 
 workflow {
+    if (params.create_conda_envs) {
+        CREATE_CONDA_ENVS()
+        ch_envs_done = CREATE_CONDA_ENVS.out.done
+    } else {
+        ch_envs_done = Channel.of('skip')
+    }
 
     // ========================================================================
     // 1. READING INPUTS, PAIRING AND PREPARING METADATA

@@ -6,6 +6,7 @@ process MGNIFY_DOWNLOAD {
     input:
     val max_pages
     val output_prefix
+    path envs_done
 
     output:
     path "metagenomes_MGnify/*.faa", emit: faa

@@ -5,6 +5,7 @@ process RENAME_FASTA {
 
     input:
     tuple val(meta), path(original_fasta)
+    path envs_done
 
     output:
     tuple val(meta), path("${meta.id}.fasta")
