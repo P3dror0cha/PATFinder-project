@@ -197,30 +197,60 @@ def sorting_concat_columns(df_united):
     return df_united
 
 def create_bgc_class_correlation(df_bgc_product, ids_correlation_path):
-    ids_corr = pd.read_csv(ids_correlation_path, sep="\t")
-    original_to_sample = dict(zip(ids_corr["Original_ID"], ids_corr["Padronized_ID"]))
+    ids_corr = pd.read_csv(
+        ids_correlation_path,
+        sep="\t",
+        dtype=str
+    )
 
-    sorted_originals = sorted(original_to_sample.keys(), key=len, reverse=True)
+    ids_corr.columns = (
+        ids_corr.columns
+        .str.replace("\ufeff", "", regex=False)
+        .str.strip()
+    )
 
+    sample_to_original = dict(
+        zip(
+            ids_corr["Padronized_ID"].str.strip(),
+            ids_corr["Original_ID"].str.strip()
+        )
+    )
+
+    sorted_samples = sorted(
+        sample_to_original.keys(),
+        key=len,
+        reverse=True
+    )
+
+    columns = [
+        "original_name",
+        "padronized_name",
+        "query_bgc_class"
+    ]
     rows = []
+
     for _, row in df_bgc_product.iterrows():
-        record_id = row["record_id"]
+        record_id = str(row["record_id"]).strip()
 
-        matched_base = None
-        for original_base in sorted_originals:
-            if record_id.startswith(original_base):
-                matched_base = original_base
-                break
+        matched_sample = next(
+            (
+                sample_id
+                for sample_id in sorted_samples
+                if record_id == sample_id
+                or record_id.startswith(f"{sample_id}_")
+            ),
+            None
+        )
 
-        if matched_base:
-            suffix = record_id[len(matched_base):]
-            rows.append({
-                "original_name": record_id,
-                "padronized_name": original_to_sample[matched_base] + suffix,
-                "query_bgc_class": row["query_bgc_class"]
-            })
+        suffix = record_id[len(matched_sample):]
 
-    return pd.DataFrame(rows)
+        rows.append({
+            "original_name": sample_to_original[matched_sample] + suffix,
+            "padronized_name": record_id,
+            "query_bgc_class": row["query_bgc_class"]
+        })
+
+    return pd.DataFrame(rows, columns=columns)
 
 
 def uniting_amrfinder_results(df_concat, df_amrfinder):

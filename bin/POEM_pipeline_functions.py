@@ -30,13 +30,16 @@ def POEM1_parse_operon_string(result_from_POEM):
     coords = []
 
     for g in genes:
-        m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$([^.]+)', g)
+        m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)\.region(\d+)', g)
         #m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)', g)
         if m:
             strand = m.group(1)      
             start = m.group(2)        
             end = m.group(3)         
-            metagenome = m.group(4)   
+            metagenome = m.group(4) 
+            region = m.group(5)  
+
+            metagenome = f"{metagenome}_{region}"
             coords.append(f"{start}/{end}")
 
        

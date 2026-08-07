@@ -22,7 +22,7 @@ def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diam
 
     df_bgc_product = product_from_gbk_files(gbk_files)
     df_bgc_correlation = create_bgc_class_correlation(df_bgc_product, ids_correlation)
-
+    df_bgc_correlation.to_csv("df_bgc_correlation.csv")
     df_poem_deepsea = uniting_poem_deepsea_results(df_bgc_correlation, df_poem, df_deepsea)
     df_kofam_diamond = uniting_kofam_diamond_results(df_kofam, df_diamond)
 
