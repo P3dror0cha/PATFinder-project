@@ -1,6 +1,6 @@
 process MGNIFY_PLOTS {
     tag "MGnify metadata plots"
-    publishDir "results/MGnify_plots", mode: "copy"
+    publishDir "results", mode: "copy"
 
     input:
     path metadata_csv
