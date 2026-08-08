@@ -39,3 +39,4 @@ dependencies:
   - screed=1.2.0
   - tibs=0.5.7
   - tqdm=4.67.3
+  - seaborn

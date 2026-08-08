@@ -11,6 +11,7 @@ process MGNIFY_DOWNLOAD {
     output:
     path "metagenomes_MGnify/*.faa", emit: faa
     path "metagenomes_MGnify/*.fna", emit: fna
+    path "${output_prefix}_genome_metadata.csv", emit: metadata
 
     script:
     """

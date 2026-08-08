@@ -9,7 +9,7 @@ process DOWNLOAD_AMRFINDER_DB {
 
     script:
     """
-    amrfinder -u
+    amrfinder -U
     touch amrfinder_db_downloaded
     """
 }

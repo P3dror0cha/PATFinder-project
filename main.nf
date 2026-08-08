@@ -1,5 +1,6 @@
 include { CREATE_CONDA_ENVS } from './nextflow_modules/create_conda_envs.nf'
 include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
+include { MGNIFY_PLOTS } from './nextflow_modules/MGnify_plot.nf'
 include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
 include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
 include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
@@ -37,6 +38,7 @@ workflow {
     // 1. DOWNLOAD METAGENOMES
     // ========================================================================
     results = MGNIFY_DOWNLOAD(params.max_pages, params.output_prefix, ch_envs_done.first())
+    MGNIFY_PLOTS(results.metadata, params.output_prefix)
     
 
     // ========================================================================

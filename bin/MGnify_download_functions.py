@@ -3,6 +3,7 @@
 import requests
 import json
 import os
+import csv
 
 def D1_MGnify_search(max_pages, url=None, output_prefix="aquatic", output_dir="MGnify_pipeline_results"):
     """
@@ -169,3 +170,90 @@ def D3_download_genome_url(input, filter_ext=".fna"):
             print(f"Download completed: {filename}")
         except requests.RequestException as e:
             print(f"Error downloading {filename}: {e}")
+
+##############################################################################################
+
+def D4_extract_genome_metadata(genome_record):
+    """
+    Extract metadata from a genome record returned by D1.
+    No additional API request is performed.
+    """
+    attributes = genome_record.get("attributes") or {}
+    relationships = genome_record.get("relationships") or {}
+
+    catalogue_data = (
+        relationships
+        .get("catalogue", {})
+        .get("data")
+        or {}
+    )
+
+    completeness = attributes.get("completeness")
+    contamination = attributes.get("contamination")
+
+    quality_score = None
+
+    if completeness is not None and contamination is not None:
+        quality_score = completeness - (5 * contamination)
+
+    return {
+        "accession": attributes.get(
+            "accession",
+            genome_record.get("id"),
+        ),
+        "type": attributes.get("type"),
+        "completeness": completeness,
+        "contamination": contamination,
+        "quality_score": quality_score,
+        "length": attributes.get("length"),
+        "num_contigs": attributes.get("num-contigs"),
+        "n50": attributes.get("n-50"),
+        "gc_content": attributes.get("gc-content"),
+        "num_proteins": attributes.get("num-proteins"),
+        "taxon_lineage": attributes.get("taxon-lineage"),
+        "catalogue_id": catalogue_data.get("id"),
+    }
+
+##############################################################################################
+
+def D5_save_genome_metadata(metadata, output_file):
+    """
+    Save the extracted MGnify genome metadata in CSV format.
+    """
+    if not metadata:
+        print("No genome metadata was found.")
+        return
+
+    fieldnames = [
+        "accession",
+        "type",
+        "completeness",
+        "contamination",
+        "quality_score",
+        "length",
+        "num_contigs",
+        "n50",
+        "gc_content",
+        "num_proteins",
+        "taxon_lineage",
+        "catalogue_id",
+    ]
+
+    with open(
+        output_file,
+        "w",
+        newline="",
+        encoding="utf-8",
+    ) as file:
+        writer = csv.DictWriter(
+            file,
+            fieldnames=fieldnames,
+        )
+
+        writer.writeheader()
+        writer.writerows(metadata)
+
+    print(
+        f"Metadata from {len(metadata)} genomes "
+        f"saved to: {output_file}"
+    )

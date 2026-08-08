@@ -5,6 +5,8 @@ import argparse
 from MGnify_download_functions import D1_MGnify_search
 from MGnify_download_functions import D2_genome_urls_list
 from MGnify_download_functions import D3_download_genome_url
+from MGnify_download_functions import D4_extract_genome_metadata
+from MGnify_download_functions import D5_save_genome_metadata
 
 def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output_dir="./genomes_MGnify"):
     """
@@ -12,6 +14,8 @@ def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output
     1. D1_MGnify_search
     2. D2_genome_urls_list
     3. D3_download_genome_url
+    4. D4_get_genome_metadata
+    5. D5_save_genome_metadata
 
     Parameters:
     max_pages (int): Number of pages to retrieve from MGnify. Each page has 25 metagenomes. (required)
@@ -28,8 +32,15 @@ def MGnify_pipeline(max_pages, output_prefix="aquatic", extension=".fna", output
     D3_download_genome_url(url_list, filter_ext=".fna")
     D3_download_genome_url(url_list, filter_ext=".faa")
 
+    metadata_list = [
+        D4_extract_genome_metadata(genome_record)
+        for genome_record in json_file.get("data", [])
+    ]
 
-
+    D5_save_genome_metadata(
+        metadata_list,
+        output_file=f"{output_prefix}_genome_metadata.csv",
+    )
 def main():
     parser = argparse.ArgumentParser(
         description="Complete MGnify genome download pipeline"
