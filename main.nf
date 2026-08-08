@@ -6,6 +6,7 @@ include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
 include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
 include { DOWNLOAD_COG_DB } from './nextflow_modules/download_cog_db.nf'
 include { ANTISMASH } from './nextflow_modules/antismash.nf'
+include { BGC_PLOTS } from './nextflow_modules/bgc_plots.nf'
 include { BIGSCAPE } from './nextflow_modules/bigscape.nf'
 include { UNITING_ALL_GBKS } from './nextflow_modules/uniting_all_gbks_in_one_folder.nf'
 include { FILTERING_BIGSCAPE_RESULTS } from './nextflow_modules/filtering_bigscape_results.nf'
@@ -92,6 +93,8 @@ workflow {
     antismash_output = ANTISMASH(ch_antismash_input)
     
     ch_gbks = antismash_output.gbk.map { meta, gbk -> gbk }.collect()
+
+    bgc_plots = BGC_PLOTS(ch_gbks)
 
     // ========================================================================
     // 5. DEEPSEA PIPELINE
