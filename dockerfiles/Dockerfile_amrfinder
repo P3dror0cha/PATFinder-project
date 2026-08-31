@@ -1,0 +1,38 @@
+FROM mambaorg/micromamba:1.5-bullseye-slim
+
+ARG ENV_FILE=environment.yml
+
+COPY ${ENV_FILE} /tmp/environment.yml
+
+ARG MAMBA_DOCKERFILE_ACTIVATE=1
+
+ENV PATH="$MAMBA_ROOT_PREFIX/bin:$PATH"
+
+RUN micromamba install \
+        -c defaults \
+        -c bioconda \
+        -c conda-forge \
+        -y \
+        -n base \
+        git \
+        gcc_linux-64 \
+        gxx_linux-64 \
+    && micromamba install \
+        -y \
+        -n base \
+        -f /tmp/environment.yml \
+    && micromamba clean --all --yes
+
+USER root
+
+RUN mkdir -p /opt/conda/share/amrfinderplus/data \
+    && amrfinder_update \
+        -d /opt/conda/share/amrfinderplus/data \
+        --force_update \
+    && chmod -R a+rX /opt/conda/share/amrfinderplus
+
+USER mambauser
+
+WORKDIR /home/mambauser/app
+
+CMD ["/bin/bash"]

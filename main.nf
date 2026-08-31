@@ -80,7 +80,7 @@ workflow {
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
     DOWNLOAD_COG_DB()
-    DOWNLOAD_AMRFINDER_DB()
+    DOWNLOAD_AMRFINDER_DB(params.amrfinder_db_preinstalled)
 
     // ========================================================================
     // 4. ANTISMASH PIPELINE
