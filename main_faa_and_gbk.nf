@@ -2,18 +2,24 @@
 // INCLUDES (Módulos de Processamento)
 // ========================================================================
 include { CREATE_CONDA_ENVS } from './nextflow_modules/create_conda_envs.nf'
+include { MGNIFY_DOWNLOAD } from './nextflow_modules/metagenomes_download.nf'
+include { MGNIFY_PLOTS } from './nextflow_modules/MGnify_plot.nf'
+include { DOWNLOAD_ANTISMASH_DB } from './nextflow_modules/download_antismash_db.nf'
 include { DOWNLOAD_PFAM_DB } from './nextflow_modules/download_pfam_db.nf'
 include { DOWNLOAD_KOFAM_DB } from './nextflow_modules/download_kofam_db.nf'
 include { DOWNLOAD_COG_DB } from './nextflow_modules/download_cog_db.nf'
+include { ANTISMASH } from './nextflow_modules/antismash.nf'
+include { BGC_PLOTS } from './nextflow_modules/bgc_plots.nf'
 include { BIGSCAPE } from './nextflow_modules/bigscape.nf'
 include { UNITING_ALL_GBKS } from './nextflow_modules/uniting_all_gbks_in_one_folder.nf'
 include { FILTERING_BIGSCAPE_RESULTS } from './nextflow_modules/filtering_bigscape_results.nf'
 include { DEEPSEA } from './nextflow_modules/deepsea.nf'
 include { FILTERING_DEEPSEA_RESULTS } from './nextflow_modules/filtering_deepsea_results.nf'
+include { RENAME_FASTA } from './nextflow_modules/rename_fasta.nf'
+include { RENAME_GBKS } from './nextflow_modules/rename_gbks.nf'
 include { KOFAM } from './nextflow_modules/kofam.nf'
 include { FILTERING_KOFAM_RESULTS } from './nextflow_modules/filtering_kofam_results.nf'
 include { RENAME_FAA } from './nextflow_modules/rename_faa.nf'
-include { RENAME_GBKS } from './nextflow_modules/rename_gbks.nf'
 include { EXTRACTING_GBKS_SEQUENCES } from './nextflow_modules/extracting_gbks_sequences.nf'
 include { EXTRACTING_GBKS_CDS } from './nextflow_modules/extracting_gbks_cds.nf'
 include { POEM } from './nextflow_modules/POEM_pipeline.nf'
@@ -37,7 +43,7 @@ workflow {
         CREATE_CONDA_ENVS()
         ch_envs_done = CREATE_CONDA_ENVS.out.done
     } else {
-        ch_envs_done = Channel.of('skip')
+        ch_envs_done = channel.of('skip')
     }
 
     // ========================================================================
@@ -47,17 +53,17 @@ workflow {
         error "ERRO: Please, provide the path to your gbk and faa files. Use --gbk_files and --faa_files."
     }
 
-    def ch_gbk_by_name = Channel.fromPath(params.gbk_files)
+    ch_gbk_by_name = channel.fromPath(params.gbk_files)
         .map { file ->
             def id = file.name.replaceAll(/_[0-9]+\.region[0-9]+\.gbk$/, "")
             tuple(id, file)
         }
         .groupTuple() 
 
-    def ch_faa_by_name = Channel.fromPath(params.faa_files)
+    ch_faa_by_name = channel.fromPath(params.faa_files)
         .map { file -> tuple(file.baseName, file) }
 
-    def ch_paired_inputs = ch_gbk_by_name
+    ch_paired_inputs = ch_gbk_by_name
         .join(ch_faa_by_name)
         .toList()                  
         .flatMap { it.withIndex() } 
@@ -67,7 +73,7 @@ workflow {
         return gbk_files_list
     }.collect()
 
-    def plan_rename = ch_paired_inputs.flatMap { item, index ->
+    plan_rename = ch_paired_inputs.flatMap { item, index ->
         def (original_name, gbk_files_list, faa_file) = item
         def clean_name = String.format("sample_%08d", index + 1)
         
@@ -83,7 +89,7 @@ workflow {
         }
     }
 
-    def genome_mapping = ch_paired_inputs.map { item, index ->
+    genome_mapping = ch_paired_inputs.map { item, index ->
         def (original_name, gbk_files_list, faa_file) = item
         def clean_name = String.format("sample_%08d", index + 1)
         return "${clean_name}\t${original_name}"
@@ -117,7 +123,7 @@ workflow {
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
     DOWNLOAD_COG_DB()
-    DOWNLOAD_AMRFINDER_DB()
+    DOWNLOAD_AMRFINDER_DB(params.amrfinder_db_preinstalled)
 
     // ========================================================================
     // 3. DEEPSEA PIPELINE
@@ -132,6 +138,7 @@ workflow {
     // 4. BiG-SCAPE ANALYSIS
     // ========================================================================
     all_BGCs = UNITING_ALL_GBKS(ch_gbks)
+    bgc_plots = BGC_PLOTS(ch_gbks)
 
     bigscape_output = BIGSCAPE(all_BGCs.bgc_dir, file(params.pfam_db))
     filtered_bigscape_results = FILTERING_BIGSCAPE_RESULTS(bigscape_output.bigscape_fullnetwork, ids_correlation)
