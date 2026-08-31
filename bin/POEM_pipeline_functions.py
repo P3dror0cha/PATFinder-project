@@ -29,26 +29,49 @@ def POEM1_parse_operon_string(result_from_POEM):
     strand = None
     coords = []
 
-    for g in genes:
-        m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)\.region(\d+)', g)
-        #m = re.search(r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)', g)
-        if m:
-            strand = m.group(1)      
-            start = m.group(2)        
-            end = m.group(3)         
-            metagenome = m.group(4) 
-            region = m.group(5)  
+    old_pattern = re.compile(
+        r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+)\.region(\d+)(?:\.gbk)?'
+    )
 
-            metagenome = f"{metagenome}_{region}"
-            coords.append(f"{start}/{end}")
+    new_pattern = re.compile(
+        r'\|([+-])\|(\d+)\|(\d+)\$\$(sample_\d+_\d+_\d+)(?:\.gbk)?'
+    )
 
-       
-    if strand == "+":
-        coord_string = " --> ".join(coords)
-    else:
-        coord_string = " <-- ".join(coords)
+    for gene in genes:
 
-    return pd.Series([metagenome, strand, coord_string])
+        match = new_pattern.search(gene)
+
+        if match:
+            current_strand, start, end, current_bgc = match.groups()
+
+        else:
+            match = old_pattern.search(gene)
+
+            if not match:
+                continue
+
+            current_strand, start, end, bgc_base, region = match.groups()
+
+            current_bgc = f"{bgc_base}_{region}"
+
+        if metagenome is None:
+            metagenome = current_bgc
+            strand = current_strand
+
+        coords.append(f"{start}/{end}")
+
+    if metagenome is None:
+        return pd.Series([None, None, None])
+
+    arrow = " --> " if strand == "+" else " <-- "
+
+    coord_string = arrow.join(coords)
+
+    return pd.Series([
+        metagenome,
+        strand,
+        coord_string
+    ])
 
 ###################################################################################
 

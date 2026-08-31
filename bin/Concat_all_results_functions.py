@@ -209,15 +209,18 @@ def create_bgc_class_correlation(df_bgc_product, ids_correlation_path):
         .str.strip()
     )
 
-    sample_to_original = dict(
+    ids_corr["Original_ID"] = ids_corr["Original_ID"].str.strip()
+    ids_corr["Padronized_ID"] = ids_corr["Padronized_ID"].str.strip()
+
+    original_to_sample = dict(
         zip(
-            ids_corr["Padronized_ID"].str.strip(),
-            ids_corr["Original_ID"].str.strip()
+            ids_corr["Original_ID"],
+            ids_corr["Padronized_ID"]
         )
     )
 
-    sorted_samples = sorted(
-        sample_to_original.keys(),
+    sorted_originals = sorted(
+        original_to_sample.keys(),
         key=len,
         reverse=True
     )
@@ -227,31 +230,40 @@ def create_bgc_class_correlation(df_bgc_product, ids_correlation_path):
         "padronized_name",
         "query_bgc_class"
     ]
+
     rows = []
 
     for _, row in df_bgc_product.iterrows():
+
         record_id = str(row["record_id"]).strip()
 
-        matched_sample = next(
+        matched_original = next(
             (
-                sample_id
-                for sample_id in sorted_samples
-                if record_id == sample_id
-                or record_id.startswith(f"{sample_id}_")
+                original_id
+                for original_id in sorted_originals
+                if record_id == original_id
+                or record_id.startswith(f"{original_id}_")
             ),
             None
         )
 
-        suffix = record_id[len(matched_sample):]
+        if matched_original is None:
+            raise ValueError(
+                f"Could not correlate BGC '{record_id}' with any "
+                f"Original_ID present in '{ids_correlation_path}'."
+            )
+
+        suffix = record_id[len(matched_original):]
 
         rows.append({
-            "original_name": sample_to_original[matched_sample] + suffix,
-            "padronized_name": record_id,
+            "original_name": record_id,
+            "padronized_name": (
+                original_to_sample[matched_original] + suffix
+            ),
             "query_bgc_class": row["query_bgc_class"]
         })
 
     return pd.DataFrame(rows, columns=columns)
-
 
 def uniting_amrfinder_results(df_concat, df_amrfinder):
     df_united = pd.merge(
