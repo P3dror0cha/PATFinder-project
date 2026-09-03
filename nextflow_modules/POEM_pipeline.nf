@@ -51,7 +51,7 @@ process POEM {
     bash tmp_poem_env/bin/run_poem.sh \\
         -f ${fna_files} \\
         -a n \\
-        -p pka \\
+        -p pro \\
         -l y
     """
 }
