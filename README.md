@@ -41,6 +41,8 @@ micromamba install -c conda-forge -c bioconda nextflow
 ```
 Note that nextflow requires Java version 17 or higher.
 
+The oficial documentation for Nextflow download is in the link: https://docs.seqera.io/nextflow/install
+
 ## 3. Running PATFinder
 
 The workflow has two different pipelines. 
