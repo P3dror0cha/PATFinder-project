@@ -89,4 +89,9 @@ nextflow run main_faa_and_gbk.nf -resume -profile conda --gbk_files "path/to/you
 
 # If you are using micromamba
 nextflow run main_faa_and_gbk.nf -resume -profile micromamba --gbk_files "path/to/your/gbk_files/*.gbk" --faa_files "path/to/your/faa_files/*.faa"
+
+# If you are using docker
+nextflow run main_faa_and_gbk.nf -resume -profile docker --gbk_files "path/to/your/gbk_files/*.gbk" --faa_files "path/to/your/faa_files/*.faa"
 ```
+
+
