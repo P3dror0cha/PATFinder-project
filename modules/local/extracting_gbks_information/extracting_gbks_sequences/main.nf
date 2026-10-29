@@ -17,5 +17,3 @@ process EXTRACTING_GBKS_SEQUENCES {
         --output BGCS_fna_sequences.fasta
     """
 }
-
-
