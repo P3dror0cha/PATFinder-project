@@ -125,27 +125,20 @@ workflow {
     kofam_results = FILTERING_KOFAM_RESULTS(kofam.kofam_output, filtered_bigscape_results.filtered_bigscape_results)
 
     // ========================================================================
-    // 8. POEM PIPELINE (OPERON)
-    // ========================================================================
-    sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks)
-    poem_output = POEM(sequences_from_all_gbks.bgc_sequences, DOWNLOAD_COG_DB.out.cog_db)
-    poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
-
-    // ========================================================================
-    // 9. DIAMOND ALIGNMENT (RESISTANCE PROTEINS AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
+    // 8. DIAMOND ALIGNMENT (RESISTANCE PROTEINS AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
     // ========================================================================
     diamond_results = DIAMOND(cds_from_all_gbks)
     filtered_diamond_results = FILTERING_DIAMOND_RESULTS(diamond_results.diamond_result)
 
     // ========================================================================
-    // 10. AMRFINDER PIPELINE
+    // 9. AMRFINDER PIPELINE
     // ========================================================================
 
     amrfinder_results = AMRFINDER(cds_from_all_gbks, DOWNLOAD_AMRFINDER_DB.out.db_ready)
     filtered_amrfinder_results = FILTERING_AMRFINDER_RESULTS(amrfinder_results.amrfinder_result)
 
     // ========================================================================
-    // 11. UNITING ALL RESULTS 
+    // 10. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
         all_BGCs,

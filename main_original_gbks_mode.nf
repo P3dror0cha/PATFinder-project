@@ -80,7 +80,7 @@ workflow {
         return gbk_files_list.collect { gbk ->
             def matcher = gbk.name =~ /_([0-9]+)\.region([0-9]+)\.gbk$/
             
-            def valor1 = matcher ? matcher[0][1] : "00" // Corrigir isto aqui!!! 
+            def valor1 = matcher ? matcher[0][1] : "00"  
             def valor2 = matcher ? matcher[0][2] : "000" 
             
             def novo_nome = "${clean_name}_${valor1}_${valor2}.gbk"
@@ -151,26 +151,19 @@ workflow {
     kofam_results = FILTERING_KOFAM_RESULTS(kofam.kofam_output, filtered_bigscape_results.filtered_bigscape_results)
 
     // ========================================================================
-    // 6. POEM PIPELINE (OPERON)
-    // ========================================================================
-    sequences_from_all_gbks = EXTRACTING_GBKS_SEQUENCES(ch_gbks_renamed)
-    poem_output = POEM(sequences_from_all_gbks.bgc_sequences, DOWNLOAD_COG_DB.out.cog_db)
-    poem_results = FILTERING_POEM_RESULTS(poem_output.operon_file)
-
-    // ========================================================================
-    // 7. DIAMOND ALIGNMENT (RESISTANCE AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
+    // 6. DIAMOND ALIGNMENT (RESISTANCE AND ANTIBIOTIC BIOSYNTHESIS PROTEINS)
     // ========================================================================
     diamond_results = DIAMOND(cds_from_all_gbks)
     filtered_diamond_results = FILTERING_DIAMOND_RESULTS(diamond_results.diamond_result)
 
     // ========================================================================
-    // 8. AMRFINDER PIPELINE
+    // 7. AMRFINDER PIPELINE
     // ========================================================================
     amrfinder_results = AMRFINDER(cds_from_all_gbks, DOWNLOAD_AMRFINDER_DB.out.db_ready)
     filtered_amrfinder_results = FILTERING_AMRFINDER_RESULTS(amrfinder_results.amrfinder_result)
 
     // ========================================================================
-    // 9. UNITING ALL RESULTS 
+    // 8. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
         all_BGCs,

@@ -41,7 +41,7 @@ def product_from_gbk_files(gbk_files):
 
     return pd.DataFrame(all_rows)
 
-def uniting_poem_deepsea_results(df_bgc_correlation, poem_result, deepsea_result):
+def deepsea_results(df_bgc_correlation, deepsea_result):
     '''
     Merges POEM and DeepSea results into a single DataFrame.
 
@@ -57,18 +57,10 @@ def uniting_poem_deepsea_results(df_bgc_correlation, poem_result, deepsea_result
         pd.DataFrame: A unified DataFrame containing both results.
     '''
     df_bgc_correlation = df_bgc_correlation.rename(columns={"padronized_name": "bgc_id"})
-    poem_result = poem_result.rename(columns={"metagenome_id": "bgc_id"})
     deepsea_result = deepsea_result.rename(columns={"record_id": "bgc_id"})
 
     df_united = pd.merge(
-        poem_result, 
-        deepsea_result, 
-        on="bgc_id", 
-        how="outer"
-        )
-
-    df_united = pd.merge(
-        df_united,
+        deepsea_result,
         df_bgc_correlation,
         on="bgc_id",
         how="outer"
