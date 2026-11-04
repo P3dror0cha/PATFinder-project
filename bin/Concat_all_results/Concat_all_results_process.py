@@ -13,9 +13,9 @@ from Concat_all_results_functions import (
 )
 
 
-def concat_process(gbk_files, deepsea_results, kofam_results, diamond_results, ids_correlation, amrfinder_results):
+def concat_process(gbk_files, deepsea_results_path, kofam_results, diamond_results, ids_correlation, amrfinder_results):
 
-    df_deepsea = pd.read_csv(deepsea_results)
+    df_deepsea = pd.read_csv(deepsea_results_path)
     df_kofam = pd.read_csv(kofam_results)
     df_diamond = pd.read_csv(diamond_results)
     df_amrfinder = pd.read_csv(amrfinder_results)
@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     df_final, df_bgc_correlation = concat_process(
         gbk_files=args.gbk,
-        deepsea_results=args.deepsea,
+        deepsea_results_path=args.deepsea,
         kofam_results=args.kofam,
         diamond_results=args.diamond,
         ids_correlation=args.ids_correlation,
