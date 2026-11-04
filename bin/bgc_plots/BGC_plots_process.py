@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from BGC_plots_functions import (
+from bin.bgc_plots.BGC_plots_functions import (
     build_class_frequency,
     build_functional_composition,
     extract_antismash_tables,

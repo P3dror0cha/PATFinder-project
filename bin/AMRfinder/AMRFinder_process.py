@@ -1,7 +1,7 @@
 import pandas as pd
 import argparse
 
-from AMRFinder_functions import (
+from bin.AMRfinder.AMRFinder_functions import (
     parse_amrfinder_result,
     clustering_results_by_id
 )
