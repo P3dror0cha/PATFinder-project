@@ -12,7 +12,7 @@ process FILTERING_AMRFINDER_RESULTS {
 
     script:
     """
-    python3 ${projectDir}/bin/AMRFinder_process.py \
+    python3 ${projectDir}/bin/AMRfinder/AMRFinder_process.py \
         --amrfinder_output ${amrfinder_tsv_output} \
         --output_csv amrfinder_annotated_results.csv
     """

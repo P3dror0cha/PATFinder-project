@@ -43,14 +43,13 @@ def product_from_gbk_files(gbk_files):
 
 def deepsea_results(df_bgc_correlation, deepsea_result):
     '''
-    Merges POEM and DeepSea results into a single DataFrame.
+    Merges DeepSea results with BGC correlation information.
 
-    This function standardizes the identification column names in both DataFrames
-    to 'bgc_id' (renaming 'metagenome_id' from POEM and 'record_id' from DeepSea) 
-    and performs an outer merge based on this column.
+    This function standardizes the identification column names to 'bgc_id' 
+    (renaming 'record_id' from DeepSea) and performs an outer merge based on this column.
 
     Args:
-        poem_result (pd.DataFrame): DataFrame containing the POEM results.
+        df_bgc_correlation (pd.DataFrame): DataFrame containing BGC correlation info.
         deepsea_result (pd.DataFrame): DataFrame containing the DeepSea results.
 
     Returns:
@@ -97,17 +96,15 @@ def uniting_kofam_diamond_results(kofam_results, diamond_results):
     
     return df_united
 
-def uniting_all_infos(poem_deepsea, kofam_diamond):
+def uniting_all_infos(deepsea_merged, kofam_diamond):
     '''
-    Consolidates BGC information (POEM/DeepSea) with gene annotations (KOfam/Diamond).
+    Consolidates BGC information (DeepSea) with gene annotations (KOfam/Diamond).
 
-    This function creates a 'bgc_id' column in the gene DataFrame by extracting 
-    the prefix from the 'gene_id' column (capturing all text before the first '|' 
-    character via Regular Expression) and strips any trailing whitespaces. Finally, 
-    it performs an outer merge with the BGC DataFrame.
+    This function creates/normalizes the 'bgc_id' column in the gene DataFrame and performs 
+    an outer merge with the BGC DataFrame.
 
     Args:
-        poem_deepsea (pd.DataFrame): Consolidated DataFrame of POEM and DeepSea results.
+        deepsea_merged (pd.DataFrame): Consolidated DataFrame of DeepSea results.
         kofam_diamond (pd.DataFrame): Consolidated DataFrame of KOfam and Diamond results.
 
     Returns:
@@ -117,7 +114,7 @@ def uniting_all_infos(poem_deepsea, kofam_diamond):
     kofam_diamond['bgc_id'] = kofam_diamond['bgc_id'].str.strip()
 
     df_united = pd.merge(
-        poem_deepsea, 
+        deepsea_merged, 
         kofam_diamond, 
         how="outer", 
         on="bgc_id"
@@ -127,7 +124,7 @@ def uniting_all_infos(poem_deepsea, kofam_diamond):
 
 def sorting_concat_columns(df_united):
     '''
-    Consolidates BGC information (POEM/DeepSea) with gene annotations (KOfam/Diamond).
+    Consolidates BGC information (DeepSea) with gene annotations (KOfam/Diamond).
 
     This function creates a 'bgc_id' column in the gene DataFrame by extracting 
     the prefix from the 'gene_id' column (capturing all text before the first '|' 

@@ -12,7 +12,7 @@ process EXTRACTING_GBKS_SEQUENCES {
 
     script:
     """
-    python3 ${projectDir}/bin/extracting_fna_sequence_from_gbks.py \
+    python3 ${projectDir}/bin/extracting_information_in_gbks/extracting_fna_sequence_from_gbks.py \
         --input ${gbk_files} \
         --output BGCS_fna_sequences.fasta
     """

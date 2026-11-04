@@ -23,7 +23,7 @@ process BGC_PLOTS {
     def gbk_arguments = [gbk_files].flatten().collect { "'${it}'" }.join(' ')
 
     """
-    python3 ${projectDir}/bin/BGC_plots_process.py \
+    python3 ${projectDir}/bin/bgc_plots/BGC_plots_process.py \
         --gbk ${gbk_arguments} \
         --output-dir . \
         --gene-maps auto \

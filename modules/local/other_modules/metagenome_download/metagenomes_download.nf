@@ -15,7 +15,7 @@ process MGNIFY_DOWNLOAD {
 
     script:
     """
-    python3 ${projectDir}/bin/MGnify_download_process.py \
+    python3 ${projectDir}/bin/MGnify/MGnify_downloads/MGnify_download_process.py \
         --max_pages ${max_pages} \
         --output_prefix ${output_prefix} 
     """

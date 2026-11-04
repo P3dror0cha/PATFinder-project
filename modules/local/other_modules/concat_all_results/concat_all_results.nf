@@ -4,7 +4,6 @@ process CONCAT_ALL_RESULTS {
 
     input:
     path folder_with_gbks
-    path poem_final_results
     path deepsea_final_results
     path kofam_final_results
     path diamond_final_results
@@ -17,9 +16,8 @@ process CONCAT_ALL_RESULTS {
 
 script:
 """
-python3 ${projectDir}/bin/Concat_all_results_process.py \\
+python3 ${projectDir}/bin/Concat_all_results/Concat_all_results_process.py \\
     --gbk ${folder_with_gbks} \\
-    --poem ${poem_final_results} \\
     --deepsea ${deepsea_final_results} \\
     --kofam ${kofam_final_results} \\
     --diamond ${diamond_final_results} \\

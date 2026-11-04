@@ -12,7 +12,7 @@ process EXTRACTING_GBKS_CDS {
 
     script:
     """
-    python3 ${projectDir}/bin/extracting_gbks_cds.py \
+    python3 ${projectDir}/bin/extracting_information_in_gbks/extracting_gbks_cds.py \
         --input "*.gbk" \
         --output BGCS_cds_sequences.faa
     """

@@ -4,7 +4,6 @@ include { MGNIFY_PLOTS } from './modules/local/plots_and_graphs/MGnify_plot/MGni
 include { DOWNLOAD_ANTISMASH_DB } from './modules/local/databases_download/antismash_db/main.nf'
 include { DOWNLOAD_PFAM_DB } from './modules/local/databases_download/pfam_db/main.nf'
 include { DOWNLOAD_KOFAM_DB } from './modules/local/databases_download/kofam_db/main.nf'
-include { DOWNLOAD_COG_DB } from './modules/local/databases_download/cog_db/main.nf'
 include { ANTISMASH } from './modules/local/antismash/main.nf'
 include { BGC_PLOTS } from './modules/local/plots_and_graphs/bgc_plot/bgc_plots.nf'
 include { BIGSCAPE } from './modules/local/bigscape/main.nf'
@@ -18,8 +17,6 @@ include { FILTERING_KOFAM_RESULTS } from './modules/local/filtering_results/kofa
 include { RENAME_FAA } from './modules/local/other_modules/rename_faa/rename_faa.nf'
 include { EXTRACTING_GBKS_SEQUENCES } from './modules/local/extracting_gbks_information/extracting_gbks_sequences/main.nf'
 include { EXTRACTING_GBKS_CDS } from './modules/local/extracting_gbks_information/extracting_gbks_cds/main.nf'
-include { POEM } from './modules/local/other_modules/poem/main.nf'
-include { FILTERING_POEM_RESULTS } from './modules/local/filtering_results/poem_results/filtering_poem_results.nf'
 include { DIAMOND } from './modules/local/diamond/main.nf'
 include { FILTERING_DIAMOND_RESULTS } from './modules/local/filtering_results/diamond_results/filtering_diamond_results.nf'
 include { CONCAT_ALL_RESULTS } from './modules/local/other_modules/concat_all_results/concat_all_results.nf'
@@ -79,7 +76,6 @@ workflow {
     DOWNLOAD_ANTISMASH_DB()
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
-    DOWNLOAD_COG_DB()
     DOWNLOAD_AMRFINDER_DB(params.amrfinder_db_preinstalled)
 
     // ========================================================================
@@ -141,8 +137,8 @@ workflow {
     // 10. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
-        all_BGCs,
-        poem_results.poem_filtered_csv, 
+        all_BGCs
+ 
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
         filtered_diamond_results.diamond_filtered_result,

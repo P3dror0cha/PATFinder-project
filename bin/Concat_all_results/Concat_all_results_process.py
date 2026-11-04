@@ -5,16 +5,16 @@ import re
 from Concat_all_results_functions import (
     product_from_gbk_files,
     uniting_amrfinder_results,
-    uniting_poem_deepsea_results,
+    deepsea_results,
     uniting_kofam_diamond_results,
     uniting_all_infos,
     sorting_concat_columns,
     create_bgc_class_correlation
 )
 
-def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diamond_results, ids_correlation, amrfinder_results):
 
-    df_poem = pd.read_csv(poem_results)
+def concat_process(gbk_files, deepsea_results, kofam_results, diamond_results, ids_correlation, amrfinder_results):
+
     df_deepsea = pd.read_csv(deepsea_results)
     df_kofam = pd.read_csv(kofam_results)
     df_diamond = pd.read_csv(diamond_results)
@@ -23,20 +23,21 @@ def concat_process(gbk_files, poem_results, deepsea_results, kofam_results, diam
     df_bgc_product = product_from_gbk_files(gbk_files)
     df_bgc_correlation = create_bgc_class_correlation(df_bgc_product, ids_correlation)
     df_bgc_correlation.to_csv("df_bgc_correlation.csv")
-    df_poem_deepsea = uniting_poem_deepsea_results(df_bgc_correlation, df_poem, df_deepsea)
+
+    df_deepsea_merged = deepsea_results(df_bgc_correlation, df_deepsea)
     df_kofam_diamond = uniting_kofam_diamond_results(df_kofam, df_diamond)
 
-    df_final_concat = uniting_all_infos(df_poem_deepsea, df_kofam_diamond)
+    df_final_concat = uniting_all_infos(df_deepsea_merged, df_kofam_diamond)
     df_final_concat = uniting_amrfinder_results(df_final_concat, df_amrfinder)
     df_final_concat = sorting_concat_columns(df_final_concat)
 
     return df_final_concat, df_bgc_correlation
 
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Process used to unite the results produced by the pipeline")
     parser.add_argument("-g", "--gbk", nargs="+", required=True, help="List of gbk files")
-    parser.add_argument("-p", "--poem", required=True, help="Path to POEM results")
     parser.add_argument("-s", "--deepsea", required=True, help="Path to DeepSea results")
     parser.add_argument("-k", "--kofam", required=True, help="Path to Kofam results")
     parser.add_argument("-d", "--diamond", required=True, help="Path to Diamond and Uniprot results")
@@ -48,7 +49,6 @@ if __name__ == "__main__":
 
     df_final, df_bgc_correlation = concat_process(
         gbk_files=args.gbk,
-        poem_results=args.poem,
         deepsea_results=args.deepsea,
         kofam_results=args.kofam,
         diamond_results=args.diamond,
@@ -57,4 +57,3 @@ if __name__ == "__main__":
     )
     df_final.to_csv(args.output, index=False)
     df_bgc_correlation.to_csv("bgc_class_correlation.csv", index=False)
-

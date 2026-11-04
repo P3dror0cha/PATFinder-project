@@ -1,7 +1,7 @@
 import pandas as pd
 import argparse
 
-from bin.Diamond.Diamond_functions import (
+from Diamond_functions import (
     parse_diamond_result,
     clustering_results_by_id
 )

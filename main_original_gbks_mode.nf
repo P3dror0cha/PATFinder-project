@@ -7,7 +7,6 @@ include { MGNIFY_PLOTS } from './modules/local/plots_and_graphs/MGnify_plot/MGni
 include { DOWNLOAD_ANTISMASH_DB } from './modules/local/databases_download/antismash_db/main.nf'
 include { DOWNLOAD_PFAM_DB } from './modules/local/databases_download/pfam_db/main.nf'
 include { DOWNLOAD_KOFAM_DB } from './modules/local/databases_download/kofam_db/main.nf'
-include { DOWNLOAD_COG_DB } from './modules/local/databases_download/cog_db/main.nf'
 include { ANTISMASH } from './modules/local/antismash/main.nf'
 include { BGC_PLOTS } from './modules/local/plots_and_graphs/bgc_plot/bgc_plots.nf'
 include { BIGSCAPE } from './modules/local/bigscape/main.nf'
@@ -120,7 +119,6 @@ workflow {
     // ========================================================================
     DOWNLOAD_PFAM_DB()
     DOWNLOAD_KOFAM_DB()
-    DOWNLOAD_COG_DB()
     DOWNLOAD_AMRFINDER_DB(params.amrfinder_db_preinstalled)
 
     // ========================================================================
@@ -164,8 +162,8 @@ workflow {
     // 8. UNITING ALL RESULTS 
     // ========================================================================
     concat = CONCAT_ALL_RESULTS(
-        all_BGCs,
-        poem_results.poem_filtered_csv, 
+        all_BGCs
+ 
         deepsea_results.deepsea_csv,
         kofam_results.kofam_bigscape_filtered_results,
         filtered_diamond_results.diamond_filtered_result,

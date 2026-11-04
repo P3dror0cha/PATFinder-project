@@ -11,7 +11,7 @@ process MGNIFY_PLOTS {
 
     script:
     """
-    python ${projectDir}/bin/MGnify_plot_process.py \
+    python ${projectDir}/bin/MGnify/MGnify_plots/MGnify_plot_process.py \
         ${metadata_csv} \
         --output_dir MGnify_plots \
         --output_prefix aquatic
