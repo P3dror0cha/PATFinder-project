@@ -1,0 +1,64 @@
+---
+
+name: "<module_name>"
+
+description: >
+  <Brief description of the module's purpose and functionality.>
+
+keywords:
+  - <tool_name>
+  - <analysis_type>
+  - <research_area>
+  - <data_type>
+
+tools:
+  - <tool_name>:
+      description: >
+        <Description of the software used by this module.>
+
+      homepage: "<official_website_url>"
+
+      documentation: "<documentation_url>"
+
+      tool_dev_url: "<source_code_repository_url>"
+
+      doi: "<publication_doi>"
+
+      licence:
+        - "<software_licence>"
+
+      identifier: "<biotools_identifier>"
+
+      args_id: "$args"
+
+input:
+  - - meta:
+        type: map
+        description: >
+          Groovy Map containing sample information.
+          Example: [ id:'sample1' ]
+
+    - input_file:
+        type: file
+        description: >
+          <Description of the input file and its contents.>
+        pattern: "<input_file_pattern>"
+
+output:
+  - results:
+      - - meta:
+            type: map
+            description: >
+              Groovy Map containing sample information.
+
+        - "<output_file_pattern>":
+            type: file
+            description: >
+              <Description of the generated results.>
+            pattern: "<output_file_pattern>"
+
+authors:
+  - "@P3dror0cha"
+
+maintainers:
+  - "@P3dror0cha"
