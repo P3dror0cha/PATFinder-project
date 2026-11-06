@@ -2,7 +2,7 @@
 
 process AMRFINDER {
     label 'process_medium'
-    label 'amrfinder'
+    label 'amrfinder'  
     publishDir "results/amrfinder", mode: 'copy'
 
     input:

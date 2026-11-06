@@ -13,8 +13,11 @@ process ANTISMASH {
     tuple val(meta), path("${meta.id}/*region*.gbk"), emit: gbk
 
     script: 
+    def args = task.ext.args ?: ''
+
     """
     antismash "$fasta_file" \
+        ${args} \
         --databases ${params.antismash_db} \
         --genefinding-tool prodigal \
         --cb-general \

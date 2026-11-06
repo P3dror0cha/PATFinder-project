@@ -15,6 +15,8 @@ process BIGSCAPE {
     path "bigscape_output/output_files/*full.network", emit: bigscape_fullnetwork
 
 script:
+def args = task.ext.args ?: ''
+
 """
 mkdir -p bgcs_from_antismash
 
@@ -25,8 +27,7 @@ done
 bigscape cluster \
     -i bgcs_from_antismash \
     -o bigscape_output \
-    --include-singletons \
     -p ${pfam_db}/Pfam-A.hmm \
-    --mibig-version 4.0
+    ${args}
 """
 }
