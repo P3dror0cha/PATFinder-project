@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process FILTERING_BIGSCAPE_RESULTS {
+    label 'process_medium'
 
     label 'bigscape_results'
     publishDir "results/bigscape_results", mode: 'copy'

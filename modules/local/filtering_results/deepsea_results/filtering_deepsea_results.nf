@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process FILTERING_DEEPSEA_RESULTS {
+    label 'process_medium'
     label 'filtering_deepsea_results'
     publishDir "results/deepsea", mode: 'copy'
 

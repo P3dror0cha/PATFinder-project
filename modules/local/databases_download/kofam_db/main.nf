@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process DOWNLOAD_KOFAM_DB {
+    label 'process_medium'
     label 'download_kofam_db'
     storeDir "${params.kofam_db}"
 

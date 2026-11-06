@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process BIGSCAPE {
+    label 'process_medium'
     container ''
     label 'bigscape'
     publishDir "results", mode: 'copy'

@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process FILTERING_DIAMOND_RESULTS {
+    label 'process_medium'
     label 'filtering_diamond_results'
     publishDir "results/diamond", mode: 'copy'
 

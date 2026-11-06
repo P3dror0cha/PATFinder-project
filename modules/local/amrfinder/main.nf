@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process AMRFINDER {
+    label 'process_medium'
     label 'amrfinder'
     publishDir "results/amrfinder", mode: 'copy'
 

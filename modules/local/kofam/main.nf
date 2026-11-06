@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process KOFAM {
+    label 'process_medium'
     label 'kofam'
     publishDir "results/kofam", mode: 'copy'
 

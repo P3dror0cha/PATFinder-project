@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process EXTRACTING_GBKS_CDS {
+    label 'process_medium'
 
     publishDir "results/gbks_cds_sequences", mode: 'copy'
 

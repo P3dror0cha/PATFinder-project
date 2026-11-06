@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process DOWNLOAD_ANTISMASH_DB {
+    label 'process_medium'
     label 'download_antismash_db'
     storeDir "${params.antismash_db}"
 

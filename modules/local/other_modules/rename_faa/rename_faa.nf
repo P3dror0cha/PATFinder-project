@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process RENAME_FAA {
+    label 'process_medium'
     tag "${meta.id}"
 
     input:

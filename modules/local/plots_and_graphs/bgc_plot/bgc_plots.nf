@@ -1,4 +1,5 @@
 process BGC_PLOTS {
+    label 'process_medium'
 
     tag "${[gbk_files].flatten().size()} antiSMASH GBKs"
 

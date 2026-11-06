@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process MGNIFY_DOWNLOAD {
+    label 'process_medium'
     publishDir "results", mode: 'copy'
 
     input:

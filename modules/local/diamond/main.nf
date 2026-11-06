@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process DIAMOND {
+    label 'process_medium'
     label 'diamond'
     publishDir "results/diamond", mode: 'copy'
 

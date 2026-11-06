@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process CREATE_CONDA_ENVS {
+    label 'process_single'
     label 'create_conda_envs'
 
     output:

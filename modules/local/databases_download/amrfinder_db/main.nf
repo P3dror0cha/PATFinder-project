@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process DOWNLOAD_AMRFINDER_DB {
+    label 'process_medium'
 
     label 'download_amrfinder_db'
 

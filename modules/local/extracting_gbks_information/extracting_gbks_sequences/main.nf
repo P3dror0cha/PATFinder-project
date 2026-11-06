@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process EXTRACTING_GBKS_SEQUENCES {
+    label 'process_medium'
 
     publishDir "results/gbks_fna_sequence", mode: 'copy'
 

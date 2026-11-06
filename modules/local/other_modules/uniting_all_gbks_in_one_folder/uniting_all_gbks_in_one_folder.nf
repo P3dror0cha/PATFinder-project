@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process UNITING_ALL_GBKS {
+    label 'process_medium'
 
     publishDir "results", mode: 'copy'
 

@@ -1,4 +1,5 @@
 process DEEPBGC_PIPELINE {
+    label 'process_low'
     tag "${meta.id}"
 
     container 'quay.io/biocontainers/deepbgc:0.1.31--pyhca03a8a_0'

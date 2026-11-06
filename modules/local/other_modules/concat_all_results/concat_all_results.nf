@@ -1,4 +1,5 @@
 process CONCAT_ALL_RESULTS {
+    label 'process_medium'
     label 'final_results'
     publishDir "results/final_results", mode: 'copy'
 

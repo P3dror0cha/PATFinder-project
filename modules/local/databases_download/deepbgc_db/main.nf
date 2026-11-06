@@ -1,4 +1,5 @@
 process DEEPBGC_DOWNLOAD {
+    label 'process_low'
     container 'quay.io/biocontainers/deepbgc:0.1.31--pyhca03a8a_0'
 
     output:

@@ -1,4 +1,5 @@
 process MGNIFY_PLOTS {
+    label 'process_medium'
     tag "MGnify metadata plots"
     publishDir "results", mode: "copy"
 

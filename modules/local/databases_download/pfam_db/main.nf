@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process DOWNLOAD_PFAM_DB {
+    label 'process_medium'
     label 'download_pfam_db'
     storeDir "${params.pfam_db}"
 

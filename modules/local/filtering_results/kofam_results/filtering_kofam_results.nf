@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process FILTERING_KOFAM_RESULTS {
+    label 'process_medium'
     label 'filtering_kofam_results'
     
     publishDir "results/kofam", mode: 'copy'

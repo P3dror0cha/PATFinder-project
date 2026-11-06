@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process FILTERING_AMRFINDER_RESULTS {
+    label 'process_medium'
     label 'filtering_amrfinder_results'
     publishDir "results/amrfinder", mode: 'copy'
 
