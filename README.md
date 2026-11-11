@@ -1,7 +1,6 @@
 # PATFinder-project
 
-<img align="left" src="<img width="1254" height="1254" alt="Explorador com lupa sobre hélice de DNA" src="https://github.com/user-attachments/assets/559e0181-3d32-4101-bd65-63249709493b" />
-" alt="PATFinder logo" width="250">
+<img align="left" src="https://github.com/user-attachments/assets/559e0181-3d32-4101-bd65-63249709493b" alt="PATFinder logo" width="250">
 
 Repository dedicated to PATFinder, a bioinformatics tool designed to identify and explore potential antibiotic compounds within biosynthetic gene clusters (BGCs).
 
