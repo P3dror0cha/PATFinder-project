@@ -97,7 +97,7 @@ nextflow run main_faa_and_gbk.nf -resume -profile docker --gbk_files "path/to/yo
 ```
 ## Roadmap
 
-[![PATFinder development roadmap](assets/roadmap.png)](ROADMAP.md)
+[![PATFinder development roadmap](assets/roadmap.png)](roadmap.md)
 
-[Explore the roadmap and planned improvements →](ROADMAP.md)
+[Explore the roadmap and planned improvements →](roadmap.md)
 
