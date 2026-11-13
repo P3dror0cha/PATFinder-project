@@ -4,6 +4,9 @@
 
 Repository dedicated to PATFinder, a bioinformatics tool designed to identify and explore potential antibiotic compounds within biosynthetic gene clusters (BGCs). This project focuses on the development of a bioinformatics pipeline for the analysis of Biosynthetic Gene Clusters (BGCs), with an emphasis on identifying and associating them with antimicrobial potential.
 
+
+
+
 The pipeline integrates the following tools:
 - antiSMASH (https://github.com/antismash);
 - BIG-SCAPE (https://github.com/medema-group/BiG-SCAPE);
