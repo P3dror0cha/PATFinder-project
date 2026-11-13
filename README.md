@@ -95,5 +95,9 @@ nextflow run main_faa_and_gbk.nf -resume -profile micromamba --gbk_files "path/t
 # If you are using docker
 nextflow run main_faa_and_gbk.nf -resume -profile docker --gbk_files "path/to/your/gbk_files/*.gbk" --faa_files "path/to/your/faa_files/*.faa"
 ```
+## Roadmap
 
+[![PATFinder development roadmap](assets/roadmap.png)](ROADMAP.md)
+
+[Explore the roadmap and planned improvements →](ROADMAP.md)
 
